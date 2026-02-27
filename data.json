@@ -356,16 +356,16 @@
       "name": "Manitoba",
       "flag": "ca",
       "region": "na",
-      "status": "specification",
+      "status": "production",
       "issuanceModel": "single",
       "isSubnational": true,
       "parent": "Canada",
-      "url": "https://www.mpi.mb.ca/",
-      "technology": "Physical ID cards only",
-      "description": "Physical ID cards. Enhanced IDs discontinued 2022. No digital ID program.",
-      "details": ["Physical ID card", "No digital ID"],
-      "nodevice": ["Physical card only"],
-      "metrics": [{"label": "Digital", "value": "None"}]
+      "url": "https://www.manitoba.ca/health/mhsip/digitalhealthcard.html",
+      "technology": "Digital Health Card via MB Wallet app",
+      "description": "Digital Health Card available via MB Wallet app. Physical ID cards also available.",
+      "details": ["MB Wallet app", "Digital Health Card", "Physical ID via MPI"],
+      "nodevice": ["Physical card (MPI)"],
+      "metrics": [{"label": "Digital", "value": "Health Card"}]
     },
     {
       "name": "Saskatchewan",
