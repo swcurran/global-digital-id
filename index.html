@@ -78,6 +78,15 @@
     @media (max-width: 600px) { .container { padding: 20px 12px; } .cards { grid-template-columns: 1fr; } }
     .loading { text-align: center; padding: 40px; color: var(--text-dim); }
     .disclaimer { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 12px; margin-bottom: 16px; font-size: 0.7rem; color: var(--text-dim); }
+    .exec-summary { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 16px; margin-bottom: 20px; }
+    .exec-summary h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 12px; }
+    .exec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 16px; }
+    .exec-stat { background: var(--bg-card); border-radius: var(--radius); padding: 12px; }
+    .exec-stat-value { font-family: 'JetBrains Mono', monospace; font-size: 1.5rem; font-weight: 600; color: var(--accent); }
+    .exec-stat-label { font-size: 0.7rem; color: var(--text-dim); margin-top: 2px; }
+    .exec-insights { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; }
+    .exec-insight { background: var(--bg-card); border-radius: var(--radius); padding: 10px; font-size: 0.75rem; color: var(--text-dim); border-left: 3px solid var(--accent); }
+    .exec-insight strong { color: var(--text); }
   </style>
 </head>
 <body>
@@ -88,6 +97,11 @@
       <div class="stats" id="statsBar"></div>
     </header>
     <div class="disclaimer" id="disclaimer"></div>
+    <div class="exec-summary" id="execSummary" style="display:none;">
+      <h2>Executive Summary</h2>
+      <div class="exec-grid" id="execGrid"></div>
+      <div class="exec-insights" id="execInsights"></div>
+    </div>
     <div class="filters-bar" id="filters"></div>
     <div class="legend" id="legend"></div>
     <div class="cards" id="cards"></div>
@@ -143,6 +157,38 @@
       
       // Disclaimer
       document.getElementById('disclaimer').textContent = `Based on publicly available information as of ${appData.meta.lastUpdated}.`;
+      
+      // Executive Summary
+      const jur = appData.jurisdictions;
+      const total = jur.length;
+      const production = jur.filter(j => j.status === 'production').length;
+      const development = jur.filter(j => j.status === 'development').length;
+      const regions = {};
+      jur.forEach(j => { regions[j.region] = (regions[j.region] || 0) + 1; });
+      const models = {};
+      jur.forEach(j => { models[j.issuanceModel] = (models[j.issuanceModel] || 0) + 1; });
+      const noDevice = jur.filter(j => j.nodevice && j.nodevice.length > 0).length;
+      
+      document.getElementById('execGrid').innerHTML = `
+        <div class="exec-stat"><div class="exec-stat-value">${total}</div><div class="exec-stat-label">Jurisdictions Tracked</div></div>
+        <div class="exec-stat"><div class="exec-stat-value">${production}</div><div class="exec-stat-label">In Production</div></div>
+        <div class="exec-stat"><div class="exec-stat-value">${development}</div><div class="exec-stat-label">In Development</div></div>
+        <div class="exec-stat"><div class="exec-stat-value">${noDevice}</div><div class="exec-stat-label">Offer Non-Digital Options</div></div>
+      `;
+      
+      const regionLabels = { eu: 'Europe', apac: 'Asia-Pacific', na: 'Americas', mea: 'Middle East/Africa' };
+      const topRegions = Object.entries(regions).sort((a,b) => b[1]-a[1]).slice(0,3);
+      const topModels = Object.entries(models).sort((a,b) => b[1]-a[1]);
+      
+      let insightsHtml = '';
+      insightsHtml += `<div class="exec-insight"><strong>${production > development ? 'Production leads' : 'Most still developing'}</strong> — ${production} live systems vs ${development} in development</div>`;
+      if (topRegions.length) insightsHtml += `<div class="exec-insight"><strong>Top regions</strong> — ${topRegions.map(([r,c]) => (regionLabels[r]||r)+': '+c).join(', ')}</div>`;
+      if (topModels.length) insightsHtml += `<div class="exec-insight"><strong>Issuance models</strong> — ${topModels.map(([m,c]) => m.charAt(0).toUpperCase()+m.slice(1)+': '+c).join(', ')}</div>`;
+      insightsHtml += `<div class="exec-insight"><strong>EU Deadline</strong> — All 27 member states must issue wallets by end of ${appData.stats.euDeadline || '2026'}</div>`;
+      insightsHtml += `<div class="exec-insight"><strong>Scale</strong> — Systems cover ~${appData.stats.users || '1.4B'} users globally</div>`;
+      
+      document.getElementById('execInsights').innerHTML = insightsHtml;
+      document.getElementById('execSummary').style.display = 'block';
       
       renderFilters();
       renderCards();
