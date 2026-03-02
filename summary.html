@@ -99,6 +99,16 @@
     }
     .system-status.prod { background: rgba(74,222,128,0.15); color: var(--success); }
     .system-status.dev { background: rgba(251,191,36,0.15); color: var(--warning); }
+    .system-model { font-size: 0.7rem; color: var(--text-dim); margin-top: 2px; }
+    
+    /* Model breakdown */
+    .model-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px; }
+    @media (max-width: 600px) { .model-grid { grid-template-columns: 1fr; } }
+    .model-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .model-title { font-weight: 600; font-size: 1rem; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .model-count { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+    .model-desc { font-size: 0.8rem; color: var(--text-dim); margin-top: 4px; }
+    .model-examples { font-size: 0.75rem; color: var(--accent); margin-top: 8px; }
     
     /* Footer */
     .footer {
@@ -119,6 +129,12 @@
     
     <!-- Key Stats -->
     <div class="stats-grid" id="stats"></div>
+    
+    <!-- Credential Models -->
+    <div class="section">
+      <h2 class="section-title">Issuance Models</h2>
+      <div class="model-grid" id="models"></div>
+    </div>
     
     <!-- Key Insights -->
     <div class="section">
@@ -163,6 +179,39 @@
         <div class="stat-card"><div class="stat-value">${data.stats.users || '1.4B'}</div><div class="stat-label">Users Covered</div></div>
       `;
       
+      // Issuance model breakdown
+      const models = { single: 0, multiple: 0, cloud: 0 };
+      const modelExamples = { single: [], multiple: [], cloud: [] };
+      jur.forEach(j => {
+        if (models[j.issuanceModel] !== undefined) {
+          models[j.issuanceModel]++;
+          if (modelExamples[j.issuanceModel].length < 5) {
+            modelExamples[j.issuanceModel].push(j.name);
+          }
+        }
+      });
+      
+      document.getElementById('models').innerHTML = `
+        <div class="model-card">
+          <div class="model-title"><span>🏛️</span> Single Issuer</div>
+          <div class="model-count">${models.single}</div>
+          <div class="model-desc">Government issues one credential per person</div>
+          <div class="model-examples">${modelExamples.single.join(', ')}</div>
+        </div>
+        <div class="model-card">
+          <div class="model-title"><span>☁️</span> Cloud-Based</div>
+          <div class="model-count">${models.cloud}</div>
+          <div class="model-desc">Browser/app-based, no physical credential</div>
+          <div class="model-examples">${modelExamples.cloud.join(', ')}</div>
+        </div>
+        <div class="model-card">
+          <div class="model-title"><span>🔑</span> Multiple Providers</div>
+          <div class="model-count">${models.multiple}</div>
+          <div class="model-desc">Multiple issuers (banks, telcos) provide credentials</div>
+          <div class="model-examples">${modelExamples.multiple.join(', ')}</div>
+        </div>
+      `;
+      
       // Insights
       const regionCounts = {};
       jur.forEach(j => regionCounts[j.region] = (regionCounts[j.region] || 0) + 1);
@@ -197,12 +246,13 @@
       
       document.getElementById('systems').innerHTML = notable.map(j => {
         const metrics = j.metrics ? j.metrics.map(m => `${m.value}`).join(' · ') : '';
+        const modelLabel = j.issuanceModel === 'single' ? 'Single Issuer' : j.issuanceModel === 'multiple' ? 'Multiple' : 'Cloud';
         return `
         <div class="system-card">
           <span class="system-flag">${getFlag(j.flag)}</span>
           <div class="system-info">
             <div class="system-name">${j.name}</div>
-            <div style="font-size: 0.8rem; color: var(--text-dim)">${j.description}</div>
+            <div class="system-model">${modelLabel}</div>
             ${metrics ? `<div style="font-size: 0.75rem; color: var(--accent); margin-top: 4px">${metrics}</div>` : ''}
           </div>
           <span class="system-status ${j.status === 'production' ? 'prod' : 'dev'}">${j.status}</span>
