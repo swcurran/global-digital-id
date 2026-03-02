@@ -108,6 +108,9 @@
       <input type="text" class="search-input" id="searchInput" placeholder="Search...">
       <div class="filter-group" id="statusFilters"></div>
       <div class="filter-group" id="regionFilters"></div>
+      <select class="sort-select" id="credTypeSelect">
+        <option value="all">All Types</option>
+      </select>
       <select class="sort-select" id="sortSelect">
         <option value="name">Name</option>
         <option value="region">Region</option>
@@ -138,7 +141,7 @@
   </div>
   <script>
     let appData = null;
-    let filter = 'all', model = 'all', region = 'all', sortBy = 'name', searchQuery = '';
+    let filter = 'all', model = 'all', region = 'all', credentialType = 'all', sortBy = 'name', searchQuery = '';
     
     async function loadData() {
       try {
@@ -180,6 +183,8 @@
     
     function renderFilters() {
       const regions = [...new Set(appData.jurisdictions.map(j => j.region))];
+      const credTypes = [...new Set(appData.jurisdictions.map(j => j.credentialType).filter(Boolean))];
+      
       document.getElementById('statusFilters').innerHTML = `
         <button class="filter-btn ${filter === 'all' ? 'active' : ''}" data-filter="all">All</button>
         <button class="filter-btn ${filter === 'production' ? 'active' : ''}" data-filter="production">Live</button>
@@ -189,6 +194,13 @@
         <button class="filter-btn ${region === 'all' ? 'active' : ''}" data-region="all">All</button>
         ${regions.map(r => `<button class="filter-btn ${region === r ? 'active' : ''}" data-region="${r}">${r.toUpperCase()}</button>`).join('')}
       `;
+      
+      // Credential type dropdown
+      const credSelect = document.getElementById('credTypeSelect');
+      credSelect.innerHTML = '<option value="all">All Types</option>' + 
+        credTypes.map(t => `<option value="${t}">${t}</option>`).join('');
+      credSelect.value = credentialType;
+      
       document.querySelectorAll('#statusFilters .filter-btn').forEach(b => b.onclick = () => {
         document.querySelectorAll('#statusFilters .filter-btn').forEach(x => x.classList.remove('active'));
         b.classList.add('active'); filter = b.dataset.filter; renderCards();
@@ -203,6 +215,7 @@
       const filtered = appData.jurisdictions.filter(j => {
         const f = filter === 'all' || j.status === filter;
         const r = region === 'all' || j.region === region;
+        const ct = credentialType === 'all' || j.credentialType === credentialType;
         
         // Search filter
         let s = true;
@@ -214,7 +227,7 @@
               (j.parent && j.parent.toLowerCase().includes(q));
         }
         
-        return f && r && s;
+        return f && r && ct && s;
       }).sort((a, b) => {
         // Sort
         if (sortBy === 'name') {
@@ -249,7 +262,7 @@
             </div>
           </div>
           ${j.isSubnational ? `<div class="parent-jurisdiction">${j.parent}</div>` : ''}
-          <div class="card-model"><strong>${j.issuanceModel === 'multiple' ? 'Multiple IDs' : j.issuanceModel === 'cloud' ? 'Cloud account' : 'One ID'}</strong></div>
+          <div class="card-model"><strong>${j.issuanceModel === 'multiple' ? 'Multiple IDs' : j.issuanceModel === 'cloud' ? 'Cloud account' : 'One ID'}</strong> · ${j.credentialType || ''}</div>
           <div class="card-desc">${j.description.substring(0, 90)}...</div>
           <div class="card-meta">${j.metrics.slice(0, 2).map(m => `<span>${m.label}: <strong>${m.value}</strong></span>`).join('')}</div>
         </div>
@@ -285,6 +298,11 @@
     
     document.getElementById('sortSelect').addEventListener('change', (e) => {
       sortBy = e.target.value;
+      renderCards();
+    });
+    
+    document.getElementById('credTypeSelect').addEventListener('change', (e) => {
+      credentialType = e.target.value;
       renderCards();
     });
     
