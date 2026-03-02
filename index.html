@@ -263,8 +263,8 @@
             </div>
           </div>
           ${j.isSubnational ? `<div class="parent-jurisdiction">${j.parent}</div>` : ''}
-          <div class="card-model"><strong>${j.issuanceModel === 'multiple' ? 'Multiple IDs' : j.issuanceModel === 'cloud' ? 'Cloud account' : 'One ID'}</strong> · ${j.credentialType || ''}</div>
-          <div class="card-tech">${(j.techStack || []).slice(0, 3).join(', ')}</div>
+          <div class="card-model"><strong>${j.credentialType || (j.issuanceModel === 'multiple' ? 'Multiple IDs' : j.issuanceModel === 'cloud' ? 'Cloud account' : 'One ID')}</strong></div>
+          <div class="card-tech">${(j.techStack || []).slice(0, 4).join(' · ')}</div>
           <div class="card-desc">${j.description.substring(0, 90)}...</div>
           <div class="card-meta">${j.metrics.slice(0, 2).map(m => `<span>${m.label}: <strong>${m.value}</strong></span>`).join('')}</div>
         </div>
