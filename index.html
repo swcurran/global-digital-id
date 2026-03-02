@@ -10,9 +10,27 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'DM Sans', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; min-height: 100vh; }
     .container { max-width: 1200px; margin: 0 auto; padding: 32px 20px; }
-    header { margin-bottom: 24px; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
-    h1 { font-size: 1.6rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 6px; }
-    .subtitle { color: var(--text-dim); font-size: 0.95rem; }
+    h1 { font-size: 1.4rem; font-weight: 600; margin: 0; }
+    
+    /* Toolbar */
+    .toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .toolbar h1 { font-size: 1.4rem; }
+    .toolbar-link { color: var(--accent); text-decoration: none; font-size: 0.85rem; }
+    .toolbar-link:hover { text-decoration: underline; }
+    
+    /* Toolbar bar with filters */
+    .toolbar-bar { display: flex; gap: 10px; align-items: center; margin-bottom: 16px; flex-wrap: wrap; }
+    .search-input { flex: 1; min-width: 150px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 12px; color: var(--text); font-size: 0.85rem; }
+    .search-input:focus { outline: none; border-color: var(--accent); }
+    .sort-select { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 12px; color: var(--text); font-size: 0.8rem; }
+    
+    /* Exec bar */
+    .exec-bar { display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; align-items: center; }
+    .exec-bar-stat { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 16px; display: flex; align-items: center; gap: 8px; }
+    .exec-bar-stat-value { font-weight: 600; color: var(--accent); }
+    .exec-bar-stat-label { font-size: 0.75rem; color: var(--text-dim); }
+    
+    /* Filters */
     .filters-bar { display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; align-items: center; }
     .filter-group { display: flex; gap: 3px; background: var(--bg-elevated); padding: 3px; border-radius: var(--radius); border: 1px solid var(--border); }
     .filter-btn { padding: 5px 10px; background: transparent; border: none; border-radius: 4px; color: var(--text-dim); font-family: inherit; font-size: 0.7rem; cursor: pointer; }
@@ -73,46 +91,32 @@
     .modal-link a { display: inline-flex; align-items: center; gap: 5px; padding: 8px 12px; background: var(--accent); color: var(--bg); text-decoration: none; border-radius: 5px; font-weight: 500; font-size: 0.75rem; }
     @media (max-width: 600px) { .container { padding: 20px 12px; } .cards { grid-template-columns: 1fr; } }
     .loading { text-align: center; padding: 40px; color: var(--text-dim); }
-    .disclaimer { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 12px; margin-bottom: 16px; font-size: 0.7rem; color: var(--text-dim); }
-    .exec-summary { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 16px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
-    .exec-summary h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent); margin-bottom: 0; }
-    .exec-summary-stats { display: flex; gap: 16px; flex-wrap: wrap; }
-    .exec-stat { background: var(--bg-card); border-radius: var(--radius); padding: 8px 12px; }
-    .exec-stat-value { font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; font-weight: 600; color: var(--accent); }
-    .exec-stat-label { font-size: 0.65rem; color: var(--text-dim); margin-top: 2px; }
-    .exec-summary .header-btn { margin-bottom: 0; }
-    .header-actions { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
-    .header-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); color: var(--text-dim); font-size: 0.75rem; text-decoration: none; transition: all 0.2s; }
-    .header-btn:hover { border-color: var(--accent); color: var(--text); }
-    .header-btn svg { width: 14px; height: 14px; }
-    .search-bar { display: flex; gap: 10px; margin-bottom: 16px; }
-    .search-input { flex: 1; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 12px; color: var(--text); font-size: 0.8rem; }
-    .search-input:focus { outline: none; border-color: var(--accent); }
-    .search-input::placeholder { color: var(--text-mute); }
-    .sort-select { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 8px 12px; color: var(--text); font-size: 0.75rem; min-width: 140px; }
   </style>
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1 id="pageTitle">Global Digital ID Landscape</h1>
-      <p class="subtitle" id="pageSubtitle">Loading...</p>
-    </header>
-    <div class="disclaimer" id="disclaimer"></div>
-    <div class="exec-summary" id="execSummary" style="display:none;">
-      <div class="exec-summary-stats" id="execStats"></div>
-      <a href="summary.html" class="header-btn">View Full Summary →</a>
+    <div class="toolbar">
+      <div class="toolbar-left">
+        <h1 id="pageTitle">Global Digital ID</h1>
+      </div>
+      <div class="toolbar-right">
+        <a href="summary.html" class="toolbar-link">Summary</a>
+      </div>
     </div>
-    <div class="search-bar">
-      <input type="text" class="search-input" id="searchInput" placeholder="Search jurisdictions, technologies...">
+    
+    <div class="toolbar-bar">
+      <input type="text" class="search-input" id="searchInput" placeholder="Search...">
+      <div class="filter-group" id="statusFilters"></div>
+      <div class="filter-group" id="regionFilters"></div>
       <select class="sort-select" id="sortSelect">
-        <option value="name">Sort by Name</option>
-        <option value="region">Sort by Region</option>
-        <option value="status">Sort by Status</option>
+        <option value="name">Name</option>
+        <option value="region">Region</option>
+        <option value="status">Status</option>
       </select>
     </div>
-    <div class="filters-bar" id="filters"></div>
-    <div class="legend" id="legend"></div>
+    
+    <div class="exec-bar" id="execBar"></div>
+    
     <div class="cards" id="cards"></div>
     <div class="section" id="nodeviceSection"></div>
   </div>
@@ -148,7 +152,6 @@
     
     function initApp() {
       document.getElementById('pageTitle').textContent = appData.meta.title;
-      document.getElementById('pageSubtitle').textContent = appData.meta.description;
       
       // Check URL params for pre-selected filters
       const urlParams = new URLSearchParams(window.location.search);
@@ -159,27 +162,16 @@
         filter = urlParams.get('filter');
       }
       
-      // Disclaimer
-      document.getElementById('disclaimer').textContent = `Based on publicly available information as of ${appData.meta.lastUpdated}.`;
-      
-      // Executive Summary - compact
+      // Executive Summary - compact stats bar
       const jur = appData.jurisdictions;
       const total = jur.length;
       const production = jur.filter(j => j.status === 'production').length;
       const development = jur.filter(j => j.status === 'development').length;
       
-      document.getElementById('execStats').innerHTML = `
-        <div class="exec-stat"><div class="exec-stat-value">${total}</div><div class="exec-stat-label">Jurisdictions</div></div>
-        <div class="exec-stat"><div class="exec-stat-value">${production}</div><div class="exec-stat-label">Production</div></div>
-        <div class="exec-stat"><div class="exec-stat-value">${development}</div><div class="exec-stat-label">In Development</div></div>
-      `;
-      
-      document.getElementById('execSummary').style.display = 'flex';
-      
-      // Legend
-      document.getElementById('legend').innerHTML = `
-        <div class="legend-item"><span class="legend-dot prod"></span> Production</div>
-        <div class="legend-item"><span class="legend-dot spec"></span> In Development</div>
+      document.getElementById('execBar').innerHTML = `
+        <div class="exec-bar-stat"><span class="exec-bar-stat-value">${total}</span> <span class="exec-bar-stat-label">Jurisdictions</span></div>
+        <div class="exec-bar-stat"><span class="exec-bar-stat-value">${production}</span> <span class="exec-bar-stat-label">Live</span></div>
+        <div class="exec-bar-stat"><span class="exec-bar-stat-value">${development}</span> <span class="exec-bar-stat-label">In Dev</span></div>
       `;
       
       renderFilters();
@@ -188,25 +180,21 @@
     
     function renderFilters() {
       const regions = [...new Set(appData.jurisdictions.map(j => j.region))];
-      document.getElementById('filters').innerHTML = `
-        <span class="filter-label">Status:</span>
-        <div class="filter-group">
-          <button class="filter-btn ${filter === 'all' ? 'active' : ''}" data-filter="all">All</button>
-          <button class="filter-btn ${filter === 'production' ? 'active' : ''}" data-filter="production">Production</button>
-          <button class="filter-btn ${filter === 'development' ? 'active' : ''}" data-filter="development">In Development</button>
-        </div>
-        <span class="filter-label">Region:</span>
-        <div class="filter-group">
-          <button class="filter-btn ${region === 'all' ? 'active' : ''}" data-region="all">All</button>
-          ${regions.map(r => `<button class="filter-btn ${region === r ? 'active' : ''}" data-region="${r}">${r.toUpperCase()}</button>`).join('')}
-        </div>
+      document.getElementById('statusFilters').innerHTML = `
+        <button class="filter-btn ${filter === 'all' ? 'active' : ''}" data-filter="all">All</button>
+        <button class="filter-btn ${filter === 'production' ? 'active' : ''}" data-filter="production">Live</button>
+        <button class="filter-btn ${filter === 'development' ? 'active' : ''}" data-filter="dev">Dev</button>
       `;
-      document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.onclick = () => {
-        document.querySelectorAll('.filter-btn[data-filter]').forEach(x => x.classList.remove('active'));
+      document.getElementById('regionFilters').innerHTML = `
+        <button class="filter-btn ${region === 'all' ? 'active' : ''}" data-region="all">All</button>
+        ${regions.map(r => `<button class="filter-btn ${region === r ? 'active' : ''}" data-region="${r}">${r.toUpperCase()}</button>`).join('')}
+      `;
+      document.querySelectorAll('#statusFilters .filter-btn').forEach(b => b.onclick = () => {
+        document.querySelectorAll('#statusFilters .filter-btn').forEach(x => x.classList.remove('active'));
         b.classList.add('active'); filter = b.dataset.filter; renderCards();
       });
-      document.querySelectorAll('.filter-btn[data-region]').forEach(b => b.onclick = () => {
-        document.querySelectorAll('.filter-btn[data-region]').forEach(x => x.classList.remove('active'));
+      document.querySelectorAll('#regionFilters .filter-btn').forEach(b => b.onclick = () => {
+        document.querySelectorAll('#regionFilters .filter-btn').forEach(x => x.classList.remove('active'));
         b.classList.add('active'); region = b.dataset.region; renderCards();
       });
     }
