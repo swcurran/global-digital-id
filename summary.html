@@ -87,7 +87,7 @@
       align-items: flex-start;
       gap: 12px;
     }
-    .system-flag { font-size: 1.5rem; }
+    .system-flag img { width: 28px; height: 20px; border-radius: 2px; }
     .system-info { flex: 1; }
     .system-name { font-weight: 600; font-size: 0.95rem; }
     .system-status {
@@ -137,6 +137,10 @@
 
   <script>
     const flags = { au:'🇦🇺', br:'🇧🇷', cn:'🇨🇳', de:'🇩🇪', ee:'🇪🇪', es:'🇪🇸', eu:'🇪🇺', fr:'🇫🇷', gb:'🇬🇧', in:'🇮🇳', il:'🇮🇱', it:'🇮🇹', ke:'🇰🇪', kr:'🇰🇷', my:'🇲🇾', ng:'🇳🇬', nl:'🇳🇱', om:'🇴🇲', pt:'🇵🇹', qa:'🇶🇦', sa:'🇸🇦', sg:'🇸🇬', se:'🇸🇪', tw:'🇹🇼', ae:'🇦🇪', us:'🇺🇸', ca:'🇨🇦' };
+    
+    function getFlag(code) {
+      return `<img src="https://flagcdn.com/w40/${code}.png" srcset="https://flagcdn.com/w80/${code}.png 2x" alt="${code.toUpperCase()}" style="width:28px;height:20px;border-radius:2px;vertical-align:middle;">`;
+    }
     
     async function loadData() {
       const resp = await fetch('data.json');
@@ -195,7 +199,7 @@
         const metrics = j.metrics ? j.metrics.map(m => `${m.value}`).join(' · ') : '';
         return `
         <div class="system-card">
-          <span class="system-flag">${flags[j.flag] || '🏳️'}</span>
+          <span class="system-flag">${getFlag(j.flag)}</span>
           <div class="system-info">
             <div class="system-name">${j.name}</div>
             <div style="font-size: 0.8rem; color: var(--text-dim)">${j.description}</div>

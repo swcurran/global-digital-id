@@ -30,7 +30,7 @@
     .card.is-subnational { margin-left: 16px; border-left: 3px solid var(--info); }
     .card-header { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
     .card-title-group { display: flex; align-items: center; gap: 8px; }
-    .card-flag { font-size: 1.5rem; }
+    .card-flag { width: 28px; height: 20px; border-radius: 2px; }
     .card-title { font-weight: 600; font-size: 0.9rem; }
     .card-subtitle { font-size: 0.7rem; color: var(--text-dim); }
     .card-badges { display: flex; gap: 3px; }
@@ -56,7 +56,7 @@
     .modal-overlay.active .modal { transform: scale(1); }
     .modal-header { padding: 14px 14px 0; display: flex; align-items: center; justify-content: space-between; }
     .modal-title { font-size: 1rem; font-weight: 600; display: flex; align-items: center; gap: 8px; }
-    .modal-flag { font-size: 1.5rem; }
+    .modal-flag { width: 28px; height: 20px; border-radius: 2px; }
     .modal-close { background: none; border: none; color: var(--text-mute); font-size: 1.2rem; cursor: pointer; }
     .modal-body { padding: 14px; }
     .modal-section { margin-bottom: 14px; }
@@ -286,8 +286,7 @@
     document.onkeydown = e => { if(e.key === 'Escape') closeModal(); };
     
     function getFlag(code) {
-      const flags = { au:'🇦🇺', br:'🇧🇷', cn:'🇨🇳', de:'🇩🇪', ee:'🇪🇪', es:'🇪🇸', eu:'🇪🇺', fr:'🇫🇷', gb:'🇬🇧', in:'🇮🇳', il:'🇮🇱', it:'🇮🇹', ke:'🇰🇪', kr:'🇰🇷', my:'🇲🇾', ng:'🇳🇬', nl:'🇳🇱', om:'🇴🇲', pt:'🇵🇹', qa:'🇶🇦', sa:'🇸🇦', sg:'🇸🇬', se:'🇸🇪', tw:'🇹🇼', ae:'🇦🇪', us:'🇺🇸', ca:'🇨🇦', af:'🇦🇫' };
-      return flags[code] || '🏳️';
+      return `<img src="https://flagcdn.com/w40/${code}.png" srcset="https://flagcdn.com/w80/${code}.png 2x" alt="${code.toUpperCase()}" style="width:28px;height:20px;border-radius:2px;">`;
     }
     
     // Search and sort
