@@ -302,22 +302,30 @@
       const topRegion = Object.entries(regionCounts).sort((a,b) => b[1]-a[1])[0];
       const regionNames = { eu: 'Europe', apac: 'Asia-Pacific', na: 'Americas', me: 'Middle East', africa: 'Africa' };
       
+      // Get issuance model counts
+      const modelCounts = { single: 0, multiple: 0, cloud: 0 };
+      jur.forEach(j => {
+        if (modelCounts[j.issuanceModel] !== undefined) {
+          modelCounts[j.issuanceModel]++;
+        }
+      });
+      
       document.getElementById('insights').innerHTML = `
         <div class="insight-card">
           <h3>🇪🇺 EU Deadline: Catalyst for Change</h3>
-          <p>All 27 EU member states must offer EUDI Wallets by Dec 2026 — the biggest coordinated digital ID rollout. This creates a de facto standard and accelerates adoption globally.</p>
-        </div>
-        <div class="insight-card">
-          <h3>🏛️ Catalyst: Multi-Credential Wallets</h3>
-          <p>Driven by EUDI Wallet, governments are moving toward user-controlled wallets that hold multiple credentials (ID, DL, health card). ISO 18013-5 enables interoperability across jurisdictions.</p>
+          <p>All 27 EU member states must offer EUDI Wallets by Dec 2026. Each wallet can hold credentials from <strong>multiple issuers</strong> (national ID, driving license, bank, university) — enabling true multi-credential portability across the EU.</p>
         </div>
         <div class="insight-card">
           <h3>📱 Catalyst: Mobile-first Adoption</h3>
-          <p>US mDL rollouts (14+ states in Apple/Google Wallet) and acceptance at TSA/federal buildings are driving mainstream digital credential use beyond government services.</p>
+          <p>US mDL rollouts (14+ states in Apple/Google Wallet) and TSA acceptance are driving mainstream digital credential use beyond government services.</p>
+        </div>
+        <div class="insight-card">
+          <h3>🏛️ Issuance Models: Single vs Multiple</h3>
+          <p>Most jurisdictions (${modelCounts.single}) use single issuer (one credential per person). Only ${modelCounts.multiple} use multiple providers (Estonia, Sweden, Finland, EUDI) where banks/telcos issue credentials.</p>
         </div>
         <div class="insight-card">
           <h3>📊 Current State: ${production} Live vs ${development} In Development</h3>
-          <p>Most jurisdictions have moved beyond pilots to production. ${production > development ? 'Production leads' : 'Development continues'} globally.</p>
+          <p>Most jurisdictions have moved beyond pilots to production.</p>
         </div>
       `;
       
