@@ -114,7 +114,7 @@
       ],
       "credentialType": "Government Wallet",
       "walletType": "Browser/Cloud",
-      "credentialFormat": "Account-based",
+      "credentialFormat": "OIDC",
       "walletTech": "myID"
     },
     {
@@ -155,7 +155,7 @@
       "credentialType": "OIDC-style authentication",
       "walletType": "Government",
       "walletTech": "Gov.br / Digital CIN",
-      "credentialFormat": "ID Card"
+      "credentialFormat": "Physical ID"
     },
     {
       "name": "China",
@@ -197,7 +197,7 @@
       ],
       "credentialType": "OIDC-style authentication",
       "walletType": "Browser/Cloud",
-      "credentialFormat": "Account-based",
+      "credentialFormat": "OIDC",
       "walletTech": "National Online Identity Auth App (MPS/CAC)"
     },
     {
@@ -236,7 +236,7 @@
       "credentialType": "Bank credentials",
       "walletType": "Government",
       "walletTech": "mRiik / Mobile ID / Smart-ID",
-      "credentialFormat": "Bank Credential"
+      "credentialFormat": "PKI"
     },
     {
       "name": "European Union",
@@ -426,7 +426,7 @@
       ],
       "credentialType": "Government Wallet",
       "walletType": "Browser/Cloud",
-      "credentialFormat": "Account-based",
+      "credentialFormat": "OIDC",
       "walletTech": "eCitizen Wallet"
     },
     {
@@ -575,7 +575,7 @@
       "credentialType": "OIDC-style authentication",
       "walletType": "Government",
       "walletTech": "QDI (Qatar Digital Identity)",
-      "credentialFormat": "ID Card"
+      "credentialFormat": "Physical ID"
     },
     {
       "name": "Saudi Arabia",
@@ -610,7 +610,7 @@
       "credentialType": "OIDC-style authentication",
       "walletType": "Government",
       "walletTech": "Nafath / Tawakkalna",
-      "credentialFormat": "ID Card"
+      "credentialFormat": "Physical ID"
     },
     {
       "name": "Singapore",
@@ -932,7 +932,7 @@
       ],
       "credentialType": "OIDC-style authentication",
       "walletType": "Government",
-      "credentialFormat": "ID Card",
+      "credentialFormat": "Physical ID",
       "walletTech": "TW DIW (MODA)"
     },
     {
@@ -1002,7 +1002,7 @@
       ],
       "credentialType": "OIDC-style authentication",
       "walletType": "Browser/Cloud",
-      "credentialFormat": "Account-based",
+      "credentialFormat": "OIDC",
       "walletTech": "GOV.UK One Login"
     },
     {
@@ -1110,7 +1110,7 @@
       "credentialType": "OIDC-style authentication",
       "walletType": "Platform",
       "walletTech": "eID-Me (Bluink)",
-      "credentialFormat": "ID Card"
+      "credentialFormat": "Physical ID"
     },
     {
       "name": "Quebec",
@@ -1143,7 +1143,7 @@
       ],
       "credentialType": "OIDC-style authentication",
       "walletType": "Platform",
-      "credentialFormat": "ID Card",
+      "credentialFormat": "Physical ID",
       "walletTech": "eID-Me (Bluink)"
     },
     {
@@ -1211,7 +1211,7 @@
       ],
       "credentialType": "OIDC-style authentication",
       "walletType": "Platform",
-      "credentialFormat": "ID Card",
+      "credentialFormat": "Physical ID",
       "walletTech": "eID-Me (Bluink)"
     },
     {
@@ -1245,7 +1245,7 @@
       ],
       "credentialType": "Government Wallet",
       "walletType": "Browser/Cloud",
-      "credentialFormat": "Account-based",
+      "credentialFormat": "OIDC",
       "walletTech": "Service NSW"
     },
     {
@@ -1279,7 +1279,7 @@
       ],
       "credentialType": "Government Wallet",
       "walletType": "Government",
-      "credentialFormat": "ID Card",
+      "credentialFormat": "Physical ID",
       "walletTech": "myVicRoads / ServiceVic"
     },
     {
