@@ -1,124 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital ID Interoperability Map</title>
-  <script src="https://unpkg.com/globe.gl"></script>
-  <style>
-    :root { --bg: #0c0c0f; --border: #2a2a32; --text: #e8e8ec; --text-dim: #8a8a96; --accent: #e8c547; --success: #4ade80; --blue: #60a5fa; }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); overflow: hidden; }
-    .container { height: 100vh; display: flex; flex-direction: column; }
-    .header { padding: 16px 24px; background: rgba(12,12,15,0.95); border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 20px; z-index: 100; }
-    h1 { font-size: 1.1rem; }
-    .subtitle { color: var(--text-dim); font-size: 0.8rem; }
-    .back { color: var(--accent); text-decoration: none; font-size: 0.8rem; }
-    #globeViz { flex: 1; }
-    .legend { position: absolute; bottom: 24px; left: 24px; background: rgba(12,12,15,0.9); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; z-index: 10; }
-    .legend-title { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
-    .legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; margin-bottom: 6px; }
-    .legend-dot { width: 12px; height: 12px; border-radius: 50%; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital ID Interoperability Map</title>
+<script src="https://unpkg.com/globe.gl"></script>
+<style>
+:root { --bg: #0c0c0f; --border: #2a2a32; --text: #e8e8ec; --text-dim: #8a8a96; --accent: #e8c547; --success: #4ade80; --blue: #60a5fa; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); overflow: hidden; }
+.container { height: 100vh; display: flex; flex-direction: column; }
+.header { padding: 16px 24px; background: rgba(12,12,15,0.95); border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 20px; z-index: 100; }
+h1 { font-size: 1.1rem; }
+.subtitle { color: var(--text-dim); font-size: 0.8rem; }
+.back { color: var(--accent); text-decoration: none; font-size: 0.8rem; }
+#globeViz { flex: 1; }
+.legend { position: absolute; bottom: 24px; left: 24px; background: rgba(12,12,15,0.9); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; z-index: 10; }
+.legend-title { font-size: 0.7rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 10px; }
+.legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.8rem; margin-bottom: 6px; }
+.legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+</style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <a href="index.html" class="back">← Back to Registry</a>
-      <div>
-        <h1>🌐 Digital ID Interoperability</h1>
-        <p class="subtitle">Interactive Globe — Drag to rotate, scroll to zoom</p>
-      </div>
-    </div>
-    <div id="globeViz"></div>
-    <div class="legend">
-      <div class="legend-title">Interoperability</div>
-      <div class="legend-item"><div class="legend-dot" style="background:var(--accent)"></div> EU (EUDI)</div>
-      <div class="legend-item"><div class="legend-dot" style="background:var(--success)"></div> Nordic</div>
-      <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div> North America</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#666;border:1px dashed #666"></div> Future</div>
-    </div>
-  </div>
+<div class="container">
+<div class="header">
+<a href="index.html" class="back">← Back to Registry</a>
+<div>
+<h1>🌐 Digital ID Interoperability</h1>
+<p class="subtitle">Interactive Globe — Drag to rotate, scroll to zoom</p>
+</div>
+</div>
+<div id="globeViz"></div>
+<div class="legend">
+<div class="legend-title">Interoperability</div>
+<div class="legend-item"><div class="legend-dot" style="background:var(--accent)"></div> EU (EUDI)</div>
+<div class="legend-item"><div class="legend-dot" style="background:var(--success)"></div> Nordic</div>
+<div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div> North America</div>
+</div>
+</div>
 
-  <script>
-    const locations = [
-      { name: 'United States', lat: 37.09, lng: -95.71, color: '#60a5fa', type: 'us', desc: '13+ states with mDL' },
-      { name: 'Canada', lat: 56.13, lng: -106.34, color: '#60a5fa', type: 'us', desc: 'BC, Alberta digital IDs' },
-      { name: 'Germany', lat: 51.16, lng: 10.45, color: '#e8c547', type: 'eu', desc: 'EUDI Wallet 2026-2027' },
-      { name: 'France', lat: 46.22, lng: 2.21, color: '#e8c547', type: 'eu', desc: 'France Identité' },
-      { name: 'Italy', lat: 41.87, lng: 12.56, color: '#e8c547', type: 'eu', desc: 'IT-Wallet pilot' },
-      { name: 'Spain', lat: 40.46, lng: -3.75, color: '#e8c547', type: 'eu', desc: 'Cl@ve + EUDI' },
-      { name: 'Netherlands', lat: 52.13, lng: 5.29, color: '#e8c547', type: 'eu', desc: 'DigiD + EUDI' },
-      { name: 'Portugal', lat: 39.4, lng: -8.2, color: '#e8c547', type: 'eu', desc: 'EUDI pilot' },
-      { name: 'UK', lat: 55.37, lng: -3.43, color: '#e8c547', type: 'uk', desc: 'GOV.UK One Login' },
-      { name: 'Sweden', lat: 60.12, lng: 18.64, color: '#4ade80', type: 'nordic', desc: 'BankID - 94%' },
-      { name: 'Norway', lat: 60.47, lng: 8.46, color: '#4ade80', type: 'nordic', desc: 'BankID' },
-      { name: 'Denmark', lat: 56.26, lng: 9.5, color: '#4ade80', type: 'nordic', desc: 'MitID' },
-      { name: 'Finland', lat: 61.92, lng: 25.75, color: '#4ade80', type: 'nordic', desc: 'Findy + EUDI' },
-      { name: 'Estonia', lat: 58.59, lng: 25.01, color: '#4ade80', type: 'nordic', desc: 'e-Residency' },
-      { name: 'Australia', lat: -25.27, lng: 133.77, color: '#60a5fa', type: 'apac', desc: 'myID, Austroads' },
-      { name: 'NZ', lat: -40.9, lng: 174.88, color: '#60a5fa', type: 'apac', desc: 'Digital ID framework' },
-      { name: 'Japan', lat: 36.2, lng: 138.25, color: '#60a5fa', type: 'apac', desc: 'Individual Number' },
-      { name: 'Singapore', lat: 1.35, lng: 103.81, color: '#60a5fa', type: 'apac', desc: 'SingPass - 5M+' },
-      { name: 'India', lat: 20.59, lng: 78.96, color: '#60a5fa', type: 'apac', desc: 'Aadhaar - 1.3B' },
-      { name: 'China', lat: 35.86, lng: 104.19, color: '#60a5fa', type: 'apac', desc: 'Cyber ID' },
-      { name: 'Kenya', lat: -0.02, lng: 37.9, color: '#60a5fa', type: 'africa', desc: 'eCitizen' },
-      { name: 'Brazil', lat: -14.23, lng: -51.92, color: '#60a5fa', type: 'latam', desc: 'Gov.br - 166M' },
-    ];
-    
-    const arcs = [
-      { src: 'Sweden', dst: 'Norway', color: '#4ade80' },
-      { src: 'Sweden', dst: 'Denmark', color: '#4ade80' },
-      { src: 'Sweden', dst: 'Finland', color: '#4ade80' },
-      { src: 'Sweden', dst: 'Estonia', color: '#4ade80' },
-      { src: 'Germany', dst: 'France', color: '#e8c547' },
-      { src: 'Germany', dst: 'Italy', color: '#e8c547' },
-      { src: 'Germany', dst: 'Spain', color: '#e8c547' },
-      { src: 'Germany', dst: 'Netherlands', color: '#e8c547' },
-      { src: 'Germany', dst: 'UK', color: '#e8c547' },
-      { src: 'Germany', dst: 'Portugal', color: '#e8c547' },
-      { src: 'United States', dst: 'Canada', color: '#60a5fa' },
-      { src: 'Australia', dst: 'NZ', color: '#666' },
-    ];
-    
-    const elem = document.getElementById('globeViz');
-    
-    const myGlobe = Globe()
-      .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
-      .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
-      .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
-      .width(elem.clientWidth)
-      .height(elem.clientHeight)
-      .pointsData(locations)
-      .pointLat(d => d.lat)
-      .pointLng(d => d.lng)
-      .pointColor(d => d.color)
-      .pointAltitude(0.02)
-      .pointRadius(0.5)
-      .pointLabel(d => `<div style="background:#141418;border:1px solid #2a2a32;border-radius:6px;padding:8px 12px;color:#e8e8ec;font-size:12px"><strong>${d.name}</strong><br><span style="color:#8a8a96;font-size:11px">${d.desc}</span></div>`);
-    
-    // Add arcs separately
-    myGlobe.arcsData(arcs);
-    myGlobe.arcStartLat(d => locations.find(l => l.name === d.src)?.lat || 0);
-    myGlobe.arcStartLng(d => locations.find(l => l.name === d.src)?.lng || 0);
-    myGlobe.arcEndLat(d => locations.find(l => l.name === d.dst)?.lat || 0);
-    myGlobe.arcEndLng(d => locations.find(l => l.name === d.dst)?.lng || 0);
-    myGlobe.arcColor(d => d.color);
-    myGlobe.arcStrokeLength(0.5);
-    myGlobe.arcDashLength(0.4);
-    myGlobe.arcDashGap(0.2);
-    myGlobe.arcDashAnimateTime(2000);
-    myGlobe.arcAltitude(0.04);
-    
-    myGlobe(elem);
-    
-    myGlobe.controls().autoRotate = true;
-    myGlobe.controls().autoRotateSpeed = 0.5;
-    myGlobe.pointOfView({ lat: 30, lng: 0, altitude: 2.5 });
-    
-    window.addEventListener('resize', () => {
-      myGlobe.width(elem.clientWidth).height(elem.clientHeight);
-    });
-  </script>
+<script>
+(function() {
+const locations = [
+{name:'United States',lat:37.09,lng:-95.71,color:'#60a5fa',desc:'13+ states with mDL'},
+{name:'Canada',lat:56.13,lng:-106.34,color:'#60a5fa',desc:'BC, Alberta digital IDs'},
+{name:'Germany',lat:51.16,lng:10.45,color:'#e8c547',desc:'EUDI Wallet 2026-2027'},
+{name:'France',lat:46.22,lng:2.21,color:'#e8c547',desc:'France Identité'},
+{name:'Italy',lat:41.87,lng:12.56,color:'#e8c547',desc:'IT-Wallet pilot'},
+{name:'Spain',lat:40.46,lng:-3.75,color:'#e8c547',desc:'Cl@ve + EUDI'},
+{name:'Netherlands',lat:52.13,lng:5.29,color:'#e8c547',desc:'DigiD + EUDI'},
+{name:'Portugal',lat:39.4,lng:-8.2,color:'#e8c547',desc:'EUDI pilot'},
+{name:'UK',lat:55.37,lng:-3.43,color:'#e8c547',desc:'GOV.UK One Login'},
+{name:'Sweden',lat:60.12,lng:18.64,color:'#4ade80',desc:'BankID - 94%'},
+{name:'Norway',lat:60.47,lng:8.46,color:'#4ade80',desc:'BankID'},
+{name:'Denmark',lat:56.26,lng:9.5,color:'#4ade80',desc:'MitID'},
+{name:'Finland',lat:61.92,lng:25.75,color:'#4ade80',desc:'Findy + EUDI'},
+{name:'Estonia',lat:58.59,lng:25.01,color:'#4ade80',desc:'e-Residency'},
+{name:'Australia',lat:-25.27,lng:133.77,color:'#60a5fa',desc:'myID, Austroads'},
+{name:'NZ',lat:-40.9,lng:174.88,color:'#60a5fa',desc:'Digital ID framework'},
+{name:'Japan',lat:36.2,lng:138.25,color:'#60a5fa',desc:'Individual Number'},
+{name:'Singapore',lat:1.35,lng:103.81,color:'#60a5fa',desc:'SingPass - 5M+'},
+{name:'India',lat:20.59,lng:78.96,color:'#60a5fa',desc:'Aadhaar - 1.3B'},
+{name:'China',lat:35.86,lng:104.19,color:'#60a5fa',desc:'Cyber ID'},
+{name:'Kenya',lat:-0.02,lng:37.9,color:'#60a5fa',desc:'eCitizen'},
+{name:'Brazil',lat:-14.23,lng:-51.92,color:'#60a5fa',desc:'Gov.br - 166M'}
+];
+
+const arcsData = [
+{src:'Sweden',dst:'Norway',c:'#4ade80'},
+{src:'Sweden',dst:'Denmark',c:'#4ade80'},
+{src:'Sweden',dst:'Finland',c:'#4ade80'},
+{src:'Sweden',dst:'Estonia',c:'#4ade80'},
+{src:'Germany',dst:'France',c:'#e8c547'},
+{src:'Germany',dst:'Italy',c:'#e8c547'},
+{src:'Germany',dst:'Spain',c:'#e8c547'},
+{src:'Germany',dst:'Netherlands',c:'#e8c547'},
+{src:'Germany',dst:'UK',c:'#e8c547'},
+{src:'Germany',dst:'Portugal',c:'#e8c547'},
+{src:'United States',dst:'Canada',c:'#60a5fa'},
+{src:'Australia',dst:'NZ',c:'#666'}
+];
+
+const elem = document.getElementById('globeViz');
+const g = Globe()(elem);
+
+g.globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg');
+g.bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png');
+g.backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png');
+g.width(elem.clientWidth);
+g.height(elem.clientHeight);
+g.pointsData(locations);
+g.pointLat(d => d.lat);
+g.pointLng(d => d.lng);
+g.pointColor(d => d.color);
+g.pointAltitude(0.02);
+g.pointRadius(0.5);
+g.pointLabel(d => '<div style="background:#141418;border:1px solid #2a2a32;border-radius:6px;padding:8px;color:#e8e8ec;font-size:12px"><strong>' + d.name + '</strong><br><span style="color:#8a8a96;font-size:11px">' + d.desc + '</span></div>');
+
+g.arcsData(arcsData);
+g.arcStartLat(d => locations.find(l => l.name === d.src)?.lat || 0);
+g.arcStartLng(d => locations.find(l => l.name === d.src)?.lng || 0);
+g.arcEndLat(d => locations.find(l => l.name === d.dst)?.lat || 0);
+g.arcEndLng(d => locations.find(l => l.name === d.dst)?.lng || 0);
+g.arcColor(d => d.c);
+g.arcStrokeLength(0.5);
+g.arcDashLength(0.4);
+g.arcDashGap(0.2);
+g.arcDashAnimateTime(2000);
+g.arcAltitude(0.04);
+
+g.controls().autoRotate = true;
+g.controls().autoRotateSpeed = 0.5;
+g.pointOfView({lat:30,lng:0,altitude:2.5});
+
+window.addEventListener('resize', function() {
+  g.width(elem.clientWidth);
+  g.height(elem.clientHeight);
+});
+})();
+</script>
 </body>
 </html>
