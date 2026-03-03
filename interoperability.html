@@ -4,35 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital ID Interoperability Map</title>
-  <script src="https://unpkg.com/d3@7"></script>
-  <script src="https://unpkg.com/topojson-client@3"></script>
   <style>
     :root { --bg: #0c0c0f; --border: #2a2a32; --text: #e8e8ec; --text-dim: #8a8a96; --accent: #e8c547; --success: #4ade80; --blue: #60a5fa; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); overflow: hidden; }
+    body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); }
     .container { display: flex; height: 100vh; }
-    .sidebar { width: 320px; background: rgba(20,20,24,0.95); border-right: 1px solid var(--border); padding: 20px; overflow-y: auto; }
-    .main { flex: 1; position: relative; }
-    h1 { font-size: 1.3rem; margin-bottom: 4px; }
-    .subtitle { color: var(--text-dim); font-size: 0.85rem; margin-bottom: 20px; }
-    .back { color: var(--accent); text-decoration: none; font-size: 0.85rem; display: block; margin-bottom: 16px; }
-    .frameworks { display: flex; flex-direction: column; gap: 12px; }
-    .fw-card { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 14px; cursor: pointer; transition: border-color 0.2s; }
-    .fw-card:hover { border-color: var(--accent); }
-    .fw-card.active { border-color: var(--accent); background: rgba(232,197,71,0.1); }
-    .fw-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
-    .fw-desc { font-size: 0.75rem; color: var(--text-dim); }
-    .fw-count { font-size: 0.7rem; color: var(--accent); margin-top: 6px; }
-    svg { width: 100%; height: 100%; }
-    .country { fill: var(--border); stroke: #0c0c0f; stroke-width: 0.5; cursor: pointer; transition: fill 0.2s; }
-    .country:hover { fill: #333; }
-    .country.active-eu { fill: var(--accent); }
-    .country.active-nordic { fill: var(--success); }
-    .country.active-us { fill: var(--blue); }
-    .dot { fill: var(--accent); }
-    .connection { fill: none; stroke-width: 1.5; stroke-dasharray: 3,3; opacity: 0.6; animation: dash 20s linear infinite; }
-    @keyframes dash { to { stroke-dashoffset: -100; } }
-    .legend { position: absolute; bottom: 20px; left: 20px; background: rgba(20,20,24,0.9); border: 1px solid var(--border); border-radius: 8px; padding: 12px; }
+    .sidebar { width: 300px; background: #0f0f14; border-right: 1px solid var(--border); padding: 20px; overflow-y: auto; }
+    .main { flex: 1; position: relative; display: flex; align-items: center; justify-content: center; }
+    h1 { font-size: 1.2rem; margin-bottom: 4px; }
+    .subtitle { color: var(--text-dim); font-size: 0.8rem; margin-bottom: 16px; }
+    .back { color: var(--accent); text-decoration: none; font-size: 0.8rem; display: block; margin-bottom: 12px; }
+    .frameworks { display: flex; flex-direction: column; gap: 10px; }
+    .fw-card { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 12px; }
+    .fw-title { font-weight: 600; font-size: 0.85rem; margin-bottom: 4px; }
+    .fw-desc { font-size: 0.7rem; color: var(--text-dim); }
+    #globe { width: 100%; height: 100%; }
+    .legend { position: absolute; bottom: 20px; left: 20px; background: rgba(15,15,20,0.9); border: 1px solid var(--border); border-radius: 8px; padding: 12px; }
     .legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.75rem; margin-bottom: 6px; }
     .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
   </style>
@@ -42,124 +29,132 @@
     <div class="sidebar">
       <a href="index.html" class="back">← Back to Registry</a>
       <h1>🌐 Digital ID Interoperability</h1>
-      <p class="subtitle">Click frameworks to highlight</p>
-      <div class="frameworks" id="frameworks"></div>
+      <p class="subtitle">Global Map</p>
+      <div class="frameworks">
+        <div class="fw-card">
+          <div class="fw-title">EUDI Cross-Border</div>
+          <div class="fw-desc">27 EU member states</div>
+        <div class="fw-desc" style="color:#e8c547;margin-top:4px">27 jurisdictions</div>
+        </div>
+        <div class="fw-card">
+          <div class="fw-title">Nordic Interoperability</div>
+          <div class="fw-desc">Sweden, Norway, Denmark, Finland, Estonia</div>
+          <div class="fw-desc" style="color:#4ade80;margin-top:4px">5 jurisdictions</div>
+        </div>
+        <div class="fw-card">
+          <div class="fw-title">US TSA Acceptance</div>
+          <div class="fw-desc">mDL accepted at checkpoints</div>
+          <div class="fw-desc" style="color:#60a5fa;margin-top:4px">13 states</div>
+        </div>
+        <div class="fw-card">
+          <div class="fw-title">AU/NZ Future</div>
+          <div class="fw-desc">Parallel development</div>
+          <div class="fw-desc" style="color:#8a8a96;margin-top:4px">2 jurisdictions</div>
+        </div>
+      </div>
     </div>
     <div class="main">
-      <svg id="globe"></svg>
+      <svg id="globe" viewBox="0 0 800 500"></svg>
       <div class="legend">
-        <div class="legend-item"><div class="legend-dot" style="background:var(--accent)"></div> EU (EUDI)</div>
-        <div class="legend-item"><div class="legend-dot" style="background:var(--success)"></div> Nordic</div>
-        <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div> North America</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#e8c547"></div> EU (EUDI)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#4ade80"></div> Nordic</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#60a5fa"></div> North America</div>
       </div>
     </div>
   </div>
+
   <script>
-    const width = window.innerWidth - 320, height = window.innerHeight;
-    const svg = d3.select("#globe").attr("viewBox", `0 0 ${width} ${height}`);
+    const svg = document.getElementById('globe');
+    const w = 800, h = 500, cx = w/2, cy = h/2, r = 180;
     
-    // Simple world map using d3-geo
-    const projection = d3.geoOrthographic().scale(Math.min(width, height) / 2.2).translate([width/2, height/2]);
-    const path = d3.geoPath().projection(projection);
+    // Background circle
+    const bg = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    bg.setAttribute('cx', cx); bg.setAttribute('cy', cy); bg.setAttribute('r', r);
+    bg.setAttribute('fill', '#141418'); bg.setAttribute('stroke', '#2a2a32');
+    svg.appendChild(bg);
     
-    // Draw globe background
-    svg.append("circle").attr("cx", width/2).attr("cy", height/2).attr("r", projection.scale()).attr("fill", "#141418").attr("stroke", "#2a2a32");
+    // Grid lines
+    for (let i = -60; i <= 60; i += 30) {
+      const y = cy - (r * Math.cos(i * Math.PI / 180));
+      const rh = r * Math.sin(i * Math.PI / 180);
+      const ellipse = document.createElementNS('http://www.w3.org/2000/svg', 'ellipse');
+      ellipse.setAttribute('cx', cx); ellipse.setAttribute('cy', y);
+      ellipse.setAttribute('rx', Math.abs(rh)); ellipse.setAttribute('ry', 1);
+      ellipse.setAttribute('fill', 'none'); ellipse.setAttribute('stroke', '#2a2a32');
+      ellipse.setAttribute('opacity', '0.3'); svg.appendChild(ellipse);
+    }
+    for (let i = -120; i <= 180; i += 30) {
+      const x = cx + (r * Math.cos(i * Math.PI / 180));
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('x1', x); line.setAttribute('y1', cy - r);
+      line.setAttribute('x2', x); line.setAttribute('y2', cy + r);
+      line.setAttribute('stroke', '#2a2a32'); line.setAttribute('opacity', '0.3');
+      svg.appendChild(line);
+    }
     
-    // Simplified world countries (polygons)
-    const countries = [
-      // North America
-      { name: "United States", type: "us", path: "M-125,48 L-125,25 L-65,25 L-65,48 Z" },
-      { name: "Canada", type: "us", path: "M-140,48 L-140,75 L-55,75 L-55,48 Z" },
-      // Europe  
-      { name: "UK", type: "eu", path: "M-10,58 L-5,62 L2,58 L2,55 L-8,52 Z" },
-      { name: "France", type: "eu", path: "M-4,46 L9,46 L12,51 L2,52 L-4,50 Z" },
-      { name: "Germany", type: "eu", path: "M6,48 L15,48 L16,54 L8,54 Z" },
-      { name: "Spain", type: "eu", path: "M-9,36 L3,36 L5,44 L-3,44 Z" },
-      { name: "Italy", type: "eu", path: "M6,36 L18,36 L20,47 L10,48 Z" },
-      { name: "Netherlands", type: "eu", path: "M3,52 L7,52 L7,55 L3,55 Z" },
-      { name: "Sweden", type: "nordic", path: "M11,55 L19,55 L18,67 L12,67 Z" },
-      { name: "Norway", type: "nordic", path: "M8,55 L14,55 L16,70 L8,70 Z" },
-      { name: "Denmark", type: "nordic", path: "M8,52 L13,52 L13,56 L8,56 Z" },
-      { name: "Finland", type: "nordic", path: "M20,55 L30,55 L28,68 L20,68 Z" },
-      { name: "Estonia", type: "nordic", path: "M22,55 L28,55 L27,59 L22,59 Z" },
-      // Asia/Pacific
-      { name: "Australia", type: "apac", path: "M110,30 L160,30 L160,75 L110,75 Z" },
-      { name: "Japan", type: "apac", path: "M145,28 L155,28 L158,40 L148,40 Z" },
-      { name: "China", type: "apac", path: "M100,25 L145,25 L150,50 L105,50 Z" },
-      { name: "India", type: "apac", path: "M85,20 L105,20 L110,40 L90,40 Z" },
-      { name: "Singapore", type: "apac", path: "M118,38 L122,38 L122,42 L118,42 Z" },
-      { name: "Kenya", type: "africa", path: "M55,-1 L62,-1 L62,8 L55,8 Z" },
-      { name: "Brazil", type: "apac", path: "M-55,-15 L-30,-15 L-35,8 L-55,8 Z" },
-      { name: "New Zealand", type: "apac", path: "M165,65 L175,65 L175,80 L165,80 Z" },
+    const locations = [
+      { name: 'US', x: 180, y: 220, color: '#60a5fa', label: 'US mDL' },
+      { name: 'Canada', x: 180, y: 160, color: '#60a5fa', label: 'Canada' },
+      { name: 'UK', x: 410, y: 185, color: '#e8c547', label: 'UK' },
+      { name: 'Germany', x: 445, y: 195, color: '#e8c547', label: 'Germany' },
+      { name: 'France', x: 410, y: 215, color: '#e8c547', label: 'France' },
+      { name: 'Italy', x: 455, y: 230, color: '#e8c547', label: 'Italy' },
+      { name: 'Spain', x: 390, y: 240, color: '#e8c547', label: 'Spain' },
+      { name: 'Sweden', x: 460, y: 160, color: '#4ade80', label: 'Sweden' },
+      { name: 'Norway', x: 445, y: 155, color: '#4ade80', label: 'Norway' },
+      { name: 'Denmark', x: 440, y: 180, color: '#4ade80', label: 'Denmark' },
+      { name: 'Finland', x: 480, y: 155, color: '#4ade80', label: 'Finland' },
+      { name: 'Estonia', x: 485, y: 180, color: '#4ade80', label: 'Estonia' },
+      { name: 'Australia', x: 650, y: 340, color: '#60a5fa', label: 'Australia' },
+      { name: 'NZ', x: 700, y: 380, color: '#60a5fa', label: 'NZ' },
+      { name: 'Japan', x: 700, y: 230, color: '#60a5fa', label: 'Japan' },
+      { name: 'Singapore', x: 620, y: 290, color: '#60a5fa', label: 'Singapore' },
+      { name: 'India', x: 580, y: 260, color: '#60a5fa', label: 'India' },
+      { name: 'China', x: 620, y: 220, color: '#60a5fa', label: 'China' },
+      { name: 'Kenya', x: 520, y: 310, color: '#60a5fa', label: 'Kenya' },
+      { name: 'Brazil', x: 290, y: 340, color: '#60a5fa', label: 'Brazil' },
     ];
     
-    // Draw countries
-    const g = svg.append("g");
-    countries.forEach(c => {
-      const pathEl = g.append("path").attr("d", c.path).attr("class", `country active-${c.type}`).attr("data-name", c.name);
-    });
-    
-    // Add dots for major hubs
-    const dots = [
-      { x: projection([37, 55])[0], y: projection([37, 55])[1], color: "var(--blue)", label: "US States (mDL)" },
-      { x: projection([10, 50])[0], y: projection([10, 50])[1], color: "var(--accent)", label: "EUDI Wallet" },
-      { x: projection([15, 60])[0], y: projection([15, 60])[1], color: "var(--success)", label: "Nordic" },
-      { x: projection([135, -25])[0], y: projection([135, -25])[1], color: "var(--blue)", label: "Australia" },
-      { x: projection([103, 1])[0], y: projection([103, 1])[1], color: "var(--blue)", label: "Singapore" },
-    ];
-    
-    dots.forEach(d => {
-      svg.append("circle").attr("cx", d.x).attr("cy", d.y).attr("r", 6).attr("fill", d.color);
-      svg.append("circle").attr("cx", d.x).attr("cy", d.y).attr("r", 10).attr("fill", "none").attr("stroke", d.color).attr("stroke-width", 1).attr("opacity", 0.5);
-    });
-    
-    // Connection lines
     const connections = [
-      { from: [15, 60], to: [20, 62], color: "var(--success)" },
-      { from: [15, 60], to: [8, 56], color: "var(--success)" },
-      { from: [15, 60], to: [10, 56], color: "var(--success)" },
-      { from: [15, 60], to: [22, 58], color: "var(--success)" },
-      { from: [10, 50], to: [2, 50], color: "var(--accent)" },
-      { from: [10, 50], to: [18, 40], color: "var(--accent)" },
-      { from: [10, 50], to: [0, 40], color: "var(--accent)" },
-      { from: [10, 50], to: [-8, 50], color: "var(--accent)" },
-      { from: [37, 55], to: [40, 65], color: "var(--blue)" },
+      { from: 'Sweden', to: 'Norway', c: '#4ade80' },
+      { from: 'Sweden', to: 'Denmark', c: '#4ade80' },
+      { from: 'Sweden', to: 'Finland', c: '#4ade80' },
+      { from: 'Sweden', to: 'Estonia', c: '#4ade80' },
+      { from: 'Germany', to: 'France', c: '#e8c547' },
+      { from: 'Germany', to: 'Italy', c: '#e8c547' },
+      { from: 'Germany', to: 'Spain', c: '#e8c547' },
+      { from: 'Germany', to: 'UK', c: '#e8c547' },
+      { from: 'US', to: 'Canada', c: '#60a5fa' },
+      { from: 'Australia', to: 'NZ', c: '#666' },
     ];
     
-    connections.forEach(c => {
-      const p1 = projection(c.from), p2 = projection(c.to);
-      svg.append("path").attr("d", `M${p1[0]},${p1[1]} Q${(p1[0]+p2[0])/2},${(p1[1]+p2[1])/2-20} ${p2[0]},${p2[1]}`)
-        .attr("class", "connection").attr("stroke", c.color);
+    connections.forEach(conn => {
+      const f = locations.find(l => l.name === conn.from);
+      const t = locations.find(l => l.name === conn.to);
+      if (f && t) {
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', 'M' + f.x + ',' + f.y + ' Q' + ((f.x+t.x)/2) + ',' + ((f.y+t.y)/2-20) + ' ' + t.x + ',' + t.y);
+        path.setAttribute('fill', 'none'); path.setAttribute('stroke', conn.c);
+        path.setAttribute('stroke-width', '1.5'); path.setAttribute('stroke-dasharray', '4,4');
+        path.setAttribute('opacity', '0.5'); svg.appendChild(path);
+      }
     });
     
-    // Draggable rotation
-    let rotate = [0, -30];
-    const sensitivity = 0.25;
-    
-    d3.select("#globe").call(d3.drag().on("drag", (event) => {
-      const k = sensitivity;
-      rotate[0] = event.x * k;
-      rotate[1] = -event.y * k;
-      projection.rotate(rotate);
-      g.selectAll("path").attr("d", d3.geoPath().projection(projection));
-    }));
-    
-    // Sidebar
-    const frameworks = [
-      { name: "EUDI Cross-Border", desc: "27 EU member states", count: "27 jurisdictions", type: "eu" },
-      { name: "Nordic Interoperability", desc: "Sweden, Norway, Denmark, Finland, Estonia", count: "5 jurisdictions", type: "nordic" },
-      { name: "US TSA Acceptance", desc: "mDL accepted at airport checkpoints", count: "13 states", type: "us" },
-      { name: "AU/NZ Future", desc: "Parallel development", count: "2 jurisdictions", type: "apac" },
-      { name: "EU-Canada MoU", desc: "Signed December 2025", count: "2 jurisdictions", type: "eu" },
-    ];
-    
-    document.getElementById("frameworks").innerHTML = frameworks.map(f => `
-      <div class="fw-card" data-type="${f.type}">
-        <div class="fw-title">${f.name}</div>
-        <div class="fw-desc">${f.desc}</div>
-        <div class="fw-count">${f.count}</div>
-      </div>
-    `).join("");
+    locations.forEach(loc => {
+      const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      c.setAttribute('cx', loc.x); c.setAttribute('cy', loc.y); c.setAttribute('r', '6');
+      c.setAttribute('fill', loc.color); g.appendChild(c);
+      const r = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      r.setAttribute('cx', loc.x); r.setAttribute('cy', loc.y); r.setAttribute('r', '10');
+      r.setAttribute('fill', 'none'); r.setAttribute('stroke', loc.color);
+      r.setAttribute('stroke-width', '1'); r.setAttribute('opacity', '0.4'); g.appendChild(r);
+      const t = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      t.setAttribute('x', loc.x + 12); t.setAttribute('y', loc.y + 4);
+      t.setAttribute('fill', '#8a8a96'); t.setAttribute('font-size', '10');
+      t.textContent = loc.label; g.appendChild(t);
+      svg.appendChild(g);
+    });
   </script>
 </body>
 </html>
