@@ -103,7 +103,7 @@ g.arcStartLng(d => locations.find(l => l.name === d.src)?.lng || 0);
 g.arcEndLat(d => locations.find(l => l.name === d.dst)?.lat || 0);
 g.arcEndLng(d => locations.find(l => l.name === d.dst)?.lng || 0);
 g.arcColor(d => d.c);
-g.arcStrokeLength(0.5);
+
 g.arcDashLength(0.4);
 g.arcDashGap(0.2);
 g.arcDashAnimateTime(2000);
