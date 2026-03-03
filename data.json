@@ -27,7 +27,7 @@
         "EUDI Wallet",
         "Verifiable Credentials"
       ],
-      "credentialType": "Wallet (EUDI-compliant)",
+      "credentialType": "Government Wallet (Multi-issuer)",
       "description": "Findy network + EUDI Wallet launching end 2026. Wallet will hold credentials from government, banks, other issuers.",
       "details": [
         "Findy network",
@@ -58,7 +58,7 @@
         "mDL",
         "Interoperability framework"
       ],
-      "credentialType": "Digital Wallet -- ISO mDL",
+      "credentialType": "Government Wallet (mDL)",
       "description": "National digital trust service for interoperable digital credentials across Australia and NZ.",
       "details": [
         "National framework",
@@ -106,7 +106,7 @@
           "value": "76+"
         }
       ],
-      "credentialType": "OIDC-style authentication"
+      "credentialType": "Government Wallet"
     },
     {
       "name": "Brazil",
@@ -253,7 +253,7 @@
           "value": "Dec 2026"
         }
       ],
-      "credentialType": "Wallet (EUDI-compliant)"
+      "credentialType": "Government Wallet (Multi-issuer)"
     },
     {
       "name": "Germany",
@@ -392,7 +392,7 @@
           "value": "Browser"
         }
       ],
-      "credentialType": "OIDC-style authentication"
+      "credentialType": "Government Wallet"
     },
     {
       "name": "Malaysia",
@@ -588,7 +588,7 @@
           "value": "2,700"
         }
       ],
-      "credentialType": "Platform Wallet (SingPass)"
+      "credentialType": "Government Wallet"
     },
     {
       "name": "South Korea",
@@ -692,7 +692,7 @@
           "value": "2025-26"
         }
       ],
-      "credentialType": "Wallet (EUDI-compliant)"
+      "credentialType": "Government Wallet (Multi-issuer)"
     },
     {
       "name": "Spain",
@@ -722,7 +722,7 @@
           "value": "Dev"
         }
       ],
-      "credentialType": "Wallet (EUDI-compliant)"
+      "credentialType": "Government Wallet (Multi-issuer)"
     },
     {
       "name": "France",
@@ -752,7 +752,7 @@
           "value": "Dev"
         }
       ],
-      "credentialType": "Wallet (EUDI-compliant)"
+      "credentialType": "Government Wallet (Multi-issuer)"
     },
     {
       "name": "Netherlands",
@@ -782,7 +782,7 @@
           "value": "End 2026"
         }
       ],
-      "credentialType": "Wallet (EUDI-compliant)"
+      "credentialType": "Government Wallet (Multi-issuer)"
     },
     {
       "name": "Portugal",
@@ -812,7 +812,7 @@
           "value": "2025-26"
         }
       ],
-      "credentialType": "Wallet (EUDI-compliant)"
+      "credentialType": "Government Wallet (Multi-issuer)"
     },
     {
       "name": "Taiwan",
@@ -941,7 +941,7 @@
           "value": "Live"
         }
       ],
-      "credentialType": "Government Wallet (BC Wallet)"
+      "credentialType": "Government Wallet"
     },
     {
       "name": "Alberta",
@@ -972,7 +972,7 @@
           "value": "2025"
         }
       ],
-      "credentialType": "Digital Wallet -- Verifiable Credentials"
+      "credentialType": "Government Wallet"
     },
     {
       "name": "Ontario",
@@ -1061,7 +1061,7 @@
           "value": "Health Card"
         }
       ],
-      "credentialType": "Digital Wallet -- Verifiable Credentials"
+      "credentialType": "Government Wallet"
     },
     {
       "name": "Saskatchewan",
@@ -1121,7 +1121,7 @@
           "value": "Pilot"
         }
       ],
-      "credentialType": "OIDC-style authentication"
+      "credentialType": "Government Wallet"
     },
     {
       "name": "Victoria",
@@ -1152,7 +1152,7 @@
           "value": "Live"
         }
       ],
-      "credentialType": "Digital Wallet -- ISO mDL"
+      "credentialType": "Government Wallet"
     },
     {
       "name": "Louisiana",
@@ -1184,7 +1184,7 @@
           "value": "2018"
         }
       ],
-      "credentialType": "Platform Wallet (Apple/Google)"
+      "credentialType": "Platform Wallet"
     },
     {
       "name": "Arizona",
@@ -1214,7 +1214,7 @@
           "value": "2020"
         }
       ],
-      "credentialType": "Platform Wallet (Apple/Google)"
+      "credentialType": "Platform Wallet"
     },
     {
       "name": "Maryland",
@@ -1244,7 +1244,7 @@
           "value": "2021"
         }
       ],
-      "credentialType": "Platform Wallet (Apple/Google)"
+      "credentialType": "Platform Wallet"
     },
     {
       "name": "Colorado",
@@ -1274,7 +1274,7 @@
           "value": "2022"
         }
       ],
-      "credentialType": "Platform Wallet (Apple/Google)"
+      "credentialType": "Platform Wallet"
     },
     {
       "name": "Georgia",
@@ -1304,7 +1304,7 @@
           "value": "2022"
         }
       ],
-      "credentialType": "Platform Wallet (Apple/Google)"
+      "credentialType": "Platform Wallet"
     },
     {
       "name": "Ohio",
@@ -1334,7 +1334,7 @@
           "value": "Apple"
         }
       ],
-      "credentialType": "Platform Wallet (Apple/Google)"
+      "credentialType": "Platform Wallet"
     },
     {
       "name": "California",
@@ -1364,7 +1364,7 @@
           "value": "Dec 2023"
         }
       ],
-      "credentialType": "Platform Wallet (Apple/Google)"
+      "credentialType": "Platform Wallet"
     },
     {
       "name": "Utah",
@@ -1394,7 +1394,7 @@
           "value": "2023"
         }
       ],
-      "credentialType": "Platform Wallet (Apple/Google)"
+      "credentialType": "Platform Wallet"
     },
     {
       "name": "Iowa",
@@ -1424,7 +1424,7 @@
           "value": "2023"
         }
       ],
-      "credentialType": "Platform Wallet (Apple/Google)"
+      "credentialType": "Platform Wallet"
     },
     {
       "name": "Virginia",
@@ -1454,7 +1454,7 @@
           "value": "2024"
         }
       ],
-      "credentialType": "Platform Wallet (Apple/Google)"
+      "credentialType": "Platform Wallet"
     },
     {
       "name": "Nevada",
@@ -1484,7 +1484,7 @@
           "value": "2024"
         }
       ],
-      "credentialType": "Platform Wallet (Apple/Google)"
+      "credentialType": "Platform Wallet"
     },
     {
       "name": "Vermont",
@@ -1514,7 +1514,7 @@
           "value": "2024"
         }
       ],
-      "credentialType": "Platform Wallet (Apple/Google)"
+      "credentialType": "Platform Wallet"
     },
     {
       "name": "New York",
@@ -1544,7 +1544,7 @@
           "value": "200K+"
         }
       ],
-      "credentialType": "Platform Wallet (Apple/Google)"
+      "credentialType": "Platform Wallet"
     },
     {
       "name": "New Jersey",
@@ -1573,7 +1573,7 @@
           "value": "Spec"
         }
       ],
-      "credentialType": "Platform Wallet (Apple/Google)"
+      "credentialType": "Platform Wallet"
     },
     {
       "name": "Texas",
@@ -1602,7 +1602,7 @@
           "value": "Spec"
         }
       ],
-      "credentialType": "Platform Wallet (Apple/Google)"
+      "credentialType": "Platform Wallet"
     }
   ],
   "nodeviceSolutions": [
