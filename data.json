@@ -629,7 +629,7 @@
       ],
       "credentialType": "Government Wallet",
       "walletType": "Browser/Cloud",
-      "credentialFormat": "Account-based",
+      "credentialFormat": "OIDC",
       "walletTech": "SingPass App"
     },
     {
@@ -702,7 +702,7 @@
       ],
       "credentialType": "Bank credentials",
       "walletType": "None",
-      "credentialFormat": "Bank Credential"
+      "credentialFormat": "PKI"
     },
     {
       "name": "Italy",
