@@ -13,6 +13,174 @@
   },
   "jurisdictions": [
     {
+      "name": "Austroads",
+      "flag": "au",
+      "region": "apac",
+      "status": "development",
+      "issuanceModel": "single",
+      "isSubnational": false,
+      "url": "https://austroads.gov.au/drivers-and-vehicles/digital-trust-service",
+      "technology": "Digital Trust Service - National Digital Credential",
+      "techStack": [
+        "ISO 18013-5",
+        "mDL",
+        "Interoperability framework"
+      ],
+      "credentialType": "Government Wallet",
+      "description": "National digital trust service for interoperable digital credentials across Australia and NZ.",
+      "details": [
+        "National framework",
+        "mDL interoperability",
+        "All states/territories"
+      ],
+      "nodevice": [
+        "Physical licence"
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "value": "Dev"
+        }
+      ],
+      "walletType": "Platform",
+      "credentialFormat": "mDL",
+      "walletTech": "Digital Trust Service (Austroads/NEVDIS/Mattr)",
+      "issuedCredentialTypes": [
+        "Digital Driver License",
+        "National Digital Credential"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Austroads",
+          "type": "National Body",
+          "credentials": [
+            "Digital Driver License",
+            "National Digital Credential"
+          ]
+        },
+        {
+          "name": "State/Territory Transport Authorities",
+          "type": "State",
+          "credentials": [
+            "Digital Driver License"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Travel (Domestic)": {
+          "agency": "Airlines",
+          "acceptedTypes": [
+            "Digital Driver License",
+            "Physical Driver License",
+            "Passport"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "Digital Driver License",
+            "Physical Driver License",
+            "Proof of Age Card"
+          ]
+        },
+        "Government Services": {
+          "agency": "State/Federal Agencies",
+          "acceptedTypes": [
+            "Digital Driver License",
+            "myGovID"
+          ]
+        }
+      },
+      "digitalScore": 100.0,
+      "digitalCount": 2
+    },
+    {
+      "name": "California",
+      "flag": "us",
+      "region": "na",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": true,
+      "parent": "United States",
+      "url": "https://www.dmv.ca.gov/",
+      "technology": "Mobile Driver License",
+      "techStack": [
+        "ISO 18013-5",
+        "mDL",
+        "Apple Wallet"
+      ],
+      "description": "Apple Wallet Dec 2023.",
+      "details": [
+        "One mDL per person"
+      ],
+      "nodevice": [
+        "Physical license"
+      ],
+      "metrics": [
+        {
+          "label": "Since",
+          "value": "Dec 2023"
+        }
+      ],
+      "credentialType": "Platform Wallet",
+      "walletType": "Platform",
+      "credentialFormat": "mDL",
+      "walletTech": "CA DMV Wallet",
+      "issuedCredentialTypes": [
+        "mDL",
+        "Digital ID"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "California DMV",
+          "type": "State",
+          "credentials": [
+            "mDL",
+            "Digital ID",
+            "Physical Driver License"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "TSA Airport Security": {
+          "agency": "TSA",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "Passport",
+            "Passport Card",
+            "Global Entry"
+          ]
+        },
+        "Age Verification": {
+          "agency": "ABC / Retailers",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "Passport"
+          ]
+        },
+        "Government Services": {
+          "agency": "CA State Agencies",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        },
+        "Law Enforcement": {
+          "agency": "Police / Sheriff",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      },
+      "digitalScore": 100.0,
+      "digitalCount": 2
+    },
+    {
       "name": "Finland",
       "flag": "fi",
       "region": "eu",
@@ -111,28 +279,531 @@
             "Physical ID"
           ]
         }
-      }
+      },
+      "digitalScore": 80.0,
+      "digitalCount": 4
     },
     {
-      "name": "Austroads",
-      "flag": "au",
-      "region": "apac",
+      "name": "Sweden",
+      "flag": "se",
+      "region": "eu",
+      "status": "production",
+      "issuanceModel": "multiple",
+      "isSubnational": false,
+      "url": "https://www.bankid.com/en/",
+      "technology": "Bank-issued PKI certificates + private wallet apps",
+      "techStack": [
+        "PKI",
+        "BankID",
+        "Mobile app",
+        "Browser plugin",
+        "Freja eID"
+      ],
+      "description": "94% of smartphone users. 7.6B transactions in 2024. Multiple BankIDs from different banks.",
+      "details": [
+        "Multiple BankIDs per person",
+        "Cross-platform (mobile/desktop)",
+        "Bank-issued",
+        "7.6B uses in 2024",
+        "Freja eID alternative"
+      ],
+      "nodevice": [
+        "Physical ID cards (passport/ID card)"
+      ],
+      "metrics": [
+        {
+          "label": "Users",
+          "value": "94% smartphone"
+        },
+        {
+          "label": "Uses 2024",
+          "value": "7.6B"
+        }
+      ],
+      "credentialType": "Bank credentials",
+      "walletType": "Platform",
+      "walletTech": "BankID / Freja eID",
+      "credentialFormat": "PKI",
+      "issuedCredentialTypes": [
+        "BankID",
+        "Freja eID",
+        "EUDI Wallet",
+        "Health Card",
+        "Digital Driving License"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Swedish Banks",
+          "type": "Private",
+          "credentials": [
+            "BankID"
+          ]
+        },
+        {
+          "name": "Freja eID AB",
+          "type": "Private",
+          "credentials": [
+            "Freja eID"
+          ]
+        },
+        {
+          "name": "Bolagsverket / DIGG",
+          "type": "National",
+          "credentials": [
+            "EUDI Wallet"
+          ]
+        },
+        {
+          "name": "Transportstyrelsen",
+          "type": "National",
+          "credentials": [
+            "Digital Driving License"
+          ]
+        },
+        {
+          "name": "1177 / Healthcare",
+          "type": "Regional",
+          "credentials": [
+            "Health Card"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Government Services": {
+          "agency": "e-legitimation",
+          "acceptedTypes": [
+            "BankID",
+            "Freja eID",
+            "EUDI Wallet"
+          ]
+        },
+        "Banking": {
+          "agency": "Swedish Banks",
+          "acceptedTypes": [
+            "BankID"
+          ]
+        },
+        "Healthcare": {
+          "agency": "1177 / Regional Councils",
+          "acceptedTypes": [
+            "BankID",
+            "Freja eID",
+            "Health Card"
+          ]
+        },
+        "Travel": {
+          "agency": "Border Control / Police",
+          "acceptedTypes": [
+            "National ID",
+            "Passport",
+            "Digital Driving License"
+          ]
+        }
+      },
+      "digitalScore": 80.0,
+      "digitalCount": 4
+    },
+    {
+      "name": "European Union",
+      "flag": "eu",
+      "region": "eu",
+      "status": "development",
+      "issuanceModel": "wallet",
+      "isSubnational": false,
+      "url": "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
+      "technology": "EUDI Wallet (eIDAS 2.0) - framework + 27 national wallets",
+      "techStack": [
+        "eIDAS 2.0",
+        "OpenID4VP",
+        "ISO 18013-5",
+        "W3C Verifiable Credentials"
+      ],
+      "description": "Regulation mandates all 27 member states to issue EUDI Wallets by end 2026. One wallet can hold credentials from multiple issuers (government, banks, universities).",
+      "details": [
+        "User-controlled wallet",
+        "ISO 18013-5 mDL compatible",
+        "350+ orgs in pilots",
+        "2nd wave pilots 2025"
+      ],
+      "nodevice": [
+        "Physical ID cards"
+      ],
+      "metrics": [
+        {
+          "label": "Members",
+          "value": "27"
+        },
+        {
+          "label": "Deadline",
+          "value": "Dec 2026"
+        }
+      ],
+      "credentialType": "Government Wallet (Multi-credential)",
+      "walletType": "Government",
+      "credentialFormat": "Verifiable Credentials",
+      "walletTech": "EUDI Wallet SDK",
+      "issuedCredentialTypes": [
+        "EUDI Wallet",
+        "National eIDs",
+        "Digital Driving License",
+        "Health Credentials",
+        "Professional Credentials"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "EU Commission (eIDAS 2.0)",
+          "type": "Supranational",
+          "credentials": [
+            "EUDI Wallet Framework"
+          ]
+        },
+        {
+          "name": "Member State Authorities",
+          "type": "National",
+          "credentials": [
+            "National eIDs",
+            "Digital Driving License",
+            "Health Credentials"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Cross-Border Government Services": {
+          "agency": "EU Member States",
+          "acceptedTypes": [
+            "EUDI Wallet",
+            "National eIDs"
+          ]
+        },
+        "Healthcare (Cross-Border)": {
+          "agency": "EU Health Systems",
+          "acceptedTypes": [
+            "EHIC",
+            "EUDI Health Credentials"
+          ]
+        },
+        "Professional Recognition": {
+          "agency": "EU Professional Bodies",
+          "acceptedTypes": [
+            "Professional Credentials",
+            "EUDI Wallet"
+          ]
+        },
+        "Travel (Schengen)": {
+          "agency": "Border Control",
+          "acceptedTypes": [
+            "National ID",
+            "Passport",
+            "EUDI Wallet (future)"
+          ]
+        }
+      },
+      "digitalScore": 60.0,
+      "digitalCount": 3
+    },
+    {
+      "name": "Portugal",
+      "flag": "pt",
+      "region": "eu",
       "status": "development",
       "issuanceModel": "single",
       "isSubnational": false,
-      "url": "https://austroads.gov.au/drivers-and-vehicles/digital-trust-service",
-      "technology": "Digital Trust Service - National Digital Credential",
+      "url": "https://www2.gov.pt/en/temas/cidadania-e-documentos/cartao-de-cidadao",
+      "technology": "EUDI Wallet + eID",
       "techStack": [
-        "ISO 18013-5",
-        "mDL",
-        "Interoperability framework"
+        "eID card",
+        "Authentication",
+        "EUDI Wallet"
+      ],
+      "description": "One of first to launch EUDI Wallet pilot. Target 2025-2026.",
+      "details": [
+        "EUDI pilot",
+        "eID card"
+      ],
+      "nodevice": [
+        "Physical eID"
+      ],
+      "metrics": [
+        {
+          "label": "Target",
+          "value": "2025-26"
+        }
+      ],
+      "credentialType": "Government Wallet (Multi-credential)",
+      "walletType": "Government",
+      "credentialFormat": "Verifiable Credentials",
+      "walletTech": "PT Wallet",
+      "issuedCredentialTypes": [
+        "Chave M\u00f3vel Digital",
+        "Cart\u00e3o de Cidad\u00e3o",
+        "EUDI Wallet",
+        "Health Card",
+        "Digital Driving License"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "AMA (Agency for Modernization)",
+          "type": "National",
+          "credentials": [
+            "Chave M\u00f3vel Digital",
+            "EUDI Wallet"
+          ]
+        },
+        {
+          "name": "IRN (Records & Notaries)",
+          "type": "National",
+          "credentials": [
+            "Cart\u00e3o de Cidad\u00e3o"
+          ]
+        },
+        {
+          "name": "SNS (Health Service)",
+          "type": "National",
+          "credentials": [
+            "Health Card"
+          ]
+        },
+        {
+          "name": "IMT (Transport Institute)",
+          "type": "National",
+          "credentials": [
+            "Digital Driving License"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Government Services": {
+          "agency": "ePortugal",
+          "acceptedTypes": [
+            "Chave M\u00f3vel Digital",
+            "Cart\u00e3o de Cidad\u00e3o",
+            "EUDI Wallet"
+          ]
+        },
+        "Healthcare": {
+          "agency": "SNS",
+          "acceptedTypes": [
+            "Health Card",
+            "Cart\u00e3o de Cidad\u00e3o",
+            "Chave M\u00f3vel Digital"
+          ]
+        },
+        "Travel": {
+          "agency": "SEF / Border Control",
+          "acceptedTypes": [
+            "Cart\u00e3o de Cidad\u00e3o",
+            "Passport",
+            "Digital Driving License"
+          ]
+        },
+        "Banking": {
+          "agency": "Portuguese Banks",
+          "acceptedTypes": [
+            "Chave M\u00f3vel Digital",
+            "Cart\u00e3o de Cidad\u00e3o"
+          ]
+        }
+      },
+      "digitalScore": 60.0,
+      "digitalCount": 3
+    },
+    {
+      "name": "South Korea",
+      "flag": "kr",
+      "region": "apac",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": false,
+      "url": "https://www.gov.kr/",
+      "technology": "Mobile-based certificates + platform wallets",
+      "techStack": [
+        "Mobile certificate",
+        "Public certificate",
+        "App-based",
+        "Samsung Wallet"
+      ],
+      "description": "Nationwide rollout March 2025. PASS app + Samsung Wallet integration.",
+      "details": [
+        "One per person",
+        "Mobile app",
+        "Certificate auth",
+        "Samsung Wallet (15+ banks)"
+      ],
+      "nodevice": [
+        "Physical ID cards"
+      ],
+      "metrics": [
+        {
+          "label": "Launch",
+          "value": "Mar 2025"
+        }
+      ],
+      "credentialType": "Mobile Certificate",
+      "walletType": "Platform",
+      "walletTech": "PASS / Samsung Wallet",
+      "credentialFormat": "Certificate",
+      "issuedCredentialTypes": [
+        "PASS Mobile ID",
+        "Resident Registration Card",
+        "Digital Driver License",
+        "Passport"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Ministry of Interior",
+          "type": "National",
+          "credentials": [
+            "PASS Mobile ID",
+            "Resident Registration Card"
+          ]
+        },
+        {
+          "name": "Korea Road Traffic Authority",
+          "type": "National",
+          "credentials": [
+            "Digital Driver License"
+          ]
+        },
+        {
+          "name": "Ministry of Foreign Affairs",
+          "type": "National",
+          "credentials": [
+            "Passport"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Government Services": {
+          "agency": "All Government Agencies",
+          "acceptedTypes": [
+            "PASS Mobile ID",
+            "Resident Registration Card"
+          ]
+        },
+        "Banking": {
+          "agency": "Korean Banks",
+          "acceptedTypes": [
+            "PASS Mobile ID",
+            "Resident Registration Card",
+            "Digital Driver License"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "PASS Mobile ID",
+            "Digital Driver License",
+            "Resident Registration Card"
+          ]
+        },
+        "Travel": {
+          "agency": "Immigration / Airlines",
+          "acceptedTypes": [
+            "Resident Registration Card",
+            "Passport",
+            "Digital Driver License"
+          ]
+        }
+      },
+      "digitalScore": 50.0,
+      "digitalCount": 2
+    },
+    {
+      "name": "New South Wales",
+      "flag": "au",
+      "region": "apac",
+      "status": "development",
+      "issuanceModel": "cloud",
+      "isSubnational": true,
+      "parent": "Australia",
+      "url": "https://www.service.nsw.gov.au/services/nsw-digital-id",
+      "technology": "Digital ID pilot program",
+      "techStack": [
+        "OIDC",
+        "Digital ID",
+        "Photo card"
+      ],
+      "description": "Pilot program testing digital identity. Digital photo card for 16-21 launch March 2026.",
+      "details": [
+        "Pilot program",
+        "Digital photo card 2026"
+      ],
+      "nodevice": [
+        "Service NSW centres"
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "value": "Pilot"
+        }
       ],
       "credentialType": "Government Wallet",
-      "description": "National digital trust service for interoperable digital credentials across Australia and NZ.",
+      "walletType": "Browser/Cloud",
+      "credentialFormat": "OIDC",
+      "walletTech": "Service NSW",
+      "issuedCredentialTypes": [
+        "Digital Driver License",
+        "Proof of Age Card"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Service NSW",
+          "type": "State",
+          "credentials": [
+            "Digital Driver License",
+            "Physical Driver License",
+            "Proof of Age Card"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "State Government Services": {
+          "agency": "NSW Government",
+          "acceptedTypes": [
+            "Digital Driver License",
+            "Physical Driver License"
+          ]
+        },
+        "Federal Services": {
+          "agency": "Australian Government",
+          "acceptedTypes": [
+            "Digital Driver License",
+            "Physical Driver License",
+            "Passport",
+            "myGovID"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "Digital Driver License",
+            "Physical Driver License",
+            "Proof of Age Card"
+          ]
+        }
+      },
+      "digitalScore": 50.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "Victoria",
+      "flag": "au",
+      "region": "apac",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": true,
+      "parent": "Australia",
+      "url": "https://www.vic.gov.au/do-more-go-digital-driver-licence-service-victoria",
+      "technology": "Digital driver licence via ServiceVic/myVicRoads",
+      "techStack": [
+        "Digital license",
+        "ServiceVic app"
+      ],
+      "description": "Digital driver licence available via myVicRoads and ServiceVic apps. Full licence holders.",
       "details": [
-        "National framework",
-        "mDL interoperability",
-        "All states/territories"
+        "Digital driver licence",
+        "myVicRoads app",
+        "ServiceVic app"
       ],
       "nodevice": [
         "Physical licence"
@@ -140,162 +811,1050 @@
       "metrics": [
         {
           "label": "Status",
-          "value": "Dev"
-        }
-      ],
-      "walletType": "Platform",
-      "credentialFormat": "mDL",
-      "walletTech": "Digital Trust Service (Austroads/NEVDIS/Mattr)",
-      "issuedCredentialTypes": [
-        "Digital Driver License",
-        "National Digital Credential"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Austroads",
-          "type": "National Body",
-          "credentials": [
-            "Digital Driver License",
-            "National Digital Credential"
-          ]
-        },
-        {
-          "name": "State/Territory Transport Authorities",
-          "type": "State",
-          "credentials": [
-            "Digital Driver License"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Travel (Domestic)": {
-          "agency": "Airlines",
-          "acceptedTypes": [
-            "Digital Driver License",
-            "Physical Driver License",
-            "Passport"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "Digital Driver License",
-            "Physical Driver License",
-            "Proof of Age Card"
-          ]
-        },
-        "Government Services": {
-          "agency": "State/Federal Agencies",
-          "acceptedTypes": [
-            "Digital Driver License",
-            "myGovID"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Australia",
-      "flag": "au",
-      "region": "apac",
-      "status": "production",
-      "issuanceModel": "cloud",
-      "isSubnational": false,
-      "url": "https://www.myid.gov.au/",
-      "technology": "Cloud-native federated identity (myID)",
-      "techStack": [
-        "OIDC",
-        "FIDO2",
-        "Facial verification"
-      ],
-      "description": "Federal system. Voluntary myID for 76+ services. Cloud-based. States have additional programs.",
-      "details": [
-        "myID app",
-        "Identity strength levels (Basic/Standard/High)",
-        "Facial verification",
-        "76+ services as of Jan 2025"
-      ],
-      "nodevice": [
-        "myGov service centres",
-        "In-person proofing with passport/ID"
-      ],
-      "metrics": [
-        {
-          "label": "Services",
-          "value": "76+"
+          "value": "Live"
         }
       ],
       "credentialType": "Government Wallet",
-      "walletType": "Browser/Cloud",
-      "credentialFormat": "OIDC",
-      "walletTech": "myID",
+      "walletType": "Government",
+      "credentialFormat": "Verifiable Credentials",
+      "walletTech": "myVicRoads / ServiceVic",
       "issuedCredentialTypes": [
-        "Digital ID (myGovID)",
-        "Physical Driver License (state)",
-        "Passport",
+        "Digital Driver License",
         "Proof of Age Card"
       ],
       "issuingAuthorities": [
         {
-          "name": "ATO (myGovID)",
-          "type": "National",
-          "credentials": [
-            "myGovID"
-          ]
-        },
-        {
-          "name": "State/Territory Transport Authorities",
+          "name": "Service Victoria",
           "type": "State",
           "credentials": [
+            "Digital Driver License",
             "Physical Driver License",
             "Proof of Age Card"
-          ]
-        },
-        {
-          "name": "DFAT",
-          "type": "National",
-          "credentials": [
-            "Passport"
           ]
         }
       ],
       "acceptedCredentials": {
-        "Federal Government Services": {
-          "agency": "myGov / Services Australia",
+        "State Government Services": {
+          "agency": "Victoria Government",
           "acceptedTypes": [
-            "myGovID",
+            "Digital Driver License",
+            "Physical Driver License"
+          ]
+        },
+        "Federal Services": {
+          "agency": "Australian Government",
+          "acceptedTypes": [
+            "Digital Driver License",
             "Physical Driver License",
-            "Passport"
-          ]
-        },
-        "Tax Services": {
-          "agency": "ATO",
-          "acceptedTypes": [
-            "myGovID"
-          ]
-        },
-        "Healthcare": {
-          "agency": "Medicare",
-          "acceptedTypes": [
-            "Medicare Card",
+            "Passport",
             "myGovID"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
           "acceptedTypes": [
+            "Digital Driver License",
             "Physical Driver License",
-            "Proof of Age Card",
-            "Passport"
-          ]
-        },
-        "Travel (Domestic)": {
-          "agency": "Airlines / TSA equivalent",
-          "acceptedTypes": [
-            "Physical Driver License",
-            "Passport"
+            "Proof of Age Card"
           ]
         }
-      }
+      },
+      "digitalScore": 50.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "Louisiana",
+      "flag": "us",
+      "region": "na",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": true,
+      "parent": "United States",
+      "url": "https://lawallet.com/",
+      "technology": "Mobile Driver License (LA Wallet app)",
+      "techStack": [
+        "ISO 18013-5",
+        "mDL",
+        "Apple/Google Wallet"
+      ],
+      "description": "First state mDL (2018). Now accepted at TSA + federal buildings.",
+      "details": [
+        "One mDL per person",
+        "LA Wallet app",
+        "Apple + Google Play"
+      ],
+      "nodevice": [
+        "Physical license"
+      ],
+      "metrics": [
+        {
+          "label": "Since",
+          "value": "2018"
+        }
+      ],
+      "credentialType": "Platform Wallet",
+      "walletType": "Platform",
+      "credentialFormat": "mDL",
+      "walletTech": "LA Wallet",
+      "issuedCredentialTypes": [
+        "mDL",
+        "State ID"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Louisiana OMV",
+          "type": "State",
+          "credentials": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "TSA Airport Security": {
+          "agency": "TSA",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "Passport",
+            "Passport Card",
+            "Global Entry"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License"
+          ]
+        },
+        "Government Services": {
+          "agency": "LA State Agencies",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      },
+      "digitalScore": 50.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "Arizona",
+      "flag": "us",
+      "region": "na",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": true,
+      "parent": "United States",
+      "url": "https://www.azdot.gov/",
+      "technology": "Mobile Driver License",
+      "techStack": [
+        "ISO 18013-5",
+        "mDL",
+        "Apple/Google Wallet"
+      ],
+      "description": "mDL 2020. Apple + Google Wallet.",
+      "details": [
+        "One mDL per person"
+      ],
+      "nodevice": [
+        "Physical license"
+      ],
+      "metrics": [
+        {
+          "label": "Since",
+          "value": "2020"
+        }
+      ],
+      "credentialType": "Platform Wallet",
+      "walletType": "Platform",
+      "credentialFormat": "mDL",
+      "issuedCredentialTypes": [
+        "mDL",
+        "State ID"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Arizona MVD",
+          "type": "State",
+          "credentials": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "TSA Airport Security": {
+          "agency": "TSA",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "Passport",
+            "Passport Card",
+            "Global Entry"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License"
+          ]
+        },
+        "Government Services": {
+          "agency": "AZ State Agencies",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      },
+      "digitalScore": 50.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "Maryland",
+      "flag": "us",
+      "region": "na",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": true,
+      "parent": "United States",
+      "url": "https://mva.maryland.gov/",
+      "technology": "Mobile Driver License",
+      "techStack": [
+        "ISO 18013-5",
+        "mDL",
+        "Apple/Google Wallet"
+      ],
+      "description": "Apple + Google Wallet.",
+      "details": [
+        "One mDL per person"
+      ],
+      "nodevice": [
+        "Physical license"
+      ],
+      "metrics": [
+        {
+          "label": "Since",
+          "value": "2021"
+        }
+      ],
+      "credentialType": "Platform Wallet",
+      "walletType": "Platform",
+      "credentialFormat": "mDL",
+      "issuedCredentialTypes": [
+        "mDL",
+        "State ID"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Maryland MVA",
+          "type": "State",
+          "credentials": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "TSA Airport Security": {
+          "agency": "TSA",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "Passport",
+            "Passport Card",
+            "Global Entry"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License"
+          ]
+        },
+        "Government Services": {
+          "agency": "MD State Agencies",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      },
+      "digitalScore": 50.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "Colorado",
+      "flag": "us",
+      "region": "na",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": true,
+      "parent": "United States",
+      "url": "https://www.colorado.gov/dmv",
+      "technology": "Mobile Driver License",
+      "techStack": [
+        "ISO 18013-5",
+        "mDL",
+        "Apple/Google Wallet"
+      ],
+      "description": "Apple + Google Wallet.",
+      "details": [
+        "One mDL per person"
+      ],
+      "nodevice": [
+        "Physical license"
+      ],
+      "metrics": [
+        {
+          "label": "Since",
+          "value": "2022"
+        }
+      ],
+      "credentialType": "Platform Wallet",
+      "walletType": "Platform",
+      "credentialFormat": "mDL",
+      "issuedCredentialTypes": [
+        "mDL",
+        "State ID"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Colorado DMV",
+          "type": "State",
+          "credentials": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "TSA Airport Security": {
+          "agency": "TSA",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "Passport",
+            "Passport Card",
+            "Global Entry"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Dispensaries",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License"
+          ]
+        },
+        "Government Services": {
+          "agency": "CO State Agencies",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      },
+      "digitalScore": 50.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "Georgia",
+      "flag": "us",
+      "region": "na",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": true,
+      "parent": "United States",
+      "url": "https://dds.georgia.gov/",
+      "technology": "Mobile Driver License",
+      "techStack": [
+        "ISO 18013-5",
+        "mDL",
+        "Apple/Google Wallet"
+      ],
+      "description": "Apple + Google Wallet.",
+      "details": [
+        "One mDL per person"
+      ],
+      "nodevice": [
+        "Physical license"
+      ],
+      "metrics": [
+        {
+          "label": "Since",
+          "value": "2022"
+        }
+      ],
+      "credentialType": "Platform Wallet",
+      "walletType": "Platform",
+      "credentialFormat": "mDL",
+      "issuedCredentialTypes": [
+        "mDL",
+        "State ID"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Georgia DDS",
+          "type": "State",
+          "credentials": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "TSA Airport Security": {
+          "agency": "TSA",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "Passport",
+            "Passport Card",
+            "Global Entry"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License"
+          ]
+        },
+        "Government Services": {
+          "agency": "GA State Agencies",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      },
+      "digitalScore": 50.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "Ohio",
+      "flag": "us",
+      "region": "na",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": true,
+      "parent": "United States",
+      "url": "https://www.bmv.ohio.gov/",
+      "technology": "Mobile Driver License (Apple only)",
+      "techStack": [
+        "ISO 18013-5",
+        "mDL",
+        "Apple Wallet"
+      ],
+      "description": "Apple Wallet only.",
+      "details": [
+        "One mDL per person"
+      ],
+      "nodevice": [
+        "Physical license"
+      ],
+      "metrics": [
+        {
+          "label": "Platform",
+          "value": "Apple"
+        }
+      ],
+      "credentialType": "Platform Wallet",
+      "walletType": "Platform",
+      "credentialFormat": "mDL",
+      "walletTech": "Apple/Google Wallet",
+      "issuedCredentialTypes": [
+        "mDL",
+        "State ID"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Ohio BMV",
+          "type": "State",
+          "credentials": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "TSA Airport Security": {
+          "agency": "TSA",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "Passport",
+            "Passport Card",
+            "Global Entry"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License"
+          ]
+        },
+        "Government Services": {
+          "agency": "OH State Agencies",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      },
+      "digitalScore": 50.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "Utah",
+      "flag": "us",
+      "region": "na",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": true,
+      "parent": "United States",
+      "url": "https://dld.utah.gov/",
+      "technology": "Mobile Driver License",
+      "techStack": [
+        "ISO 18013-5",
+        "mDL",
+        "State app"
+      ],
+      "description": "State app.",
+      "details": [
+        "One mDL per person"
+      ],
+      "nodevice": [
+        "Physical license"
+      ],
+      "metrics": [
+        {
+          "label": "Since",
+          "value": "2023"
+        }
+      ],
+      "credentialType": "Platform Wallet",
+      "walletType": "Platform",
+      "credentialFormat": "mDL",
+      "walletTech": "GET Mobile App",
+      "issuedCredentialTypes": [
+        "mDL",
+        "State ID"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Utah DMV",
+          "type": "State",
+          "credentials": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "TSA Airport Security": {
+          "agency": "TSA",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "Passport",
+            "Passport Card",
+            "Global Entry"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License"
+          ]
+        },
+        "Government Services": {
+          "agency": "UT State Agencies",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      },
+      "digitalScore": 50.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "Iowa",
+      "flag": "us",
+      "region": "na",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": true,
+      "parent": "United States",
+      "url": "https://iowadot.gov/",
+      "technology": "Mobile Driver License",
+      "techStack": [
+        "ISO 18013-5",
+        "mDL",
+        "State app"
+      ],
+      "description": "State app.",
+      "details": [
+        "One mDL per person"
+      ],
+      "nodevice": [
+        "Physical license"
+      ],
+      "metrics": [
+        {
+          "label": "Since",
+          "value": "2023"
+        }
+      ],
+      "credentialType": "Platform Wallet",
+      "walletType": "Platform",
+      "credentialFormat": "mDL",
+      "walletTech": "Iowa Mobile ID",
+      "issuedCredentialTypes": [
+        "mDL",
+        "State ID"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Iowa DOT",
+          "type": "State",
+          "credentials": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "TSA Airport Security": {
+          "agency": "TSA",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "Passport",
+            "Passport Card",
+            "Global Entry"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License"
+          ]
+        },
+        "Government Services": {
+          "agency": "IA State Agencies",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      },
+      "digitalScore": 50.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "Virginia",
+      "flag": "us",
+      "region": "na",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": true,
+      "parent": "United States",
+      "url": "https://www.dmv.virginia.gov/",
+      "technology": "Mobile Driver License",
+      "techStack": [
+        "ISO 18013-5",
+        "mDL",
+        "Apple/Google Wallet"
+      ],
+      "description": "Apple + Google Wallet.",
+      "details": [
+        "One mDL per person"
+      ],
+      "nodevice": [
+        "Physical license"
+      ],
+      "metrics": [
+        {
+          "label": "Since",
+          "value": "2024"
+        }
+      ],
+      "credentialType": "Platform Wallet",
+      "walletType": "Platform",
+      "credentialFormat": "mDL",
+      "walletTech": "VA MiD App",
+      "issuedCredentialTypes": [
+        "mDL",
+        "State ID"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Virginia DMV",
+          "type": "State",
+          "credentials": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "TSA Airport Security": {
+          "agency": "TSA",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "Passport",
+            "Passport Card",
+            "Global Entry"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License"
+          ]
+        },
+        "Government Services": {
+          "agency": "VA State Agencies",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      },
+      "digitalScore": 50.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "Nevada",
+      "flag": "us",
+      "region": "na",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": true,
+      "parent": "United States",
+      "url": "https://dmv.nv.gov/",
+      "technology": "Mobile Driver License",
+      "techStack": [
+        "ISO 18013-5",
+        "mDL",
+        "Apple/Google Wallet"
+      ],
+      "description": "Apple + Google Wallet.",
+      "details": [
+        "One mDL per person"
+      ],
+      "nodevice": [
+        "Physical license"
+      ],
+      "metrics": [
+        {
+          "label": "Since",
+          "value": "2024"
+        }
+      ],
+      "credentialType": "Platform Wallet",
+      "walletType": "Platform",
+      "credentialFormat": "mDL",
+      "issuedCredentialTypes": [
+        "mDL",
+        "State ID"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Nevada DMV",
+          "type": "State",
+          "credentials": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "TSA Airport Security": {
+          "agency": "TSA",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "Passport",
+            "Passport Card",
+            "Global Entry"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars / Dispensaries",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License"
+          ]
+        },
+        "Government Services": {
+          "agency": "NV State Agencies",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      },
+      "digitalScore": 50.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "Vermont",
+      "flag": "us",
+      "region": "na",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": true,
+      "parent": "United States",
+      "url": "https://dmv.vermont.gov/",
+      "technology": "Mobile Driver License",
+      "techStack": [
+        "ISO 18013-5",
+        "mDL",
+        "State app"
+      ],
+      "description": "State app.",
+      "details": [
+        "One mDL per person"
+      ],
+      "nodevice": [
+        "Physical license"
+      ],
+      "metrics": [
+        {
+          "label": "Since",
+          "value": "2024"
+        }
+      ],
+      "credentialType": "Platform Wallet",
+      "walletType": "Platform",
+      "credentialFormat": "mDL",
+      "walletTech": "Apple/Google Wallet",
+      "issuedCredentialTypes": [
+        "mDL",
+        "State ID"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Vermont DMV",
+          "type": "State",
+          "credentials": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "TSA Airport Security": {
+          "agency": "TSA",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "Passport",
+            "Passport Card",
+            "Global Entry"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License"
+          ]
+        },
+        "Government Services": {
+          "agency": "VT State Agencies",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      },
+      "digitalScore": 50.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "New Jersey",
+      "flag": "us",
+      "region": "na",
+      "status": "development",
+      "issuanceModel": "single",
+      "isSubnational": true,
+      "parent": "United States",
+      "url": "https://www.nj.gov/mvc/",
+      "technology": "Mobile Driver License (planned)",
+      "techStack": [
+        "ISO 18013-5",
+        "mDL"
+      ],
+      "description": "Law passed 2025.",
+      "details": [
+        "One mDL per person"
+      ],
+      "nodevice": [
+        "Physical license"
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "value": "Spec"
+        }
+      ],
+      "credentialType": "Platform Wallet",
+      "walletType": "Platform",
+      "credentialFormat": "mDL",
+      "issuedCredentialTypes": [
+        "mDL",
+        "State ID"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "New Jersey MVC",
+          "type": "State",
+          "credentials": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "TSA Airport Security": {
+          "agency": "TSA",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "Passport",
+            "Passport Card",
+            "Global Entry"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License"
+          ]
+        },
+        "Government Services": {
+          "agency": "NJ State Agencies",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      },
+      "digitalScore": 50.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "Texas",
+      "flag": "us",
+      "region": "na",
+      "status": "development",
+      "issuanceModel": "single",
+      "isSubnational": true,
+      "parent": "United States",
+      "url": "https://www.txdps.gov/",
+      "technology": "Mobile Driver License (in development)",
+      "techStack": [
+        "ISO 18013-5",
+        "mDL"
+      ],
+      "description": "In development.",
+      "details": [
+        "One mDL per person"
+      ],
+      "nodevice": [
+        "Physical license"
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "value": "Spec"
+        }
+      ],
+      "credentialType": "Platform Wallet",
+      "walletType": "Platform",
+      "credentialFormat": "mDL",
+      "issuedCredentialTypes": [
+        "mDL",
+        "State ID"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Texas DPS",
+          "type": "State",
+          "credentials": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "TSA Airport Security": {
+          "agency": "TSA",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "Passport",
+            "Passport Card",
+            "Global Entry"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License"
+          ]
+        },
+        "Government Services": {
+          "agency": "TX State Agencies",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      },
+      "digitalScore": 50.0,
+      "digitalCount": 1
     },
     {
       "name": "Brazil",
@@ -409,7 +1968,1553 @@
             "CNH Digital"
           ]
         }
-      }
+      },
+      "digitalScore": 40.0,
+      "digitalCount": 2
+    },
+    {
+      "name": "Estonia",
+      "flag": "ee",
+      "region": "eu",
+      "status": "production",
+      "issuanceModel": "multiple",
+      "isSubnational": false,
+      "url": "https://e-estonia.com/",
+      "technology": "PKI-based with multiple credentials + government wallet",
+      "techStack": [
+        "PKI",
+        "X-Road",
+        "Mobile-ID",
+        "Smart-ID",
+        "mRiik"
+      ],
+      "description": "Mandatory since 2002. 99%+ coverage. ID card + Mobile-ID + Smart-ID + mRiik app.",
+      "details": [
+        "ID card + Mobile ID + Smart ID",
+        "X-Road",
+        "e-Residency",
+        "mRiik (mState) app"
+      ],
+      "nodevice": [
+        "Physical cards",
+        "Code card"
+      ],
+      "metrics": [
+        {
+          "label": "Coverage",
+          "value": "99%+"
+        }
+      ],
+      "credentialType": "Bank credentials",
+      "walletType": "Government",
+      "walletTech": "mRiik / Mobile ID / Smart-ID",
+      "credentialFormat": "PKI",
+      "issuedCredentialTypes": [
+        "e-Residency",
+        "ID-kaart",
+        "Digital ID",
+        "Mobile-ID",
+        "Smart-ID"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Police and Border Guard Board",
+          "type": "National",
+          "credentials": [
+            "ID-kaart",
+            "e-Residency"
+          ]
+        },
+        {
+          "name": "Telia / Elisa / Tele2",
+          "type": "Private",
+          "credentials": [
+            "Mobile-ID",
+            "Smart-ID"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Government Services": {
+          "agency": "e-Estonia",
+          "acceptedTypes": [
+            "ID-kaart",
+            "Digital ID",
+            "Mobile-ID",
+            "Smart-ID",
+            "e-Residency"
+          ]
+        },
+        "Banking": {
+          "agency": "Estonian Banks",
+          "acceptedTypes": [
+            "ID-kaart",
+            "Mobile-ID",
+            "Smart-ID"
+          ]
+        },
+        "Healthcare": {
+          "agency": "e-Health",
+          "acceptedTypes": [
+            "ID-kaart",
+            "Digital ID"
+          ]
+        },
+        "Travel (EU)": {
+          "agency": "Border Control",
+          "acceptedTypes": [
+            "ID-kaart",
+            "Passport"
+          ]
+        }
+      },
+      "digitalScore": 40.0,
+      "digitalCount": 2
+    },
+    {
+      "name": "Germany",
+      "flag": "de",
+      "region": "eu",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": false,
+      "url": "https://www.bsi.bund.de/EN/Themen/Oeffentliche-Verwaltung/Elektronische-Identitaeten/Online-Ausweisfunktion/online-ausweisfunktion_node.html",
+      "technology": "NFC-enabled ID card (Online-Ausweisfunktion) + EUDI Wallet in dev",
+      "techStack": [
+        "PKI",
+        "NFC",
+        "eIDAS",
+        "SAML"
+      ],
+      "description": "eID in ID cards since 2010. EUDI Wallet sandbox launched, gradually usable by early 2027.",
+      "details": [
+        "eID function in card",
+        "NFC smartphone",
+        "EUDI Wallet sandbox",
+        "75+ companies in MoU"
+      ],
+      "nodevice": [
+        "Physical card"
+      ],
+      "metrics": [
+        {
+          "label": "eID since",
+          "value": "2010"
+        },
+        {
+          "label": "EUDI",
+          "value": "Early 2027"
+        }
+      ],
+      "credentialType": "PKI-based",
+      "walletType": "Government",
+      "credentialFormat": "PKI",
+      "walletTech": "EUDI Wallet (Bundesdruckerei)",
+      "issuedCredentialTypes": [
+        "Personalausweis",
+        "EUDI Wallet",
+        "Digital Driver License",
+        "Health Card (eGK)",
+        "Passport"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Federal Ministry of Interior",
+          "type": "National",
+          "credentials": [
+            "Personalausweis",
+            "EUDI Wallet",
+            "Passport"
+          ]
+        },
+        {
+          "name": "State Authorities",
+          "type": "State",
+          "credentials": [
+            "Digital Driver License"
+          ]
+        },
+        {
+          "name": "Health Insurance Funds",
+          "type": "Private/Regulated",
+          "credentials": [
+            "Health Card (eGK)"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Government Services": {
+          "agency": "All Government Agencies",
+          "acceptedTypes": [
+            "Personalausweis",
+            "EUDI Wallet",
+            "Digital ID"
+          ]
+        },
+        "Healthcare": {
+          "agency": "Healthcare Providers",
+          "acceptedTypes": [
+            "Health Card (eGK)",
+            "Personalausweis"
+          ]
+        },
+        "Travel (EU)": {
+          "agency": "Border Control / Airlines",
+          "acceptedTypes": [
+            "Personalausweis",
+            "Passport",
+            "Digital Driver License"
+          ]
+        },
+        "Banking": {
+          "agency": "German Banks",
+          "acceptedTypes": [
+            "Personalausweis",
+            "Passport"
+          ]
+        }
+      },
+      "digitalScore": 40.0,
+      "digitalCount": 2
+    },
+    {
+      "name": "Italy",
+      "flag": "it",
+      "region": "eu",
+      "status": "development",
+      "issuanceModel": "single",
+      "isSubnational": false,
+      "url": "https://www.agid.gov.it/en/it-wallet",
+      "technology": "It Wallet (EUDI-compliant)",
+      "techStack": [
+        "eIDAS",
+        "SPID",
+        "OpenID Connect",
+        "Wallet SDK"
+      ],
+      "description": "It Wallet preview launched. Full launch expected 2025-2026 in line with EUDI timeline.",
+      "details": [
+        "It Wallet preview",
+        "SPID existing",
+        "50K pilot users"
+      ],
+      "nodevice": [
+        "Physical ID (SPID)"
+      ],
+      "metrics": [
+        {
+          "label": "Preview",
+          "value": "2024"
+        },
+        {
+          "label": "Full",
+          "value": "2025-26"
+        }
+      ],
+      "credentialType": "Government Wallet (Multi-credential)",
+      "walletType": "Government",
+      "credentialFormat": "Verifiable Credentials",
+      "walletTech": "IT-Wallet",
+      "issuedCredentialTypes": [
+        "SPID",
+        "CIE",
+        "EUDI Wallet",
+        "Health Card (TS)",
+        "Digital Driving License"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "AgID (Digital Italy Agency)",
+          "type": "National",
+          "credentials": [
+            "SPID",
+            "EUDI Wallet"
+          ]
+        },
+        {
+          "name": "Ministry of Interior",
+          "type": "National",
+          "credentials": [
+            "CIE (Carta d'Identit\u00e0 Elettronica)"
+          ]
+        },
+        {
+          "name": "Ministry of Health",
+          "type": "National",
+          "credentials": [
+            "Health Card (TS)"
+          ]
+        },
+        {
+          "name": "Ministry of Transport",
+          "type": "National",
+          "credentials": [
+            "Digital Driving License"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Government Services": {
+          "agency": "AgID / Public Admin",
+          "acceptedTypes": [
+            "SPID",
+            "CIE",
+            "EUDI Wallet"
+          ]
+        },
+        "Healthcare": {
+          "agency": "SSN (National Health Service)",
+          "acceptedTypes": [
+            "Health Card (TS)",
+            "CIE",
+            "SPID"
+          ]
+        },
+        "Travel (Domestic/EU)": {
+          "agency": "Police / Border Control",
+          "acceptedTypes": [
+            "CIE",
+            "Passport",
+            "Digital Driving License"
+          ]
+        },
+        "Banking": {
+          "agency": "Italian Banks",
+          "acceptedTypes": [
+            "SPID",
+            "CIE"
+          ]
+        }
+      },
+      "digitalScore": 40.0,
+      "digitalCount": 2
+    },
+    {
+      "name": "Spain",
+      "flag": "es",
+      "region": "eu",
+      "status": "development",
+      "issuanceModel": "single",
+      "isSubnational": false,
+      "url": "https://clave.gob.es/en/clave",
+      "technology": "Cl@ve + EUDI Wallet",
+      "techStack": [
+        "Cl@ve (OIDC)",
+        "DNIe (PKI)",
+        "EUDI Wallet"
+      ],
+      "description": "Cl@ve system existing. EUDI Wallet in development.",
+      "details": [
+        "Cl@ve system",
+        "EUDI Wallet dev"
+      ],
+      "nodevice": [
+        "Physical DNIe"
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "value": "Dev"
+        }
+      ],
+      "credentialType": "Government Wallet (Multi-credential)",
+      "walletType": "Government",
+      "credentialFormat": "Verifiable Credentials",
+      "walletTech": "CL@VE",
+      "issuedCredentialTypes": [
+        "DNIe",
+        "Cl@ve",
+        "EUDI Wallet",
+        "Health Card",
+        "Digital Driving License"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Ministry of Interior",
+          "type": "National",
+          "credentials": [
+            "DNIe (Documento Nacional de Identidad electr\u00f3nico)"
+          ]
+        },
+        {
+          "name": "Ministry of Digital Affairs",
+          "type": "National",
+          "credentials": [
+            "Cl@ve",
+            "EUDI Wallet"
+          ]
+        },
+        {
+          "name": "Ministry of Health",
+          "type": "National",
+          "credentials": [
+            "Health Card"
+          ]
+        },
+        {
+          "name": "DGT (Traffic Authority)",
+          "type": "National",
+          "credentials": [
+            "Digital Driving License"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Government Services": {
+          "agency": "Administraci\u00f3n Digital",
+          "acceptedTypes": [
+            "DNIe",
+            "Cl@ve",
+            "EUDI Wallet"
+          ]
+        },
+        "Healthcare": {
+          "agency": "SNS (National Health System)",
+          "acceptedTypes": [
+            "Health Card",
+            "DNIe",
+            "Cl@ve"
+          ]
+        },
+        "Travel (Domestic/EU)": {
+          "agency": "Police / Border Control",
+          "acceptedTypes": [
+            "DNIe",
+            "Passport",
+            "Digital Driving License"
+          ]
+        },
+        "Tax Services": {
+          "agency": "Agencia Tributaria",
+          "acceptedTypes": [
+            "Cl@ve",
+            "DNIe",
+            "Digital Certificate"
+          ]
+        }
+      },
+      "digitalScore": 40.0,
+      "digitalCount": 2
+    },
+    {
+      "name": "France",
+      "flag": "fr",
+      "region": "eu",
+      "status": "development",
+      "issuanceModel": "single",
+      "isSubnational": false,
+      "url": "https://france-identite.gouv.fr/",
+      "technology": "France Identit\u00e9 + EUDI Wallet",
+      "techStack": [
+        "France Identit\u00e9",
+        "NFC",
+        "EUDI Wallet"
+      ],
+      "description": "France Identit\u00e9 (digital ID card) exists. EUDI Wallet in development.",
+      "details": [
+        "France Identit\u00e9",
+        "EUDI Wallet dev"
+      ],
+      "nodevice": [
+        "Physical ID card"
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "value": "Dev"
+        }
+      ],
+      "credentialType": "Government Wallet (Multi-credential)",
+      "walletType": "Government",
+      "credentialFormat": "Verifiable Credentials",
+      "walletTech": "France Identit\u00e9",
+      "issuedCredentialTypes": [
+        "FranceConnect",
+        "CNIe",
+        "EUDI Wallet",
+        "Health Card (Carte Vitale)",
+        "Digital Driving License"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "DINUM (Digital Interagency)",
+          "type": "National",
+          "credentials": [
+            "FranceConnect",
+            "EUDI Wallet"
+          ]
+        },
+        {
+          "name": "Ministry of Interior",
+          "type": "National",
+          "credentials": [
+            "CNIe (Carte Nationale d'Identit\u00e9)"
+          ]
+        },
+        {
+          "name": "Assurance Maladie",
+          "type": "National",
+          "credentials": [
+            "Carte Vitale"
+          ]
+        },
+        {
+          "name": "Ministry of Transport",
+          "type": "National",
+          "credentials": [
+            "Digital Driving License"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Government Services": {
+          "agency": "Service-Public.fr",
+          "acceptedTypes": [
+            "FranceConnect",
+            "CNIe",
+            "EUDI Wallet"
+          ]
+        },
+        "Healthcare": {
+          "agency": "Assurance Maladie",
+          "acceptedTypes": [
+            "Carte Vitale",
+            "FranceConnect"
+          ]
+        },
+        "Travel (Domestic/EU)": {
+          "agency": "Police / Border Control",
+          "acceptedTypes": [
+            "CNIe",
+            "Passport",
+            "Digital Driving License"
+          ]
+        },
+        "Tax Services": {
+          "agency": "impots.gouv.fr",
+          "acceptedTypes": [
+            "FranceConnect",
+            "Digital Certificate"
+          ]
+        }
+      },
+      "digitalScore": 40.0,
+      "digitalCount": 2
+    },
+    {
+      "name": "Netherlands",
+      "flag": "nl",
+      "region": "eu",
+      "status": "development",
+      "issuanceModel": "single",
+      "isSubnational": false,
+      "url": "https://www.nldigitalgovernment.nl/overview/identity/id-wallet/",
+      "technology": "EUDI Wallet (Digid upgrade)",
+      "techStack": [
+        "DigID",
+        "OIDC",
+        "EUDI Wallet"
+      ],
+      "description": "DigiD existing. EUDI Wallet expected end 2026.",
+      "details": [
+        "DigiD",
+        "EUDI Wallet 2026"
+      ],
+      "nodevice": [
+        "Physical ID"
+      ],
+      "metrics": [
+        {
+          "label": "EUDI",
+          "value": "End 2026"
+        }
+      ],
+      "credentialType": "Government Wallet (Multi-credential)",
+      "walletType": "Government",
+      "credentialFormat": "Verifiable Credentials",
+      "walletTech": "DigiD / EUDI",
+      "issuedCredentialTypes": [
+        "DigiD",
+        "eHerkenning",
+        "EUDI Wallet",
+        "Digital Driving License",
+        "Health Card"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Logius (Government IT)",
+          "type": "National",
+          "credentials": [
+            "DigiD",
+            "eHerkenning"
+          ]
+        },
+        {
+          "name": "Ministry of Interior",
+          "type": "National",
+          "credentials": [
+            "EUDI Wallet",
+            "National ID"
+          ]
+        },
+        {
+          "name": "RDW (Vehicle Authority)",
+          "type": "National",
+          "credentials": [
+            "Digital Driving License"
+          ]
+        },
+        {
+          "name": "Zorgverzekeraars",
+          "type": "Private/Regulated",
+          "credentials": [
+            "Health Card"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Government Services": {
+          "agency": "Overheid.nl",
+          "acceptedTypes": [
+            "DigiD",
+            "eHerkenning",
+            "EUDI Wallet"
+          ]
+        },
+        "Business Services": {
+          "agency": "KVK / Government",
+          "acceptedTypes": [
+            "eHerkenning",
+            "EUDI Wallet"
+          ]
+        },
+        "Healthcare": {
+          "agency": "Healthcare Providers",
+          "acceptedTypes": [
+            "Health Card",
+            "DigiD"
+          ]
+        },
+        "Travel": {
+          "agency": "Border Control / Police",
+          "acceptedTypes": [
+            "National ID",
+            "Passport",
+            "Digital Driving License"
+          ]
+        }
+      },
+      "digitalScore": 40.0,
+      "digitalCount": 2
+    },
+    {
+      "name": "Australia",
+      "flag": "au",
+      "region": "apac",
+      "status": "production",
+      "issuanceModel": "cloud",
+      "isSubnational": false,
+      "url": "https://www.myid.gov.au/",
+      "technology": "Cloud-native federated identity (myID)",
+      "techStack": [
+        "OIDC",
+        "FIDO2",
+        "Facial verification"
+      ],
+      "description": "Federal system. Voluntary myID for 76+ services. Cloud-based. States have additional programs.",
+      "details": [
+        "myID app",
+        "Identity strength levels (Basic/Standard/High)",
+        "Facial verification",
+        "76+ services as of Jan 2025"
+      ],
+      "nodevice": [
+        "myGov service centres",
+        "In-person proofing with passport/ID"
+      ],
+      "metrics": [
+        {
+          "label": "Services",
+          "value": "76+"
+        }
+      ],
+      "credentialType": "Government Wallet",
+      "walletType": "Browser/Cloud",
+      "credentialFormat": "OIDC",
+      "walletTech": "myID",
+      "issuedCredentialTypes": [
+        "Digital ID (myGovID)",
+        "Passport",
+        "Proof of Age Card"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "ATO (myGovID)",
+          "type": "National",
+          "credentials": [
+            "myGovID"
+          ]
+        },
+        {
+          "name": "State/Territory Transport Authorities",
+          "type": "State",
+          "credentials": [
+            "Physical Driver License",
+            "Proof of Age Card"
+          ]
+        },
+        {
+          "name": "DFAT",
+          "type": "National",
+          "credentials": [
+            "Passport"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Federal Government Services": {
+          "agency": "myGov / Services Australia",
+          "acceptedTypes": [
+            "myGovID",
+            "Physical Driver License",
+            "Passport"
+          ]
+        },
+        "Tax Services": {
+          "agency": "ATO",
+          "acceptedTypes": [
+            "myGovID"
+          ]
+        },
+        "Healthcare": {
+          "agency": "Medicare",
+          "acceptedTypes": [
+            "Medicare Card",
+            "myGovID"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "Physical Driver License",
+            "Proof of Age Card",
+            "Passport"
+          ]
+        },
+        "Travel (Domestic)": {
+          "agency": "Airlines / TSA equivalent",
+          "acceptedTypes": [
+            "Physical Driver License",
+            "Passport"
+          ]
+        }
+      },
+      "digitalScore": 33.3,
+      "digitalCount": 1
+    },
+    {
+      "name": "Alberta",
+      "flag": "ca",
+      "region": "na",
+      "status": "development",
+      "issuanceModel": "single",
+      "isSubnational": true,
+      "parent": "Canada",
+      "url": "https://account.alberta.ca/",
+      "technology": "Digital wallet + mobile health credential",
+      "techStack": [
+        "Verifiable Credentials",
+        "Health credential"
+      ],
+      "description": "Launching digital wallet with health card. New combined plastic card in 2025.",
+      "details": [
+        "Alberta Wallet app",
+        "Mobile health credential",
+        "Combined ID card 2025"
+      ],
+      "nodevice": [
+        "In-person registry"
+      ],
+      "metrics": [
+        {
+          "label": "Launch",
+          "value": "2025"
+        }
+      ],
+      "credentialType": "Government Wallet",
+      "walletType": "Government",
+      "credentialFormat": "Verifiable Credentials",
+      "walletTech": " Alberta Wallet App",
+      "issuedCredentialTypes": [
+        "Alberta eID",
+        "Driver License",
+        "Provincial ID"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Service Alberta",
+          "type": "Provincial",
+          "credentials": [
+            "Alberta eID",
+            "Provincial ID"
+          ]
+        },
+        {
+          "name": "Alberta Transportation",
+          "type": "Provincial",
+          "credentials": [
+            "Driver License"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Provincial Government Services": {
+          "agency": "Alberta Government",
+          "acceptedTypes": [
+            "Alberta eID",
+            "Driver License",
+            "Provincial ID"
+          ]
+        },
+        "Federal Services": {
+          "agency": "Government of Canada",
+          "acceptedTypes": [
+            "Driver License",
+            "Provincial ID",
+            "Passport"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "Driver License",
+            "Provincial ID",
+            "Passport"
+          ]
+        }
+      },
+      "digitalScore": 33.3,
+      "digitalCount": 1
+    },
+    {
+      "name": "Ontario",
+      "flag": "ca",
+      "region": "na",
+      "status": "development",
+      "issuanceModel": "single",
+      "isSubnational": true,
+      "parent": "Canada",
+      "url": "https://www.ontario.ca/page/digital-ontario",
+      "technology": "Digital ID program (on hold) + third-party app",
+      "techStack": [
+        "TBD",
+        "eID-Me"
+      ],
+      "description": "Digital ID program halted in 2024. eID-Me (Bluink) available as third-party option.",
+      "details": [
+        "Program on hold",
+        "Wallet for DL + health card planned",
+        "eID-Me available"
+      ],
+      "nodevice": [
+        "Physical ID"
+      ],
+      "metrics": [
+        {
+          "label": "Status",
+          "value": "On Hold"
+        }
+      ],
+      "credentialType": "OIDC-style authentication",
+      "walletType": "Platform",
+      "walletTech": "eID-Me (Bluink)",
+      "credentialFormat": "OIDC",
+      "issuedCredentialTypes": [
+        "ONeID",
+        "Driver License",
+        "Photo Card"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "ServiceOntario",
+          "type": "Provincial",
+          "credentials": [
+            "ONeID",
+            "Driver License",
+            "Photo Card"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Provincial Government Services": {
+          "agency": "Ontario Government",
+          "acceptedTypes": [
+            "ONeID",
+            "Driver License",
+            "Photo Card"
+          ]
+        },
+        "Federal Services": {
+          "agency": "Government of Canada",
+          "acceptedTypes": [
+            "Driver License",
+            "Photo Card",
+            "Passport"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "Driver License",
+            "Photo Card",
+            "Passport"
+          ]
+        }
+      },
+      "digitalScore": 33.3,
+      "digitalCount": 1
+    },
+    {
+      "name": "New York",
+      "flag": "us",
+      "region": "na",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": true,
+      "parent": "United States",
+      "url": "https://dmv.ny.gov/",
+      "technology": "Mobile Driver License",
+      "techStack": [
+        "ISO 18013-5",
+        "mDL",
+        "Apple/Google Wallet"
+      ],
+      "description": "200K+ enrollments March 2025.",
+      "details": [
+        "One mDL per person"
+      ],
+      "nodevice": [
+        "Physical license"
+      ],
+      "metrics": [
+        {
+          "label": "Enrolled",
+          "value": "200K+"
+        }
+      ],
+      "credentialType": "Platform Wallet",
+      "walletType": "Platform",
+      "credentialFormat": "mDL",
+      "walletTech": "NY MiD App",
+      "issuedCredentialTypes": [
+        "mDL",
+        "State ID",
+        "Enhanced ID"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "NY DMV",
+          "type": "State",
+          "credentials": [
+            "mDL",
+            "Physical Driver License",
+            "State ID",
+            "Enhanced ID"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "TSA Airport Security": {
+          "agency": "TSA",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "Enhanced ID",
+            "Passport",
+            "Passport Card",
+            "Global Entry"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License"
+          ]
+        },
+        "Border Crossing (Land/Sea)": {
+          "agency": "CBP",
+          "acceptedTypes": [
+            "Enhanced ID",
+            "Passport",
+            "Passport Card"
+          ]
+        },
+        "Government Services": {
+          "agency": "NY State Agencies",
+          "acceptedTypes": [
+            "mDL",
+            "Physical Driver License",
+            "State ID"
+          ]
+        }
+      },
+      "digitalScore": 33.3,
+      "digitalCount": 1
+    },
+    {
+      "name": "Israel",
+      "flag": "il",
+      "region": "me",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": false,
+      "url": "https://en.wikipedia.org/wiki/Israeli_identity_card",
+      "technology": "Biometric smart cards + government portal",
+      "techStack": [
+        "Biometric smart card",
+        "PKI",
+        "Government portal"
+      ],
+      "description": "Teudat Zehut (ID card) mandatory. Digital services via gov.il portal.",
+      "details": [
+        "One per person (mandatory)",
+        "Biometric ID card",
+        "Gov.il digital services"
+      ],
+      "nodevice": [
+        "Physical ID card"
+      ],
+      "metrics": [
+        {
+          "label": "Card",
+          "value": "Mandatory"
+        }
+      ],
+      "credentialType": "PKI-based",
+      "walletType": "Government",
+      "walletTech": "Gov.ID / Teudat Zehut App",
+      "credentialFormat": "PKI",
+      "issuedCredentialTypes": [
+        "Teudat Zehut",
+        "Digital ID",
+        "Driver License",
+        "Passport"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Ministry of Interior",
+          "type": "National",
+          "credentials": [
+            "Teudat Zehut",
+            "Digital ID",
+            "Passport"
+          ]
+        },
+        {
+          "name": "Ministry of Transport",
+          "type": "National",
+          "credentials": [
+            "Driver License"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Government Services": {
+          "agency": "All Government Agencies",
+          "acceptedTypes": [
+            "Teudat Zehut",
+            "Digital ID"
+          ]
+        },
+        "Banking": {
+          "agency": "Israeli Banks",
+          "acceptedTypes": [
+            "Teudat Zehut",
+            "Digital ID",
+            "Driver License"
+          ]
+        },
+        "Healthcare": {
+          "agency": "Kupat Holim",
+          "acceptedTypes": [
+            "Teudat Zehut",
+            "Digital ID"
+          ]
+        },
+        "Travel": {
+          "agency": "Border Control / Airlines",
+          "acceptedTypes": [
+            "Teudat Zehut",
+            "Passport",
+            "Driver License"
+          ]
+        }
+      },
+      "digitalScore": 25.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "Malaysia",
+      "flag": "my",
+      "region": "apac",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": false,
+      "url": "https://www.digitalid.my/",
+      "technology": "PKI-based with centralized registration",
+      "techStack": [
+        "PKI",
+        "FIDO2",
+        "MyKad integration"
+      ],
+      "description": "Targeting 15M users by end 2025. Mandatory for telcos from Dec 2025, government services from 2026.",
+      "details": [
+        "One per person",
+        "Mobile app",
+        "FIDO2 support",
+        "Required for telco apps Dec 2025"
+      ],
+      "nodevice": [
+        "Government kiosks",
+        "Face-to-face verification"
+      ],
+      "metrics": [
+        {
+          "label": "Target",
+          "value": "15M"
+        },
+        {
+          "label": "Mandate",
+          "value": "2026"
+        }
+      ],
+      "credentialType": "PKI-based",
+      "walletType": "Government",
+      "walletTech": "MyDigital ID / MyDigital ID Superapp",
+      "credentialFormat": "PKI",
+      "issuedCredentialTypes": [
+        "MyKad",
+        "MyDigital ID",
+        "Passport",
+        "Driver License"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "JPN (National Registration)",
+          "type": "National",
+          "credentials": [
+            "MyKad",
+            "MyDigital ID",
+            "Passport"
+          ]
+        },
+        {
+          "name": "JPJ (Road Transport)",
+          "type": "National",
+          "credentials": [
+            "Driver License"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Government Services": {
+          "agency": "All Government Agencies",
+          "acceptedTypes": [
+            "MyKad",
+            "MyDigital ID"
+          ]
+        },
+        "Banking": {
+          "agency": "Malaysian Banks",
+          "acceptedTypes": [
+            "MyKad",
+            "MyDigital ID"
+          ]
+        },
+        "Travel": {
+          "agency": "Immigration / Airlines",
+          "acceptedTypes": [
+            "MyKad",
+            "Passport",
+            "Driver License"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "MyKad",
+            "Driver License"
+          ]
+        }
+      },
+      "digitalScore": 25.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "Oman",
+      "flag": "om",
+      "region": "me",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": false,
+      "url": "https://gov.om/en/w/digital-identity-service-from-rop",
+      "technology": "PKI smart cards + digital wallet app",
+      "techStack": [
+        "PKI",
+        "Smart card",
+        "Facial recognition",
+        "QR codes"
+      ],
+      "description": "PKI smart cards. Tawahul program 94%. Digital wallet app since Sep 2025.",
+      "details": [
+        "One per person",
+        "PKI card",
+        "Digital wallet app",
+        "Facial biometrics"
+      ],
+      "nodevice": [
+        "Physical card"
+      ],
+      "metrics": [
+        {
+          "label": "Program",
+          "value": "Tawahul"
+        }
+      ],
+      "credentialType": "PKI-based",
+      "walletType": "Government",
+      "walletTech": "Digital Identity Service (ROP)",
+      "credentialFormat": "PKI",
+      "issuedCredentialTypes": [
+        "National ID",
+        "Digital ID",
+        "Passport",
+        "Driver License"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Ministry of Interior",
+          "type": "National",
+          "credentials": [
+            "National ID",
+            "Digital ID",
+            "Passport"
+          ]
+        },
+        {
+          "name": "Royal Oman Police",
+          "type": "National",
+          "credentials": [
+            "Driver License"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Government Services": {
+          "agency": "All Government Agencies",
+          "acceptedTypes": [
+            "National ID",
+            "Digital ID"
+          ]
+        },
+        "Banking": {
+          "agency": "Omani Banks",
+          "acceptedTypes": [
+            "National ID",
+            "Digital ID"
+          ]
+        },
+        "Travel": {
+          "agency": "Immigration / Airlines",
+          "acceptedTypes": [
+            "National ID",
+            "Passport"
+          ]
+        }
+      },
+      "digitalScore": 25.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "Qatar",
+      "flag": "qa",
+      "region": "me",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": false,
+      "url": "https://www.mcit.gov.qa/en/services/national-authentication-service/",
+      "technology": "Multiple sector systems + digital wallet",
+      "techStack": [
+        "National Authentication System",
+        "Sector-specific credentials",
+        "Digital wallet",
+        "QR codes"
+      ],
+      "description": "QDI app for digital wallet. Stores passport, ID card, national address, driving license.",
+      "details": [
+        "One per person",
+        "Digital wallet app",
+        "Healthcare"
+      ],
+      "nodevice": [
+        "Physical documents"
+      ],
+      "metrics": [
+        {
+          "label": "Services",
+          "value": "Healthcare"
+        }
+      ],
+      "credentialType": "OIDC-style authentication",
+      "walletType": "Government",
+      "walletTech": "QDI (Qatar Digital Identity)",
+      "credentialFormat": "OIDC",
+      "issuedCredentialTypes": [
+        "Qatar ID",
+        "Digital ID",
+        "Passport",
+        "Driver License"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Ministry of Interior",
+          "type": "National",
+          "credentials": [
+            "Qatar ID",
+            "Digital ID",
+            "Passport"
+          ]
+        },
+        {
+          "name": "Traffic Department",
+          "type": "National",
+          "credentials": [
+            "Driver License"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Government Services": {
+          "agency": "All Government Agencies",
+          "acceptedTypes": [
+            "Qatar ID",
+            "Digital ID"
+          ]
+        },
+        "Banking": {
+          "agency": "Qatari Banks",
+          "acceptedTypes": [
+            "Qatar ID",
+            "Digital ID"
+          ]
+        },
+        "Travel": {
+          "agency": "Immigration / Airlines",
+          "acceptedTypes": [
+            "Qatar ID",
+            "Passport"
+          ]
+        }
+      },
+      "digitalScore": 25.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "Singapore",
+      "flag": "sg",
+      "region": "apac",
+      "status": "production",
+      "issuanceModel": "cloud",
+      "isSubnational": false,
+      "url": "https://www.singpass.gov.sg/",
+      "technology": "Cloud-native with MyInfo",
+      "techStack": [
+        "OIDC",
+        "MyInfo",
+        "SingPass app",
+        "QR login"
+      ],
+      "description": "5M+ users, 2,700 services across 800+ agencies.",
+      "details": [
+        "One account",
+        "Multi-device",
+        "MyInfo",
+        "Digital IC"
+      ],
+      "nodevice": [
+        "QR (feature phones)"
+      ],
+      "metrics": [
+        {
+          "label": "Users",
+          "value": "5M+"
+        },
+        {
+          "label": "Services",
+          "value": "2,700"
+        }
+      ],
+      "credentialType": "Government Wallet",
+      "walletType": "Browser/Cloud",
+      "credentialFormat": "OIDC",
+      "walletTech": "SingPass App",
+      "issuedCredentialTypes": [
+        "Singpass",
+        "NRIC",
+        "Digital Identity",
+        "Passport"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "GovTech",
+          "type": "National",
+          "credentials": [
+            "Singpass",
+            "Digital Identity"
+          ]
+        },
+        {
+          "name": "ICA",
+          "type": "National",
+          "credentials": [
+            "NRIC",
+            "Passport"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Government Services": {
+          "agency": "All Government Agencies",
+          "acceptedTypes": [
+            "Singpass",
+            "NRIC",
+            "Digital Identity"
+          ]
+        },
+        "Banking": {
+          "agency": "Singapore Banks",
+          "acceptedTypes": [
+            "Singpass",
+            "NRIC",
+            "Passport"
+          ]
+        },
+        "Healthcare": {
+          "agency": "MOH / Healthcare Providers",
+          "acceptedTypes": [
+            "Singpass",
+            "NRIC"
+          ]
+        },
+        "Travel": {
+          "agency": "ICA / Airlines",
+          "acceptedTypes": [
+            "NRIC",
+            "Passport",
+            "Digital Identity"
+          ]
+        }
+      },
+      "digitalScore": 25.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "United Arab Emirates",
+      "flag": "ae",
+      "region": "me",
+      "status": "production",
+      "issuanceModel": "single",
+      "isSubnational": false,
+      "url": "https://www.uaepass.ae/",
+      "technology": "Cloud-based centralized + platform wallet",
+      "techStack": [
+        "UAE Pass app",
+        "Emirates ID integration",
+        "Biometric",
+        "Apple Wallet / Google Wallet"
+      ],
+      "description": "12K+ services. One per person linked to Emirates ID. Available in Apple Wallet.",
+      "details": [
+        "One UAE Pass",
+        "Linked to Emirates ID",
+        "Apple Wallet support"
+      ],
+      "nodevice": [
+        "Emirates ID card"
+      ],
+      "metrics": [
+        {
+          "label": "Services",
+          "value": "12K+"
+        }
+      ],
+      "credentialType": "OIDC-style authentication",
+      "walletType": "Platform",
+      "walletTech": "UAE Pass / Apple Wallet",
+      "credentialFormat": "Biometric",
+      "issuedCredentialTypes": [
+        "Emirates ID",
+        "Digital ID (UAE Pass)",
+        "Passport",
+        "Driver License"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Federal Authority for Identity",
+          "type": "National",
+          "credentials": [
+            "Emirates ID",
+            "Digital ID (UAE Pass)"
+          ]
+        },
+        {
+          "name": "Ministry of Interior",
+          "type": "National",
+          "credentials": [
+            "Passport"
+          ]
+        },
+        {
+          "name": "RTA / Traffic Departments",
+          "type": "Emirate-level",
+          "credentials": [
+            "Driver License"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Government Services": {
+          "agency": "All Government Agencies",
+          "acceptedTypes": [
+            "Emirates ID",
+            "Digital ID (UAE Pass)"
+          ]
+        },
+        "Banking": {
+          "agency": "UAE Banks",
+          "acceptedTypes": [
+            "Emirates ID",
+            "Digital ID (UAE Pass)"
+          ]
+        },
+        "Travel": {
+          "agency": "Immigration / Airlines",
+          "acceptedTypes": [
+            "Emirates ID",
+            "Passport"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "Emirates ID",
+            "Driver License"
+          ]
+        }
+      },
+      "digitalScore": 25.0,
+      "digitalCount": 1
     },
     {
       "name": "China",
@@ -515,269 +3620,67 @@
             "Resident Identity Card"
           ]
         }
-      }
+      },
+      "digitalScore": 20.0,
+      "digitalCount": 1
     },
     {
-      "name": "Estonia",
-      "flag": "ee",
-      "region": "eu",
-      "status": "production",
-      "issuanceModel": "multiple",
-      "isSubnational": false,
-      "url": "https://e-estonia.com/",
-      "technology": "PKI-based with multiple credentials + government wallet",
-      "techStack": [
-        "PKI",
-        "X-Road",
-        "Mobile-ID",
-        "Smart-ID",
-        "mRiik"
-      ],
-      "description": "Mandatory since 2002. 99%+ coverage. ID card + Mobile-ID + Smart-ID + mRiik app.",
-      "details": [
-        "ID card + Mobile ID + Smart ID",
-        "X-Road",
-        "e-Residency",
-        "mRiik (mState) app"
-      ],
-      "nodevice": [
-        "Physical cards",
-        "Code card"
-      ],
-      "metrics": [
-        {
-          "label": "Coverage",
-          "value": "99%+"
-        }
-      ],
-      "credentialType": "Bank credentials",
-      "walletType": "Government",
-      "walletTech": "mRiik / Mobile ID / Smart-ID",
-      "credentialFormat": "PKI",
-      "issuedCredentialTypes": [
-        "e-Residency",
-        "ID-kaart",
-        "Digital ID",
-        "Mobile-ID",
-        "Smart-ID"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Police and Border Guard Board",
-          "type": "National",
-          "credentials": [
-            "ID-kaart",
-            "e-Residency"
-          ]
-        },
-        {
-          "name": "Telia / Elisa / Tele2",
-          "type": "Private",
-          "credentials": [
-            "Mobile-ID",
-            "Smart-ID"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Government Services": {
-          "agency": "e-Estonia",
-          "acceptedTypes": [
-            "ID-kaart",
-            "Digital ID",
-            "Mobile-ID",
-            "Smart-ID",
-            "e-Residency"
-          ]
-        },
-        "Banking": {
-          "agency": "Estonian Banks",
-          "acceptedTypes": [
-            "ID-kaart",
-            "Mobile-ID",
-            "Smart-ID"
-          ]
-        },
-        "Healthcare": {
-          "agency": "e-Health",
-          "acceptedTypes": [
-            "ID-kaart",
-            "Digital ID"
-          ]
-        },
-        "Travel (EU)": {
-          "agency": "Border Control",
-          "acceptedTypes": [
-            "ID-kaart",
-            "Passport"
-          ]
-        }
-      }
-    },
-    {
-      "name": "European Union",
-      "flag": "eu",
-      "region": "eu",
+      "name": "Saudi Arabia",
+      "flag": "sa",
+      "region": "me",
       "status": "development",
-      "issuanceModel": "wallet",
-      "isSubnational": false,
-      "url": "https://commission.europa.eu/topics/digital-economy-and-society/european-digital-identity_en",
-      "technology": "EUDI Wallet (eIDAS 2.0) - framework + 27 national wallets",
-      "techStack": [
-        "eIDAS 2.0",
-        "OpenID4VP",
-        "ISO 18013-5",
-        "W3C Verifiable Credentials"
-      ],
-      "description": "Regulation mandates all 27 member states to issue EUDI Wallets by end 2026. One wallet can hold credentials from multiple issuers (government, banks, universities).",
-      "details": [
-        "User-controlled wallet",
-        "ISO 18013-5 mDL compatible",
-        "350+ orgs in pilots",
-        "2nd wave pilots 2025"
-      ],
-      "nodevice": [
-        "Physical ID cards"
-      ],
-      "metrics": [
-        {
-          "label": "Members",
-          "value": "27"
-        },
-        {
-          "label": "Deadline",
-          "value": "Dec 2026"
-        }
-      ],
-      "credentialType": "Government Wallet (Multi-credential)",
-      "walletType": "Government",
-      "credentialFormat": "Verifiable Credentials",
-      "walletTech": "EUDI Wallet SDK",
-      "issuedCredentialTypes": [
-        "EUDI Wallet",
-        "National eIDs",
-        "Digital Driving License",
-        "Health Credentials",
-        "Professional Credentials"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "EU Commission (eIDAS 2.0)",
-          "type": "Supranational",
-          "credentials": [
-            "EUDI Wallet Framework"
-          ]
-        },
-        {
-          "name": "Member State Authorities",
-          "type": "National",
-          "credentials": [
-            "National eIDs",
-            "Digital Driving License",
-            "Health Credentials"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Cross-Border Government Services": {
-          "agency": "EU Member States",
-          "acceptedTypes": [
-            "EUDI Wallet",
-            "National eIDs"
-          ]
-        },
-        "Healthcare (Cross-Border)": {
-          "agency": "EU Health Systems",
-          "acceptedTypes": [
-            "EHIC",
-            "EUDI Health Credentials"
-          ]
-        },
-        "Professional Recognition": {
-          "agency": "EU Professional Bodies",
-          "acceptedTypes": [
-            "Professional Credentials",
-            "EUDI Wallet"
-          ]
-        },
-        "Travel (Schengen)": {
-          "agency": "Border Control",
-          "acceptedTypes": [
-            "National ID",
-            "Passport",
-            "EUDI Wallet (future)"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Germany",
-      "flag": "de",
-      "region": "eu",
-      "status": "production",
       "issuanceModel": "single",
       "isSubnational": false,
-      "url": "https://www.bsi.bund.de/EN/Themen/Oeffentliche-Verwaltung/Elektronische-Identitaeten/Online-Ausweisfunktion/online-ausweisfunktion_node.html",
-      "technology": "NFC-enabled ID card (Online-Ausweisfunktion) + EUDI Wallet in dev",
+      "url": "https://sdaia.gov.sa/",
+      "technology": "Framework established + digital wallet app",
       "techStack": [
-        "PKI",
-        "NFC",
-        "eIDAS",
-        "SAML"
+        "Nafath",
+        "National database",
+        "Verification API",
+        "Tawakkalna super app"
       ],
-      "description": "eID in ID cards since 2010. EUDI Wallet sandbox launched, gradually usable by early 2027.",
+      "description": "SDAIA framework launched. Digital ID law 2026. Nafath + Tawakkalna super app.",
       "details": [
-        "eID function in card",
-        "NFC smartphone",
-        "EUDI Wallet sandbox",
-        "75+ companies in MoU"
+        "SDAIA framework",
+        "Nafath verification",
+        "Tawakkalna (10M+ users)"
       ],
       "nodevice": [
-        "Physical card"
+        "Physical ID"
       ],
       "metrics": [
         {
-          "label": "eID since",
-          "value": "2010"
-        },
-        {
-          "label": "EUDI",
-          "value": "Early 2027"
+          "label": "Framework",
+          "value": "Active"
         }
       ],
-      "credentialType": "PKI-based",
+      "credentialType": "OIDC-style authentication",
       "walletType": "Government",
-      "credentialFormat": "PKI",
-      "walletTech": "EUDI Wallet (Bundesdruckerei)",
+      "walletTech": "Nafath / Tawakkalna",
+      "credentialFormat": "OIDC",
       "issuedCredentialTypes": [
-        "Personalausweis",
-        "EUDI Wallet",
-        "Digital Driver License",
-        "Health Card (eGK)",
-        "Passport"
+        "National ID",
+        "Absher Digital ID",
+        "Passport",
+        "Driver License",
+        "Iqama"
       ],
       "issuingAuthorities": [
         {
-          "name": "Federal Ministry of Interior",
+          "name": "Ministry of Interior",
           "type": "National",
           "credentials": [
-            "Personalausweis",
-            "EUDI Wallet",
-            "Passport"
+            "National ID",
+            "Absher Digital ID",
+            "Passport",
+            "Iqama"
           ]
         },
         {
-          "name": "State Authorities",
-          "type": "State",
+          "name": "Traffic Police",
+          "type": "National",
           "credentials": [
-            "Digital Driver License"
-          ]
-        },
-        {
-          "name": "Health Insurance Funds",
-          "type": "Private/Regulated",
-          "credentials": [
-            "Health Card (eGK)"
+            "Driver License"
           ]
         }
       ],
@@ -785,34 +3688,122 @@
         "Government Services": {
           "agency": "All Government Agencies",
           "acceptedTypes": [
-            "Personalausweis",
-            "EUDI Wallet",
+            "National ID",
+            "Absher Digital ID",
+            "Iqama"
+          ]
+        },
+        "Banking": {
+          "agency": "Saudi Banks",
+          "acceptedTypes": [
+            "National ID",
+            "Absher Digital ID",
+            "Iqama"
+          ]
+        },
+        "Travel": {
+          "agency": "Immigration / Airlines",
+          "acceptedTypes": [
+            "National ID",
+            "Passport",
+            "Iqama"
+          ]
+        }
+      },
+      "digitalScore": 20.0,
+      "digitalCount": 1
+    },
+    {
+      "name": "Taiwan",
+      "flag": "tw",
+      "region": "apac",
+      "status": "development",
+      "issuanceModel": "single",
+      "isSubnational": false,
+      "url": "https://civictech.moda.gov.tw/en/what-is-the-taiwan-digital-identity-wallet/",
+      "technology": "Wallet architecture",
+      "techStack": [
+        "Wallet app",
+        "T-Flow",
+        "Mobile credential"
+      ],
+      "description": "Prototype revealed March 2025. Target launch end 2026.",
+      "details": [
+        "One per person",
+        "Digital wallet",
+        "Prototype revealed"
+      ],
+      "nodevice": [
+        "Physical cards"
+      ],
+      "metrics": [
+        {
+          "label": "Target",
+          "value": "End 2026"
+        }
+      ],
+      "credentialType": "OIDC-style authentication",
+      "walletType": "Government",
+      "credentialFormat": "Verifiable Credentials",
+      "walletTech": "TW DIW (MODA)",
+      "issuedCredentialTypes": [
+        "National ID",
+        "Digital ID",
+        "Passport",
+        "Driver License",
+        "Health Card"
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "National Immigration Agency",
+          "type": "National",
+          "credentials": [
+            "National ID",
+            "Digital ID",
+            "Passport"
+          ]
+        },
+        {
+          "name": "Ministry of Transportation",
+          "type": "National",
+          "credentials": [
+            "Driver License"
+          ]
+        },
+        {
+          "name": "Ministry of Health",
+          "type": "National",
+          "credentials": [
+            "Health Card"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Government Services": {
+          "agency": "All Government Agencies",
+          "acceptedTypes": [
+            "National ID",
             "Digital ID"
           ]
         },
         "Healthcare": {
-          "agency": "Healthcare Providers",
+          "agency": "NHI / Healthcare Providers",
           "acceptedTypes": [
-            "Health Card (eGK)",
-            "Personalausweis"
+            "Health Card",
+            "National ID"
           ]
         },
-        "Travel (EU)": {
-          "agency": "Border Control / Airlines",
+        "Travel": {
+          "agency": "Immigration / Airlines",
           "acceptedTypes": [
-            "Personalausweis",
+            "National ID",
             "Passport",
-            "Digital Driver License"
-          ]
-        },
-        "Banking": {
-          "agency": "German Banks",
-          "acceptedTypes": [
-            "Personalausweis",
-            "Passport"
+            "Driver License"
           ]
         }
-      }
+      },
+      "digitalScore": 20.0,
+      "digitalCount": 1
     },
     {
       "name": "India",
@@ -952,97 +3943,9 @@
             "Aadhaar"
           ]
         }
-      }
-    },
-    {
-      "name": "Israel",
-      "flag": "il",
-      "region": "me",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": false,
-      "url": "https://en.wikipedia.org/wiki/Israeli_identity_card",
-      "technology": "Biometric smart cards + government portal",
-      "techStack": [
-        "Biometric smart card",
-        "PKI",
-        "Government portal"
-      ],
-      "description": "Teudat Zehut (ID card) mandatory. Digital services via gov.il portal.",
-      "details": [
-        "One per person (mandatory)",
-        "Biometric ID card",
-        "Gov.il digital services"
-      ],
-      "nodevice": [
-        "Physical ID card"
-      ],
-      "metrics": [
-        {
-          "label": "Card",
-          "value": "Mandatory"
-        }
-      ],
-      "credentialType": "PKI-based",
-      "walletType": "Government",
-      "walletTech": "Gov.ID / Teudat Zehut App",
-      "credentialFormat": "PKI",
-      "issuedCredentialTypes": [
-        "Teudat Zehut",
-        "Digital ID",
-        "Driver License",
-        "Passport"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Ministry of Interior",
-          "type": "National",
-          "credentials": [
-            "Teudat Zehut",
-            "Digital ID",
-            "Passport"
-          ]
-        },
-        {
-          "name": "Ministry of Transport",
-          "type": "National",
-          "credentials": [
-            "Driver License"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Government Services": {
-          "agency": "All Government Agencies",
-          "acceptedTypes": [
-            "Teudat Zehut",
-            "Digital ID"
-          ]
-        },
-        "Banking": {
-          "agency": "Israeli Banks",
-          "acceptedTypes": [
-            "Teudat Zehut",
-            "Digital ID",
-            "Driver License"
-          ]
-        },
-        "Healthcare": {
-          "agency": "Kupat Holim",
-          "acceptedTypes": [
-            "Teudat Zehut",
-            "Digital ID"
-          ]
-        },
-        "Travel": {
-          "agency": "Border Control / Airlines",
-          "acceptedTypes": [
-            "Teudat Zehut",
-            "Passport",
-            "Driver License"
-          ]
-        }
-      }
+      },
+      "digitalScore": 0.0,
+      "digitalCount": 0
     },
     {
       "name": "Kenya",
@@ -1145,102 +4048,9 @@
             "Passport"
           ]
         }
-      }
-    },
-    {
-      "name": "Malaysia",
-      "flag": "my",
-      "region": "apac",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": false,
-      "url": "https://www.digitalid.my/",
-      "technology": "PKI-based with centralized registration",
-      "techStack": [
-        "PKI",
-        "FIDO2",
-        "MyKad integration"
-      ],
-      "description": "Targeting 15M users by end 2025. Mandatory for telcos from Dec 2025, government services from 2026.",
-      "details": [
-        "One per person",
-        "Mobile app",
-        "FIDO2 support",
-        "Required for telco apps Dec 2025"
-      ],
-      "nodevice": [
-        "Government kiosks",
-        "Face-to-face verification"
-      ],
-      "metrics": [
-        {
-          "label": "Target",
-          "value": "15M"
-        },
-        {
-          "label": "Mandate",
-          "value": "2026"
-        }
-      ],
-      "credentialType": "PKI-based",
-      "walletType": "Government",
-      "walletTech": "MyDigital ID / MyDigital ID Superapp",
-      "credentialFormat": "PKI",
-      "issuedCredentialTypes": [
-        "MyKad",
-        "MyDigital ID",
-        "Passport",
-        "Driver License"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "JPN (National Registration)",
-          "type": "National",
-          "credentials": [
-            "MyKad",
-            "MyDigital ID",
-            "Passport"
-          ]
-        },
-        {
-          "name": "JPJ (Road Transport)",
-          "type": "National",
-          "credentials": [
-            "Driver License"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Government Services": {
-          "agency": "All Government Agencies",
-          "acceptedTypes": [
-            "MyKad",
-            "MyDigital ID"
-          ]
-        },
-        "Banking": {
-          "agency": "Malaysian Banks",
-          "acceptedTypes": [
-            "MyKad",
-            "MyDigital ID"
-          ]
-        },
-        "Travel": {
-          "agency": "Immigration / Airlines",
-          "acceptedTypes": [
-            "MyKad",
-            "Passport",
-            "Driver License"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "MyKad",
-            "Driver License"
-          ]
-        }
-      }
+      },
+      "digitalScore": 0.0,
+      "digitalCount": 0
     },
     {
       "name": "Nigeria",
@@ -1355,1284 +4165,9 @@
             "Voter's Card"
           ]
         }
-      }
-    },
-    {
-      "name": "Oman",
-      "flag": "om",
-      "region": "me",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": false,
-      "url": "https://gov.om/en/w/digital-identity-service-from-rop",
-      "technology": "PKI smart cards + digital wallet app",
-      "techStack": [
-        "PKI",
-        "Smart card",
-        "Facial recognition",
-        "QR codes"
-      ],
-      "description": "PKI smart cards. Tawahul program 94%. Digital wallet app since Sep 2025.",
-      "details": [
-        "One per person",
-        "PKI card",
-        "Digital wallet app",
-        "Facial biometrics"
-      ],
-      "nodevice": [
-        "Physical card"
-      ],
-      "metrics": [
-        {
-          "label": "Program",
-          "value": "Tawahul"
-        }
-      ],
-      "credentialType": "PKI-based",
-      "walletType": "Government",
-      "walletTech": "Digital Identity Service (ROP)",
-      "credentialFormat": "PKI",
-      "issuedCredentialTypes": [
-        "National ID",
-        "Digital ID",
-        "Passport",
-        "Driver License"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Ministry of Interior",
-          "type": "National",
-          "credentials": [
-            "National ID",
-            "Digital ID",
-            "Passport"
-          ]
-        },
-        {
-          "name": "Royal Oman Police",
-          "type": "National",
-          "credentials": [
-            "Driver License"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Government Services": {
-          "agency": "All Government Agencies",
-          "acceptedTypes": [
-            "National ID",
-            "Digital ID"
-          ]
-        },
-        "Banking": {
-          "agency": "Omani Banks",
-          "acceptedTypes": [
-            "National ID",
-            "Digital ID"
-          ]
-        },
-        "Travel": {
-          "agency": "Immigration / Airlines",
-          "acceptedTypes": [
-            "National ID",
-            "Passport"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Qatar",
-      "flag": "qa",
-      "region": "me",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": false,
-      "url": "https://www.mcit.gov.qa/en/services/national-authentication-service/",
-      "technology": "Multiple sector systems + digital wallet",
-      "techStack": [
-        "National Authentication System",
-        "Sector-specific credentials",
-        "Digital wallet",
-        "QR codes"
-      ],
-      "description": "QDI app for digital wallet. Stores passport, ID card, national address, driving license.",
-      "details": [
-        "One per person",
-        "Digital wallet app",
-        "Healthcare"
-      ],
-      "nodevice": [
-        "Physical documents"
-      ],
-      "metrics": [
-        {
-          "label": "Services",
-          "value": "Healthcare"
-        }
-      ],
-      "credentialType": "OIDC-style authentication",
-      "walletType": "Government",
-      "walletTech": "QDI (Qatar Digital Identity)",
-      "credentialFormat": "OIDC",
-      "issuedCredentialTypes": [
-        "Qatar ID",
-        "Digital ID",
-        "Passport",
-        "Driver License"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Ministry of Interior",
-          "type": "National",
-          "credentials": [
-            "Qatar ID",
-            "Digital ID",
-            "Passport"
-          ]
-        },
-        {
-          "name": "Traffic Department",
-          "type": "National",
-          "credentials": [
-            "Driver License"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Government Services": {
-          "agency": "All Government Agencies",
-          "acceptedTypes": [
-            "Qatar ID",
-            "Digital ID"
-          ]
-        },
-        "Banking": {
-          "agency": "Qatari Banks",
-          "acceptedTypes": [
-            "Qatar ID",
-            "Digital ID"
-          ]
-        },
-        "Travel": {
-          "agency": "Immigration / Airlines",
-          "acceptedTypes": [
-            "Qatar ID",
-            "Passport"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Saudi Arabia",
-      "flag": "sa",
-      "region": "me",
-      "status": "development",
-      "issuanceModel": "single",
-      "isSubnational": false,
-      "url": "https://sdaia.gov.sa/",
-      "technology": "Framework established + digital wallet app",
-      "techStack": [
-        "Nafath",
-        "National database",
-        "Verification API",
-        "Tawakkalna super app"
-      ],
-      "description": "SDAIA framework launched. Digital ID law 2026. Nafath + Tawakkalna super app.",
-      "details": [
-        "SDAIA framework",
-        "Nafath verification",
-        "Tawakkalna (10M+ users)"
-      ],
-      "nodevice": [
-        "Physical ID"
-      ],
-      "metrics": [
-        {
-          "label": "Framework",
-          "value": "Active"
-        }
-      ],
-      "credentialType": "OIDC-style authentication",
-      "walletType": "Government",
-      "walletTech": "Nafath / Tawakkalna",
-      "credentialFormat": "OIDC",
-      "issuedCredentialTypes": [
-        "National ID",
-        "Absher Digital ID",
-        "Passport",
-        "Driver License",
-        "Iqama"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Ministry of Interior",
-          "type": "National",
-          "credentials": [
-            "National ID",
-            "Absher Digital ID",
-            "Passport",
-            "Iqama"
-          ]
-        },
-        {
-          "name": "Traffic Police",
-          "type": "National",
-          "credentials": [
-            "Driver License"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Government Services": {
-          "agency": "All Government Agencies",
-          "acceptedTypes": [
-            "National ID",
-            "Absher Digital ID",
-            "Iqama"
-          ]
-        },
-        "Banking": {
-          "agency": "Saudi Banks",
-          "acceptedTypes": [
-            "National ID",
-            "Absher Digital ID",
-            "Iqama"
-          ]
-        },
-        "Travel": {
-          "agency": "Immigration / Airlines",
-          "acceptedTypes": [
-            "National ID",
-            "Passport",
-            "Iqama"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Singapore",
-      "flag": "sg",
-      "region": "apac",
-      "status": "production",
-      "issuanceModel": "cloud",
-      "isSubnational": false,
-      "url": "https://www.singpass.gov.sg/",
-      "technology": "Cloud-native with MyInfo",
-      "techStack": [
-        "OIDC",
-        "MyInfo",
-        "SingPass app",
-        "QR login"
-      ],
-      "description": "5M+ users, 2,700 services across 800+ agencies.",
-      "details": [
-        "One account",
-        "Multi-device",
-        "MyInfo",
-        "Digital IC"
-      ],
-      "nodevice": [
-        "QR (feature phones)"
-      ],
-      "metrics": [
-        {
-          "label": "Users",
-          "value": "5M+"
-        },
-        {
-          "label": "Services",
-          "value": "2,700"
-        }
-      ],
-      "credentialType": "Government Wallet",
-      "walletType": "Browser/Cloud",
-      "credentialFormat": "OIDC",
-      "walletTech": "SingPass App",
-      "issuedCredentialTypes": [
-        "Singpass",
-        "NRIC",
-        "Digital Identity",
-        "Passport"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "GovTech",
-          "type": "National",
-          "credentials": [
-            "Singpass",
-            "Digital Identity"
-          ]
-        },
-        {
-          "name": "ICA",
-          "type": "National",
-          "credentials": [
-            "NRIC",
-            "Passport"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Government Services": {
-          "agency": "All Government Agencies",
-          "acceptedTypes": [
-            "Singpass",
-            "NRIC",
-            "Digital Identity"
-          ]
-        },
-        "Banking": {
-          "agency": "Singapore Banks",
-          "acceptedTypes": [
-            "Singpass",
-            "NRIC",
-            "Passport"
-          ]
-        },
-        "Healthcare": {
-          "agency": "MOH / Healthcare Providers",
-          "acceptedTypes": [
-            "Singpass",
-            "NRIC"
-          ]
-        },
-        "Travel": {
-          "agency": "ICA / Airlines",
-          "acceptedTypes": [
-            "NRIC",
-            "Passport",
-            "Digital Identity"
-          ]
-        }
-      }
-    },
-    {
-      "name": "South Korea",
-      "flag": "kr",
-      "region": "apac",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": false,
-      "url": "https://www.gov.kr/",
-      "technology": "Mobile-based certificates + platform wallets",
-      "techStack": [
-        "Mobile certificate",
-        "Public certificate",
-        "App-based",
-        "Samsung Wallet"
-      ],
-      "description": "Nationwide rollout March 2025. PASS app + Samsung Wallet integration.",
-      "details": [
-        "One per person",
-        "Mobile app",
-        "Certificate auth",
-        "Samsung Wallet (15+ banks)"
-      ],
-      "nodevice": [
-        "Physical ID cards"
-      ],
-      "metrics": [
-        {
-          "label": "Launch",
-          "value": "Mar 2025"
-        }
-      ],
-      "credentialType": "Mobile Certificate",
-      "walletType": "Platform",
-      "walletTech": "PASS / Samsung Wallet",
-      "credentialFormat": "Certificate",
-      "issuedCredentialTypes": [
-        "PASS Mobile ID",
-        "Resident Registration Card",
-        "Digital Driver License",
-        "Passport"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Ministry of Interior",
-          "type": "National",
-          "credentials": [
-            "PASS Mobile ID",
-            "Resident Registration Card"
-          ]
-        },
-        {
-          "name": "Korea Road Traffic Authority",
-          "type": "National",
-          "credentials": [
-            "Digital Driver License"
-          ]
-        },
-        {
-          "name": "Ministry of Foreign Affairs",
-          "type": "National",
-          "credentials": [
-            "Passport"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Government Services": {
-          "agency": "All Government Agencies",
-          "acceptedTypes": [
-            "PASS Mobile ID",
-            "Resident Registration Card"
-          ]
-        },
-        "Banking": {
-          "agency": "Korean Banks",
-          "acceptedTypes": [
-            "PASS Mobile ID",
-            "Resident Registration Card",
-            "Digital Driver License"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "PASS Mobile ID",
-            "Digital Driver License",
-            "Resident Registration Card"
-          ]
-        },
-        "Travel": {
-          "agency": "Immigration / Airlines",
-          "acceptedTypes": [
-            "Resident Registration Card",
-            "Passport",
-            "Digital Driver License"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Sweden",
-      "flag": "se",
-      "region": "eu",
-      "status": "production",
-      "issuanceModel": "multiple",
-      "isSubnational": false,
-      "url": "https://www.bankid.com/en/",
-      "technology": "Bank-issued PKI certificates + private wallet apps",
-      "techStack": [
-        "PKI",
-        "BankID",
-        "Mobile app",
-        "Browser plugin",
-        "Freja eID"
-      ],
-      "description": "94% of smartphone users. 7.6B transactions in 2024. Multiple BankIDs from different banks.",
-      "details": [
-        "Multiple BankIDs per person",
-        "Cross-platform (mobile/desktop)",
-        "Bank-issued",
-        "7.6B uses in 2024",
-        "Freja eID alternative"
-      ],
-      "nodevice": [
-        "Physical ID cards (passport/ID card)"
-      ],
-      "metrics": [
-        {
-          "label": "Users",
-          "value": "94% smartphone"
-        },
-        {
-          "label": "Uses 2024",
-          "value": "7.6B"
-        }
-      ],
-      "credentialType": "Bank credentials",
-      "walletType": "Platform",
-      "walletTech": "BankID / Freja eID",
-      "credentialFormat": "PKI",
-      "issuedCredentialTypes": [
-        "BankID",
-        "Freja eID",
-        "EUDI Wallet",
-        "Health Card",
-        "Digital Driving License"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Swedish Banks",
-          "type": "Private",
-          "credentials": [
-            "BankID"
-          ]
-        },
-        {
-          "name": "Freja eID AB",
-          "type": "Private",
-          "credentials": [
-            "Freja eID"
-          ]
-        },
-        {
-          "name": "Bolagsverket / DIGG",
-          "type": "National",
-          "credentials": [
-            "EUDI Wallet"
-          ]
-        },
-        {
-          "name": "Transportstyrelsen",
-          "type": "National",
-          "credentials": [
-            "Digital Driving License"
-          ]
-        },
-        {
-          "name": "1177 / Healthcare",
-          "type": "Regional",
-          "credentials": [
-            "Health Card"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Government Services": {
-          "agency": "e-legitimation",
-          "acceptedTypes": [
-            "BankID",
-            "Freja eID",
-            "EUDI Wallet"
-          ]
-        },
-        "Banking": {
-          "agency": "Swedish Banks",
-          "acceptedTypes": [
-            "BankID"
-          ]
-        },
-        "Healthcare": {
-          "agency": "1177 / Regional Councils",
-          "acceptedTypes": [
-            "BankID",
-            "Freja eID",
-            "Health Card"
-          ]
-        },
-        "Travel": {
-          "agency": "Border Control / Police",
-          "acceptedTypes": [
-            "National ID",
-            "Passport",
-            "Digital Driving License"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Italy",
-      "flag": "it",
-      "region": "eu",
-      "status": "development",
-      "issuanceModel": "single",
-      "isSubnational": false,
-      "url": "https://www.agid.gov.it/en/it-wallet",
-      "technology": "It Wallet (EUDI-compliant)",
-      "techStack": [
-        "eIDAS",
-        "SPID",
-        "OpenID Connect",
-        "Wallet SDK"
-      ],
-      "description": "It Wallet preview launched. Full launch expected 2025-2026 in line with EUDI timeline.",
-      "details": [
-        "It Wallet preview",
-        "SPID existing",
-        "50K pilot users"
-      ],
-      "nodevice": [
-        "Physical ID (SPID)"
-      ],
-      "metrics": [
-        {
-          "label": "Preview",
-          "value": "2024"
-        },
-        {
-          "label": "Full",
-          "value": "2025-26"
-        }
-      ],
-      "credentialType": "Government Wallet (Multi-credential)",
-      "walletType": "Government",
-      "credentialFormat": "Verifiable Credentials",
-      "walletTech": "IT-Wallet",
-      "issuedCredentialTypes": [
-        "SPID",
-        "CIE",
-        "EUDI Wallet",
-        "Health Card (TS)",
-        "Digital Driving License"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "AgID (Digital Italy Agency)",
-          "type": "National",
-          "credentials": [
-            "SPID",
-            "EUDI Wallet"
-          ]
-        },
-        {
-          "name": "Ministry of Interior",
-          "type": "National",
-          "credentials": [
-            "CIE (Carta d'Identit\u00e0 Elettronica)"
-          ]
-        },
-        {
-          "name": "Ministry of Health",
-          "type": "National",
-          "credentials": [
-            "Health Card (TS)"
-          ]
-        },
-        {
-          "name": "Ministry of Transport",
-          "type": "National",
-          "credentials": [
-            "Digital Driving License"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Government Services": {
-          "agency": "AgID / Public Admin",
-          "acceptedTypes": [
-            "SPID",
-            "CIE",
-            "EUDI Wallet"
-          ]
-        },
-        "Healthcare": {
-          "agency": "SSN (National Health Service)",
-          "acceptedTypes": [
-            "Health Card (TS)",
-            "CIE",
-            "SPID"
-          ]
-        },
-        "Travel (Domestic/EU)": {
-          "agency": "Police / Border Control",
-          "acceptedTypes": [
-            "CIE",
-            "Passport",
-            "Digital Driving License"
-          ]
-        },
-        "Banking": {
-          "agency": "Italian Banks",
-          "acceptedTypes": [
-            "SPID",
-            "CIE"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Spain",
-      "flag": "es",
-      "region": "eu",
-      "status": "development",
-      "issuanceModel": "single",
-      "isSubnational": false,
-      "url": "https://clave.gob.es/en/clave",
-      "technology": "Cl@ve + EUDI Wallet",
-      "techStack": [
-        "Cl@ve (OIDC)",
-        "DNIe (PKI)",
-        "EUDI Wallet"
-      ],
-      "description": "Cl@ve system existing. EUDI Wallet in development.",
-      "details": [
-        "Cl@ve system",
-        "EUDI Wallet dev"
-      ],
-      "nodevice": [
-        "Physical DNIe"
-      ],
-      "metrics": [
-        {
-          "label": "Status",
-          "value": "Dev"
-        }
-      ],
-      "credentialType": "Government Wallet (Multi-credential)",
-      "walletType": "Government",
-      "credentialFormat": "Verifiable Credentials",
-      "walletTech": "CL@VE",
-      "issuedCredentialTypes": [
-        "DNIe",
-        "Cl@ve",
-        "EUDI Wallet",
-        "Health Card",
-        "Digital Driving License"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Ministry of Interior",
-          "type": "National",
-          "credentials": [
-            "DNIe (Documento Nacional de Identidad electr\u00f3nico)"
-          ]
-        },
-        {
-          "name": "Ministry of Digital Affairs",
-          "type": "National",
-          "credentials": [
-            "Cl@ve",
-            "EUDI Wallet"
-          ]
-        },
-        {
-          "name": "Ministry of Health",
-          "type": "National",
-          "credentials": [
-            "Health Card"
-          ]
-        },
-        {
-          "name": "DGT (Traffic Authority)",
-          "type": "National",
-          "credentials": [
-            "Digital Driving License"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Government Services": {
-          "agency": "Administraci\u00f3n Digital",
-          "acceptedTypes": [
-            "DNIe",
-            "Cl@ve",
-            "EUDI Wallet"
-          ]
-        },
-        "Healthcare": {
-          "agency": "SNS (National Health System)",
-          "acceptedTypes": [
-            "Health Card",
-            "DNIe",
-            "Cl@ve"
-          ]
-        },
-        "Travel (Domestic/EU)": {
-          "agency": "Police / Border Control",
-          "acceptedTypes": [
-            "DNIe",
-            "Passport",
-            "Digital Driving License"
-          ]
-        },
-        "Tax Services": {
-          "agency": "Agencia Tributaria",
-          "acceptedTypes": [
-            "Cl@ve",
-            "DNIe",
-            "Digital Certificate"
-          ]
-        }
-      }
-    },
-    {
-      "name": "France",
-      "flag": "fr",
-      "region": "eu",
-      "status": "development",
-      "issuanceModel": "single",
-      "isSubnational": false,
-      "url": "https://france-identite.gouv.fr/",
-      "technology": "France Identit\u00e9 + EUDI Wallet",
-      "techStack": [
-        "France Identit\u00e9",
-        "NFC",
-        "EUDI Wallet"
-      ],
-      "description": "France Identit\u00e9 (digital ID card) exists. EUDI Wallet in development.",
-      "details": [
-        "France Identit\u00e9",
-        "EUDI Wallet dev"
-      ],
-      "nodevice": [
-        "Physical ID card"
-      ],
-      "metrics": [
-        {
-          "label": "Status",
-          "value": "Dev"
-        }
-      ],
-      "credentialType": "Government Wallet (Multi-credential)",
-      "walletType": "Government",
-      "credentialFormat": "Verifiable Credentials",
-      "walletTech": "France Identit\u00e9",
-      "issuedCredentialTypes": [
-        "FranceConnect",
-        "CNIe",
-        "EUDI Wallet",
-        "Health Card (Carte Vitale)",
-        "Digital Driving License"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "DINUM (Digital Interagency)",
-          "type": "National",
-          "credentials": [
-            "FranceConnect",
-            "EUDI Wallet"
-          ]
-        },
-        {
-          "name": "Ministry of Interior",
-          "type": "National",
-          "credentials": [
-            "CNIe (Carte Nationale d'Identit\u00e9)"
-          ]
-        },
-        {
-          "name": "Assurance Maladie",
-          "type": "National",
-          "credentials": [
-            "Carte Vitale"
-          ]
-        },
-        {
-          "name": "Ministry of Transport",
-          "type": "National",
-          "credentials": [
-            "Digital Driving License"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Government Services": {
-          "agency": "Service-Public.fr",
-          "acceptedTypes": [
-            "FranceConnect",
-            "CNIe",
-            "EUDI Wallet"
-          ]
-        },
-        "Healthcare": {
-          "agency": "Assurance Maladie",
-          "acceptedTypes": [
-            "Carte Vitale",
-            "FranceConnect"
-          ]
-        },
-        "Travel (Domestic/EU)": {
-          "agency": "Police / Border Control",
-          "acceptedTypes": [
-            "CNIe",
-            "Passport",
-            "Digital Driving License"
-          ]
-        },
-        "Tax Services": {
-          "agency": "impots.gouv.fr",
-          "acceptedTypes": [
-            "FranceConnect",
-            "Digital Certificate"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Netherlands",
-      "flag": "nl",
-      "region": "eu",
-      "status": "development",
-      "issuanceModel": "single",
-      "isSubnational": false,
-      "url": "https://www.nldigitalgovernment.nl/overview/identity/id-wallet/",
-      "technology": "EUDI Wallet (Digid upgrade)",
-      "techStack": [
-        "DigID",
-        "OIDC",
-        "EUDI Wallet"
-      ],
-      "description": "DigiD existing. EUDI Wallet expected end 2026.",
-      "details": [
-        "DigiD",
-        "EUDI Wallet 2026"
-      ],
-      "nodevice": [
-        "Physical ID"
-      ],
-      "metrics": [
-        {
-          "label": "EUDI",
-          "value": "End 2026"
-        }
-      ],
-      "credentialType": "Government Wallet (Multi-credential)",
-      "walletType": "Government",
-      "credentialFormat": "Verifiable Credentials",
-      "walletTech": "DigiD / EUDI",
-      "issuedCredentialTypes": [
-        "DigiD",
-        "eHerkenning",
-        "EUDI Wallet",
-        "Digital Driving License",
-        "Health Card"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Logius (Government IT)",
-          "type": "National",
-          "credentials": [
-            "DigiD",
-            "eHerkenning"
-          ]
-        },
-        {
-          "name": "Ministry of Interior",
-          "type": "National",
-          "credentials": [
-            "EUDI Wallet",
-            "National ID"
-          ]
-        },
-        {
-          "name": "RDW (Vehicle Authority)",
-          "type": "National",
-          "credentials": [
-            "Digital Driving License"
-          ]
-        },
-        {
-          "name": "Zorgverzekeraars",
-          "type": "Private/Regulated",
-          "credentials": [
-            "Health Card"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Government Services": {
-          "agency": "Overheid.nl",
-          "acceptedTypes": [
-            "DigiD",
-            "eHerkenning",
-            "EUDI Wallet"
-          ]
-        },
-        "Business Services": {
-          "agency": "KVK / Government",
-          "acceptedTypes": [
-            "eHerkenning",
-            "EUDI Wallet"
-          ]
-        },
-        "Healthcare": {
-          "agency": "Healthcare Providers",
-          "acceptedTypes": [
-            "Health Card",
-            "DigiD"
-          ]
-        },
-        "Travel": {
-          "agency": "Border Control / Police",
-          "acceptedTypes": [
-            "National ID",
-            "Passport",
-            "Digital Driving License"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Portugal",
-      "flag": "pt",
-      "region": "eu",
-      "status": "development",
-      "issuanceModel": "single",
-      "isSubnational": false,
-      "url": "https://www2.gov.pt/en/temas/cidadania-e-documentos/cartao-de-cidadao",
-      "technology": "EUDI Wallet + eID",
-      "techStack": [
-        "eID card",
-        "Authentication",
-        "EUDI Wallet"
-      ],
-      "description": "One of first to launch EUDI Wallet pilot. Target 2025-2026.",
-      "details": [
-        "EUDI pilot",
-        "eID card"
-      ],
-      "nodevice": [
-        "Physical eID"
-      ],
-      "metrics": [
-        {
-          "label": "Target",
-          "value": "2025-26"
-        }
-      ],
-      "credentialType": "Government Wallet (Multi-credential)",
-      "walletType": "Government",
-      "credentialFormat": "Verifiable Credentials",
-      "walletTech": "PT Wallet",
-      "issuedCredentialTypes": [
-        "Chave M\u00f3vel Digital",
-        "Cart\u00e3o de Cidad\u00e3o",
-        "EUDI Wallet",
-        "Health Card",
-        "Digital Driving License"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "AMA (Agency for Modernization)",
-          "type": "National",
-          "credentials": [
-            "Chave M\u00f3vel Digital",
-            "EUDI Wallet"
-          ]
-        },
-        {
-          "name": "IRN (Records & Notaries)",
-          "type": "National",
-          "credentials": [
-            "Cart\u00e3o de Cidad\u00e3o"
-          ]
-        },
-        {
-          "name": "SNS (Health Service)",
-          "type": "National",
-          "credentials": [
-            "Health Card"
-          ]
-        },
-        {
-          "name": "IMT (Transport Institute)",
-          "type": "National",
-          "credentials": [
-            "Digital Driving License"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Government Services": {
-          "agency": "ePortugal",
-          "acceptedTypes": [
-            "Chave M\u00f3vel Digital",
-            "Cart\u00e3o de Cidad\u00e3o",
-            "EUDI Wallet"
-          ]
-        },
-        "Healthcare": {
-          "agency": "SNS",
-          "acceptedTypes": [
-            "Health Card",
-            "Cart\u00e3o de Cidad\u00e3o",
-            "Chave M\u00f3vel Digital"
-          ]
-        },
-        "Travel": {
-          "agency": "SEF / Border Control",
-          "acceptedTypes": [
-            "Cart\u00e3o de Cidad\u00e3o",
-            "Passport",
-            "Digital Driving License"
-          ]
-        },
-        "Banking": {
-          "agency": "Portuguese Banks",
-          "acceptedTypes": [
-            "Chave M\u00f3vel Digital",
-            "Cart\u00e3o de Cidad\u00e3o"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Taiwan",
-      "flag": "tw",
-      "region": "apac",
-      "status": "development",
-      "issuanceModel": "single",
-      "isSubnational": false,
-      "url": "https://civictech.moda.gov.tw/en/what-is-the-taiwan-digital-identity-wallet/",
-      "technology": "Wallet architecture",
-      "techStack": [
-        "Wallet app",
-        "T-Flow",
-        "Mobile credential"
-      ],
-      "description": "Prototype revealed March 2025. Target launch end 2026.",
-      "details": [
-        "One per person",
-        "Digital wallet",
-        "Prototype revealed"
-      ],
-      "nodevice": [
-        "Physical cards"
-      ],
-      "metrics": [
-        {
-          "label": "Target",
-          "value": "End 2026"
-        }
-      ],
-      "credentialType": "OIDC-style authentication",
-      "walletType": "Government",
-      "credentialFormat": "Verifiable Credentials",
-      "walletTech": "TW DIW (MODA)",
-      "issuedCredentialTypes": [
-        "National ID",
-        "Digital ID",
-        "Passport",
-        "Driver License",
-        "Health Card"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "National Immigration Agency",
-          "type": "National",
-          "credentials": [
-            "National ID",
-            "Digital ID",
-            "Passport"
-          ]
-        },
-        {
-          "name": "Ministry of Transportation",
-          "type": "National",
-          "credentials": [
-            "Driver License"
-          ]
-        },
-        {
-          "name": "Ministry of Health",
-          "type": "National",
-          "credentials": [
-            "Health Card"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Government Services": {
-          "agency": "All Government Agencies",
-          "acceptedTypes": [
-            "National ID",
-            "Digital ID"
-          ]
-        },
-        "Healthcare": {
-          "agency": "NHI / Healthcare Providers",
-          "acceptedTypes": [
-            "Health Card",
-            "National ID"
-          ]
-        },
-        "Travel": {
-          "agency": "Immigration / Airlines",
-          "acceptedTypes": [
-            "National ID",
-            "Passport",
-            "Driver License"
-          ]
-        }
-      }
-    },
-    {
-      "name": "United Arab Emirates",
-      "flag": "ae",
-      "region": "me",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": false,
-      "url": "https://www.uaepass.ae/",
-      "technology": "Cloud-based centralized + platform wallet",
-      "techStack": [
-        "UAE Pass app",
-        "Emirates ID integration",
-        "Biometric",
-        "Apple Wallet / Google Wallet"
-      ],
-      "description": "12K+ services. One per person linked to Emirates ID. Available in Apple Wallet.",
-      "details": [
-        "One UAE Pass",
-        "Linked to Emirates ID",
-        "Apple Wallet support"
-      ],
-      "nodevice": [
-        "Emirates ID card"
-      ],
-      "metrics": [
-        {
-          "label": "Services",
-          "value": "12K+"
-        }
-      ],
-      "credentialType": "OIDC-style authentication",
-      "walletType": "Platform",
-      "walletTech": "UAE Pass / Apple Wallet",
-      "credentialFormat": "Biometric",
-      "issuedCredentialTypes": [
-        "Emirates ID",
-        "Digital ID (UAE Pass)",
-        "Passport",
-        "Driver License"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Federal Authority for Identity",
-          "type": "National",
-          "credentials": [
-            "Emirates ID",
-            "Digital ID (UAE Pass)"
-          ]
-        },
-        {
-          "name": "Ministry of Interior",
-          "type": "National",
-          "credentials": [
-            "Passport"
-          ]
-        },
-        {
-          "name": "RTA / Traffic Departments",
-          "type": "Emirate-level",
-          "credentials": [
-            "Driver License"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Government Services": {
-          "agency": "All Government Agencies",
-          "acceptedTypes": [
-            "Emirates ID",
-            "Digital ID (UAE Pass)"
-          ]
-        },
-        "Banking": {
-          "agency": "UAE Banks",
-          "acceptedTypes": [
-            "Emirates ID",
-            "Digital ID (UAE Pass)"
-          ]
-        },
-        "Travel": {
-          "agency": "Immigration / Airlines",
-          "acceptedTypes": [
-            "Emirates ID",
-            "Passport"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "Emirates ID",
-            "Driver License"
-          ]
-        }
-      }
+      },
+      "digitalScore": 0.0,
+      "digitalCount": 0
     },
     {
       "name": "United Kingdom",
@@ -2670,7 +4205,6 @@
       "walletTech": "GOV.UK One Login",
       "issuedCredentialTypes": [
         "UK One Login",
-        "Physical Passport",
         "Driving License",
         "Biometric Residence Permit"
       ],
@@ -2734,7 +4268,9 @@
             "PASS cards"
           ]
         }
-      }
+      },
+      "digitalScore": 0.0,
+      "digitalCount": 0
     },
     {
       "name": "British Columbia",
@@ -2776,7 +4312,6 @@
       "walletTech": "Credo.js",
       "issuedCredentialTypes": [
         "BC Services Card",
-        "Physical Driver License",
         "BCID"
       ],
       "issuingAuthorities": [
@@ -2828,165 +4363,9 @@
             "Passport"
           ]
         }
-      }
-    },
-    {
-      "name": "Alberta",
-      "flag": "ca",
-      "region": "na",
-      "status": "development",
-      "issuanceModel": "single",
-      "isSubnational": true,
-      "parent": "Canada",
-      "url": "https://account.alberta.ca/",
-      "technology": "Digital wallet + mobile health credential",
-      "techStack": [
-        "Verifiable Credentials",
-        "Health credential"
-      ],
-      "description": "Launching digital wallet with health card. New combined plastic card in 2025.",
-      "details": [
-        "Alberta Wallet app",
-        "Mobile health credential",
-        "Combined ID card 2025"
-      ],
-      "nodevice": [
-        "In-person registry"
-      ],
-      "metrics": [
-        {
-          "label": "Launch",
-          "value": "2025"
-        }
-      ],
-      "credentialType": "Government Wallet",
-      "walletType": "Government",
-      "credentialFormat": "Verifiable Credentials",
-      "walletTech": " Alberta Wallet App",
-      "issuedCredentialTypes": [
-        "Alberta eID",
-        "Driver License",
-        "Provincial ID"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Service Alberta",
-          "type": "Provincial",
-          "credentials": [
-            "Alberta eID",
-            "Provincial ID"
-          ]
-        },
-        {
-          "name": "Alberta Transportation",
-          "type": "Provincial",
-          "credentials": [
-            "Driver License"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Provincial Government Services": {
-          "agency": "Alberta Government",
-          "acceptedTypes": [
-            "Alberta eID",
-            "Driver License",
-            "Provincial ID"
-          ]
-        },
-        "Federal Services": {
-          "agency": "Government of Canada",
-          "acceptedTypes": [
-            "Driver License",
-            "Provincial ID",
-            "Passport"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "Driver License",
-            "Provincial ID",
-            "Passport"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Ontario",
-      "flag": "ca",
-      "region": "na",
-      "status": "development",
-      "issuanceModel": "single",
-      "isSubnational": true,
-      "parent": "Canada",
-      "url": "https://www.ontario.ca/page/digital-ontario",
-      "technology": "Digital ID program (on hold) + third-party app",
-      "techStack": [
-        "TBD",
-        "eID-Me"
-      ],
-      "description": "Digital ID program halted in 2024. eID-Me (Bluink) available as third-party option.",
-      "details": [
-        "Program on hold",
-        "Wallet for DL + health card planned",
-        "eID-Me available"
-      ],
-      "nodevice": [
-        "Physical ID"
-      ],
-      "metrics": [
-        {
-          "label": "Status",
-          "value": "On Hold"
-        }
-      ],
-      "credentialType": "OIDC-style authentication",
-      "walletType": "Platform",
-      "walletTech": "eID-Me (Bluink)",
-      "credentialFormat": "OIDC",
-      "issuedCredentialTypes": [
-        "ONeID",
-        "Driver License",
-        "Photo Card"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "ServiceOntario",
-          "type": "Provincial",
-          "credentials": [
-            "ONeID",
-            "Driver License",
-            "Photo Card"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "Provincial Government Services": {
-          "agency": "Ontario Government",
-          "acceptedTypes": [
-            "ONeID",
-            "Driver License",
-            "Photo Card"
-          ]
-        },
-        "Federal Services": {
-          "agency": "Government of Canada",
-          "acceptedTypes": [
-            "Driver License",
-            "Photo Card",
-            "Passport"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "Driver License",
-            "Photo Card",
-            "Passport"
-          ]
-        }
-      }
+      },
+      "digitalScore": 0.0,
+      "digitalCount": 0
     },
     {
       "name": "Quebec",
@@ -3023,7 +4402,6 @@
       "walletTech": "eID-Me (Bluink)",
       "issuedCredentialTypes": [
         "RAMQ Card",
-        "Physical Driver License",
         "Provincial ID"
       ],
       "issuingAuthorities": [
@@ -3074,7 +4452,9 @@
             "Passport"
           ]
         }
-      }
+      },
+      "digitalScore": 0.0,
+      "digitalCount": 0
     },
     {
       "name": "Manitoba",
@@ -3147,7 +4527,9 @@
             "Passport"
           ]
         }
-      }
+      },
+      "digitalScore": 0.0,
+      "digitalCount": 0
     },
     {
       "name": "Saskatchewan",
@@ -3220,1312 +4602,9 @@
             "Passport"
           ]
         }
-      }
-    },
-    {
-      "name": "New South Wales",
-      "flag": "au",
-      "region": "apac",
-      "status": "development",
-      "issuanceModel": "cloud",
-      "isSubnational": true,
-      "parent": "Australia",
-      "url": "https://www.service.nsw.gov.au/services/nsw-digital-id",
-      "technology": "Digital ID pilot program",
-      "techStack": [
-        "OIDC",
-        "Digital ID",
-        "Photo card"
-      ],
-      "description": "Pilot program testing digital identity. Digital photo card for 16-21 launch March 2026.",
-      "details": [
-        "Pilot program",
-        "Digital photo card 2026"
-      ],
-      "nodevice": [
-        "Service NSW centres"
-      ],
-      "metrics": [
-        {
-          "label": "Status",
-          "value": "Pilot"
-        }
-      ],
-      "credentialType": "Government Wallet",
-      "walletType": "Browser/Cloud",
-      "credentialFormat": "OIDC",
-      "walletTech": "Service NSW",
-      "issuedCredentialTypes": [
-        "Digital Driver License",
-        "Physical Driver License",
-        "Proof of Age Card"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Service NSW",
-          "type": "State",
-          "credentials": [
-            "Digital Driver License",
-            "Physical Driver License",
-            "Proof of Age Card"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "State Government Services": {
-          "agency": "NSW Government",
-          "acceptedTypes": [
-            "Digital Driver License",
-            "Physical Driver License"
-          ]
-        },
-        "Federal Services": {
-          "agency": "Australian Government",
-          "acceptedTypes": [
-            "Digital Driver License",
-            "Physical Driver License",
-            "Passport",
-            "myGovID"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "Digital Driver License",
-            "Physical Driver License",
-            "Proof of Age Card"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Victoria",
-      "flag": "au",
-      "region": "apac",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": true,
-      "parent": "Australia",
-      "url": "https://www.vic.gov.au/do-more-go-digital-driver-licence-service-victoria",
-      "technology": "Digital driver licence via ServiceVic/myVicRoads",
-      "techStack": [
-        "Digital license",
-        "ServiceVic app"
-      ],
-      "description": "Digital driver licence available via myVicRoads and ServiceVic apps. Full licence holders.",
-      "details": [
-        "Digital driver licence",
-        "myVicRoads app",
-        "ServiceVic app"
-      ],
-      "nodevice": [
-        "Physical licence"
-      ],
-      "metrics": [
-        {
-          "label": "Status",
-          "value": "Live"
-        }
-      ],
-      "credentialType": "Government Wallet",
-      "walletType": "Government",
-      "credentialFormat": "Verifiable Credentials",
-      "walletTech": "myVicRoads / ServiceVic",
-      "issuedCredentialTypes": [
-        "Digital Driver License",
-        "Physical Driver License",
-        "Proof of Age Card"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Service Victoria",
-          "type": "State",
-          "credentials": [
-            "Digital Driver License",
-            "Physical Driver License",
-            "Proof of Age Card"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "State Government Services": {
-          "agency": "Victoria Government",
-          "acceptedTypes": [
-            "Digital Driver License",
-            "Physical Driver License"
-          ]
-        },
-        "Federal Services": {
-          "agency": "Australian Government",
-          "acceptedTypes": [
-            "Digital Driver License",
-            "Physical Driver License",
-            "Passport",
-            "myGovID"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "Digital Driver License",
-            "Physical Driver License",
-            "Proof of Age Card"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Louisiana",
-      "flag": "us",
-      "region": "na",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": true,
-      "parent": "United States",
-      "url": "https://lawallet.com/",
-      "technology": "Mobile Driver License (LA Wallet app)",
-      "techStack": [
-        "ISO 18013-5",
-        "mDL",
-        "Apple/Google Wallet"
-      ],
-      "description": "First state mDL (2018). Now accepted at TSA + federal buildings.",
-      "details": [
-        "One mDL per person",
-        "LA Wallet app",
-        "Apple + Google Play"
-      ],
-      "nodevice": [
-        "Physical license"
-      ],
-      "metrics": [
-        {
-          "label": "Since",
-          "value": "2018"
-        }
-      ],
-      "credentialType": "Platform Wallet",
-      "walletType": "Platform",
-      "credentialFormat": "mDL",
-      "walletTech": "LA Wallet",
-      "issuedCredentialTypes": [
-        "mDL",
-        "Physical Driver License",
-        "State ID"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Louisiana OMV",
-          "type": "State",
-          "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "TSA Airport Security": {
-          "agency": "TSA",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
-          ]
-        },
-        "Government Services": {
-          "agency": "LA State Agencies",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Arizona",
-      "flag": "us",
-      "region": "na",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": true,
-      "parent": "United States",
-      "url": "https://www.azdot.gov/",
-      "technology": "Mobile Driver License",
-      "techStack": [
-        "ISO 18013-5",
-        "mDL",
-        "Apple/Google Wallet"
-      ],
-      "description": "mDL 2020. Apple + Google Wallet.",
-      "details": [
-        "One mDL per person"
-      ],
-      "nodevice": [
-        "Physical license"
-      ],
-      "metrics": [
-        {
-          "label": "Since",
-          "value": "2020"
-        }
-      ],
-      "credentialType": "Platform Wallet",
-      "walletType": "Platform",
-      "credentialFormat": "mDL",
-      "issuedCredentialTypes": [
-        "mDL",
-        "Physical Driver License",
-        "State ID"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Arizona MVD",
-          "type": "State",
-          "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "TSA Airport Security": {
-          "agency": "TSA",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
-          ]
-        },
-        "Government Services": {
-          "agency": "AZ State Agencies",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Maryland",
-      "flag": "us",
-      "region": "na",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": true,
-      "parent": "United States",
-      "url": "https://mva.maryland.gov/",
-      "technology": "Mobile Driver License",
-      "techStack": [
-        "ISO 18013-5",
-        "mDL",
-        "Apple/Google Wallet"
-      ],
-      "description": "Apple + Google Wallet.",
-      "details": [
-        "One mDL per person"
-      ],
-      "nodevice": [
-        "Physical license"
-      ],
-      "metrics": [
-        {
-          "label": "Since",
-          "value": "2021"
-        }
-      ],
-      "credentialType": "Platform Wallet",
-      "walletType": "Platform",
-      "credentialFormat": "mDL",
-      "issuedCredentialTypes": [
-        "mDL",
-        "Physical Driver License",
-        "State ID"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Maryland MVA",
-          "type": "State",
-          "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "TSA Airport Security": {
-          "agency": "TSA",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
-          ]
-        },
-        "Government Services": {
-          "agency": "MD State Agencies",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Colorado",
-      "flag": "us",
-      "region": "na",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": true,
-      "parent": "United States",
-      "url": "https://www.colorado.gov/dmv",
-      "technology": "Mobile Driver License",
-      "techStack": [
-        "ISO 18013-5",
-        "mDL",
-        "Apple/Google Wallet"
-      ],
-      "description": "Apple + Google Wallet.",
-      "details": [
-        "One mDL per person"
-      ],
-      "nodevice": [
-        "Physical license"
-      ],
-      "metrics": [
-        {
-          "label": "Since",
-          "value": "2022"
-        }
-      ],
-      "credentialType": "Platform Wallet",
-      "walletType": "Platform",
-      "credentialFormat": "mDL",
-      "issuedCredentialTypes": [
-        "mDL",
-        "Physical Driver License",
-        "State ID"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Colorado DMV",
-          "type": "State",
-          "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "TSA Airport Security": {
-          "agency": "TSA",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Dispensaries",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
-          ]
-        },
-        "Government Services": {
-          "agency": "CO State Agencies",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Georgia",
-      "flag": "us",
-      "region": "na",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": true,
-      "parent": "United States",
-      "url": "https://dds.georgia.gov/",
-      "technology": "Mobile Driver License",
-      "techStack": [
-        "ISO 18013-5",
-        "mDL",
-        "Apple/Google Wallet"
-      ],
-      "description": "Apple + Google Wallet.",
-      "details": [
-        "One mDL per person"
-      ],
-      "nodevice": [
-        "Physical license"
-      ],
-      "metrics": [
-        {
-          "label": "Since",
-          "value": "2022"
-        }
-      ],
-      "credentialType": "Platform Wallet",
-      "walletType": "Platform",
-      "credentialFormat": "mDL",
-      "issuedCredentialTypes": [
-        "mDL",
-        "Physical Driver License",
-        "State ID"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Georgia DDS",
-          "type": "State",
-          "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "TSA Airport Security": {
-          "agency": "TSA",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
-          ]
-        },
-        "Government Services": {
-          "agency": "GA State Agencies",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Ohio",
-      "flag": "us",
-      "region": "na",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": true,
-      "parent": "United States",
-      "url": "https://www.bmv.ohio.gov/",
-      "technology": "Mobile Driver License (Apple only)",
-      "techStack": [
-        "ISO 18013-5",
-        "mDL",
-        "Apple Wallet"
-      ],
-      "description": "Apple Wallet only.",
-      "details": [
-        "One mDL per person"
-      ],
-      "nodevice": [
-        "Physical license"
-      ],
-      "metrics": [
-        {
-          "label": "Platform",
-          "value": "Apple"
-        }
-      ],
-      "credentialType": "Platform Wallet",
-      "walletType": "Platform",
-      "credentialFormat": "mDL",
-      "walletTech": "Apple/Google Wallet",
-      "issuedCredentialTypes": [
-        "mDL",
-        "Physical Driver License",
-        "State ID"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Ohio BMV",
-          "type": "State",
-          "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "TSA Airport Security": {
-          "agency": "TSA",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
-          ]
-        },
-        "Government Services": {
-          "agency": "OH State Agencies",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      }
-    },
-    {
-      "name": "California",
-      "flag": "us",
-      "region": "na",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": true,
-      "parent": "United States",
-      "url": "https://www.dmv.ca.gov/",
-      "technology": "Mobile Driver License",
-      "techStack": [
-        "ISO 18013-5",
-        "mDL",
-        "Apple Wallet"
-      ],
-      "description": "Apple Wallet Dec 2023.",
-      "details": [
-        "One mDL per person"
-      ],
-      "nodevice": [
-        "Physical license"
-      ],
-      "metrics": [
-        {
-          "label": "Since",
-          "value": "Dec 2023"
-        }
-      ],
-      "credentialType": "Platform Wallet",
-      "walletType": "Platform",
-      "credentialFormat": "mDL",
-      "walletTech": "CA DMV Wallet",
-      "issuedCredentialTypes": [
-        "mDL",
-        "Digital ID",
-        "Physical Driver License"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "California DMV",
-          "type": "State",
-          "credentials": [
-            "mDL",
-            "Digital ID",
-            "Physical Driver License"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "TSA Airport Security": {
-          "agency": "TSA",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
-          ]
-        },
-        "Age Verification": {
-          "agency": "ABC / Retailers",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport"
-          ]
-        },
-        "Government Services": {
-          "agency": "CA State Agencies",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        },
-        "Law Enforcement": {
-          "agency": "Police / Sheriff",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Utah",
-      "flag": "us",
-      "region": "na",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": true,
-      "parent": "United States",
-      "url": "https://dld.utah.gov/",
-      "technology": "Mobile Driver License",
-      "techStack": [
-        "ISO 18013-5",
-        "mDL",
-        "State app"
-      ],
-      "description": "State app.",
-      "details": [
-        "One mDL per person"
-      ],
-      "nodevice": [
-        "Physical license"
-      ],
-      "metrics": [
-        {
-          "label": "Since",
-          "value": "2023"
-        }
-      ],
-      "credentialType": "Platform Wallet",
-      "walletType": "Platform",
-      "credentialFormat": "mDL",
-      "walletTech": "GET Mobile App",
-      "issuedCredentialTypes": [
-        "mDL",
-        "Physical Driver License",
-        "State ID"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Utah DMV",
-          "type": "State",
-          "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "TSA Airport Security": {
-          "agency": "TSA",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
-          ]
-        },
-        "Government Services": {
-          "agency": "UT State Agencies",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Iowa",
-      "flag": "us",
-      "region": "na",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": true,
-      "parent": "United States",
-      "url": "https://iowadot.gov/",
-      "technology": "Mobile Driver License",
-      "techStack": [
-        "ISO 18013-5",
-        "mDL",
-        "State app"
-      ],
-      "description": "State app.",
-      "details": [
-        "One mDL per person"
-      ],
-      "nodevice": [
-        "Physical license"
-      ],
-      "metrics": [
-        {
-          "label": "Since",
-          "value": "2023"
-        }
-      ],
-      "credentialType": "Platform Wallet",
-      "walletType": "Platform",
-      "credentialFormat": "mDL",
-      "walletTech": "Iowa Mobile ID",
-      "issuedCredentialTypes": [
-        "mDL",
-        "Physical Driver License",
-        "State ID"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Iowa DOT",
-          "type": "State",
-          "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "TSA Airport Security": {
-          "agency": "TSA",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
-          ]
-        },
-        "Government Services": {
-          "agency": "IA State Agencies",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Virginia",
-      "flag": "us",
-      "region": "na",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": true,
-      "parent": "United States",
-      "url": "https://www.dmv.virginia.gov/",
-      "technology": "Mobile Driver License",
-      "techStack": [
-        "ISO 18013-5",
-        "mDL",
-        "Apple/Google Wallet"
-      ],
-      "description": "Apple + Google Wallet.",
-      "details": [
-        "One mDL per person"
-      ],
-      "nodevice": [
-        "Physical license"
-      ],
-      "metrics": [
-        {
-          "label": "Since",
-          "value": "2024"
-        }
-      ],
-      "credentialType": "Platform Wallet",
-      "walletType": "Platform",
-      "credentialFormat": "mDL",
-      "walletTech": "VA MiD App",
-      "issuedCredentialTypes": [
-        "mDL",
-        "Physical Driver License",
-        "State ID"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Virginia DMV",
-          "type": "State",
-          "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "TSA Airport Security": {
-          "agency": "TSA",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
-          ]
-        },
-        "Government Services": {
-          "agency": "VA State Agencies",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Nevada",
-      "flag": "us",
-      "region": "na",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": true,
-      "parent": "United States",
-      "url": "https://dmv.nv.gov/",
-      "technology": "Mobile Driver License",
-      "techStack": [
-        "ISO 18013-5",
-        "mDL",
-        "Apple/Google Wallet"
-      ],
-      "description": "Apple + Google Wallet.",
-      "details": [
-        "One mDL per person"
-      ],
-      "nodevice": [
-        "Physical license"
-      ],
-      "metrics": [
-        {
-          "label": "Since",
-          "value": "2024"
-        }
-      ],
-      "credentialType": "Platform Wallet",
-      "walletType": "Platform",
-      "credentialFormat": "mDL",
-      "issuedCredentialTypes": [
-        "mDL",
-        "Physical Driver License",
-        "State ID"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Nevada DMV",
-          "type": "State",
-          "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "TSA Airport Security": {
-          "agency": "TSA",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars / Dispensaries",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
-          ]
-        },
-        "Government Services": {
-          "agency": "NV State Agencies",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Vermont",
-      "flag": "us",
-      "region": "na",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": true,
-      "parent": "United States",
-      "url": "https://dmv.vermont.gov/",
-      "technology": "Mobile Driver License",
-      "techStack": [
-        "ISO 18013-5",
-        "mDL",
-        "State app"
-      ],
-      "description": "State app.",
-      "details": [
-        "One mDL per person"
-      ],
-      "nodevice": [
-        "Physical license"
-      ],
-      "metrics": [
-        {
-          "label": "Since",
-          "value": "2024"
-        }
-      ],
-      "credentialType": "Platform Wallet",
-      "walletType": "Platform",
-      "credentialFormat": "mDL",
-      "walletTech": "Apple/Google Wallet",
-      "issuedCredentialTypes": [
-        "mDL",
-        "Physical Driver License",
-        "State ID"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Vermont DMV",
-          "type": "State",
-          "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "TSA Airport Security": {
-          "agency": "TSA",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
-          ]
-        },
-        "Government Services": {
-          "agency": "VT State Agencies",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      }
-    },
-    {
-      "name": "New York",
-      "flag": "us",
-      "region": "na",
-      "status": "production",
-      "issuanceModel": "single",
-      "isSubnational": true,
-      "parent": "United States",
-      "url": "https://dmv.ny.gov/",
-      "technology": "Mobile Driver License",
-      "techStack": [
-        "ISO 18013-5",
-        "mDL",
-        "Apple/Google Wallet"
-      ],
-      "description": "200K+ enrollments March 2025.",
-      "details": [
-        "One mDL per person"
-      ],
-      "nodevice": [
-        "Physical license"
-      ],
-      "metrics": [
-        {
-          "label": "Enrolled",
-          "value": "200K+"
-        }
-      ],
-      "credentialType": "Platform Wallet",
-      "walletType": "Platform",
-      "credentialFormat": "mDL",
-      "walletTech": "NY MiD App",
-      "issuedCredentialTypes": [
-        "mDL",
-        "Physical Driver License",
-        "State ID",
-        "Enhanced ID"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "NY DMV",
-          "type": "State",
-          "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID",
-            "Enhanced ID"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "TSA Airport Security": {
-          "agency": "TSA",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Enhanced ID",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
-          ]
-        },
-        "Border Crossing (Land/Sea)": {
-          "agency": "CBP",
-          "acceptedTypes": [
-            "Enhanced ID",
-            "Passport",
-            "Passport Card"
-          ]
-        },
-        "Government Services": {
-          "agency": "NY State Agencies",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      }
-    },
-    {
-      "name": "New Jersey",
-      "flag": "us",
-      "region": "na",
-      "status": "development",
-      "issuanceModel": "single",
-      "isSubnational": true,
-      "parent": "United States",
-      "url": "https://www.nj.gov/mvc/",
-      "technology": "Mobile Driver License (planned)",
-      "techStack": [
-        "ISO 18013-5",
-        "mDL"
-      ],
-      "description": "Law passed 2025.",
-      "details": [
-        "One mDL per person"
-      ],
-      "nodevice": [
-        "Physical license"
-      ],
-      "metrics": [
-        {
-          "label": "Status",
-          "value": "Spec"
-        }
-      ],
-      "credentialType": "Platform Wallet",
-      "walletType": "Platform",
-      "credentialFormat": "mDL",
-      "issuedCredentialTypes": [
-        "mDL",
-        "Physical Driver License",
-        "State ID"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "New Jersey MVC",
-          "type": "State",
-          "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "TSA Airport Security": {
-          "agency": "TSA",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
-          ]
-        },
-        "Government Services": {
-          "agency": "NJ State Agencies",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      }
-    },
-    {
-      "name": "Texas",
-      "flag": "us",
-      "region": "na",
-      "status": "development",
-      "issuanceModel": "single",
-      "isSubnational": true,
-      "parent": "United States",
-      "url": "https://www.txdps.gov/",
-      "technology": "Mobile Driver License (in development)",
-      "techStack": [
-        "ISO 18013-5",
-        "mDL"
-      ],
-      "description": "In development.",
-      "details": [
-        "One mDL per person"
-      ],
-      "nodevice": [
-        "Physical license"
-      ],
-      "metrics": [
-        {
-          "label": "Status",
-          "value": "Spec"
-        }
-      ],
-      "credentialType": "Platform Wallet",
-      "walletType": "Platform",
-      "credentialFormat": "mDL",
-      "issuedCredentialTypes": [
-        "mDL",
-        "Physical Driver License",
-        "State ID"
-      ],
-      "issuingAuthorities": [
-        {
-          "name": "Texas DPS",
-          "type": "State",
-          "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      ],
-      "acceptedCredentials": {
-        "TSA Airport Security": {
-          "agency": "TSA",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
-          ]
-        },
-        "Government Services": {
-          "agency": "TX State Agencies",
-          "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
-          ]
-        }
-      }
+      },
+      "digitalScore": 0.0,
+      "digitalCount": 0
     }
   ],
   "nodeviceSolutions": [
