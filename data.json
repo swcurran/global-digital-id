@@ -430,7 +430,9 @@
         {
           "name": "EU Commission (eIDAS 2.0)",
           "type": "Supranational",
-          "credentials": []
+          "credentials": [
+            "EUDI Wallet"
+          ]
         },
         {
           "name": "Member State Authorities",
@@ -516,11 +518,6 @@
             "Chave M\u00f3vel Digital",
             "EUDI Wallet"
           ]
-        },
-        {
-          "name": "IRN (Records & Notaries)",
-          "type": "National",
-          "credentials": []
         },
         {
           "name": "SNS (Health Service)",
@@ -621,11 +618,6 @@
           "credentials": [
             "Digital Driver License"
           ]
-        },
-        {
-          "name": "Ministry of Foreign Affairs",
-          "type": "National",
-          "credentials": []
         }
       ],
       "acceptedCredentials": {
@@ -1711,11 +1703,6 @@
           ]
         },
         {
-          "name": "State Secretariats",
-          "type": "State",
-          "credentials": []
-        },
-        {
           "name": "DENATRAN",
           "type": "National",
           "credentials": [
@@ -1725,7 +1712,10 @@
         {
           "name": "Federal Police",
           "type": "National",
-          "credentials": []
+          "credentials": [
+            "eID",
+            "Digital ID"
+          ]
         }
       ],
       "acceptedCredentials": {
@@ -1908,7 +1898,10 @@
         {
           "name": "Health Insurance Funds",
           "type": "Private/Regulated",
-          "credentials": []
+          "credentials": [
+            "Health Card",
+            "Health Credentials"
+          ]
         }
       ],
       "acceptedCredentials": {
@@ -1990,12 +1983,18 @@
         {
           "name": "Ministry of Interior",
           "type": "National",
-          "credentials": []
+          "credentials": [
+            "eID",
+            "Digital ID"
+          ]
         },
         {
           "name": "Ministry of Health",
           "type": "National",
-          "credentials": []
+          "credentials": [
+            "Health Card",
+            "Health Credentials"
+          ]
         },
         {
           "name": "Ministry of Transport",
@@ -2071,7 +2070,10 @@
         {
           "name": "Ministry of Interior",
           "type": "National",
-          "credentials": []
+          "credentials": [
+            "eID",
+            "Digital ID"
+          ]
         },
         {
           "name": "Ministry of Digital Affairs",
@@ -2176,12 +2178,10 @@
         {
           "name": "Ministry of Interior",
           "type": "National",
-          "credentials": []
-        },
-        {
-          "name": "Assurance Maladie",
-          "type": "National",
-          "credentials": []
+          "credentials": [
+            "eID",
+            "Digital ID"
+          ]
         },
         {
           "name": "Ministry of Transport",
@@ -2359,19 +2359,12 @@
       ],
       "issuingAuthorities": [
         {
-          "name": "ATO (myGovID)",
-          "type": "National",
-          "credentials": []
-        },
-        {
           "name": "State/Territory Transport Authorities",
           "type": "State",
-          "credentials": []
-        },
-        {
-          "name": "DFAT",
-          "type": "National",
-          "credentials": []
+          "credentials": [
+            "Digital Driver License",
+            "mDL"
+          ]
         }
       ],
       "acceptedCredentials": {
@@ -2446,7 +2439,10 @@
         {
           "name": "Alberta Transportation",
           "type": "Provincial",
-          "credentials": []
+          "credentials": [
+            "Digital Driver License",
+            "mDL"
+          ]
         }
       ],
       "acceptedCredentials": {
@@ -2650,7 +2646,10 @@
         {
           "name": "Ministry of Transport",
           "type": "National",
-          "credentials": []
+          "credentials": [
+            "Digital Driver License",
+            "mDL"
+          ]
         }
       ],
       "acceptedCredentials": {
@@ -2733,7 +2732,10 @@
         {
           "name": "JPJ (Road Transport)",
           "type": "National",
-          "credentials": []
+          "credentials": [
+            "Digital Driver License",
+            "mDL"
+          ]
         }
       ],
       "acceptedCredentials": {
@@ -2810,7 +2812,10 @@
         {
           "name": "Royal Oman Police",
           "type": "National",
-          "credentials": []
+          "credentials": [
+            "eID",
+            "Digital ID"
+          ]
         }
       ],
       "acceptedCredentials": {
@@ -2882,7 +2887,10 @@
         {
           "name": "Traffic Department",
           "type": "National",
-          "credentials": []
+          "credentials": [
+            "Digital Driver License",
+            "PASS Mobile ID"
+          ]
         }
       ],
       "acceptedCredentials": {
@@ -2955,11 +2963,6 @@
           "credentials": [
             "Digital Identity"
           ]
-        },
-        {
-          "name": "ICA",
-          "type": "National",
-          "credentials": []
         }
       ],
       "acceptedCredentials": {
@@ -3035,12 +3038,18 @@
         {
           "name": "Ministry of Interior",
           "type": "National",
-          "credentials": []
+          "credentials": [
+            "eID",
+            "Digital ID"
+          ]
         },
         {
           "name": "RTA / Traffic Departments",
           "type": "Emirate-level",
-          "credentials": []
+          "credentials": [
+            "Digital Driver License",
+            "PASS Mobile ID"
+          ]
         }
       ],
       "acceptedCredentials": {
@@ -3124,12 +3133,10 @@
         {
           "name": "Ministry of Transport",
           "type": "National",
-          "credentials": []
-        },
-        {
-          "name": "Ministry of Human Resources",
-          "type": "National",
-          "credentials": []
+          "credentials": [
+            "Digital Driver License",
+            "mDL"
+          ]
         }
       ],
       "acceptedCredentials": {
@@ -3207,7 +3214,10 @@
         {
           "name": "Traffic Police",
           "type": "National",
-          "credentials": []
+          "credentials": [
+            "Digital Driver License",
+            "PASS Mobile ID"
+          ]
         }
       ],
       "acceptedCredentials": {
@@ -3278,7 +3288,10 @@
         {
           "name": "Ministry of Transportation",
           "type": "National",
-          "credentials": []
+          "credentials": [
+            "Digital Driver License",
+            "mDL"
+          ]
         },
         {
           "name": "Ministry of Health",
@@ -3366,27 +3379,18 @@
         {
           "name": "Income Tax Department",
           "type": "National",
-          "credentials": []
-        },
-        {
-          "name": "Ministry of External Affairs",
-          "type": "National",
-          "credentials": []
-        },
-        {
-          "name": "State RTOs",
-          "type": "State",
-          "credentials": []
-        },
-        {
-          "name": "Election Commission",
-          "type": "National",
-          "credentials": []
+          "credentials": [
+            "Digital ID",
+            "eID"
+          ]
         },
         {
           "name": "Ministry of Health",
           "type": "National",
-          "credentials": []
+          "credentials": [
+            "Health Card",
+            "Health Credentials"
+          ]
         }
       ],
       "acceptedCredentials": {
@@ -3459,28 +3463,7 @@
       "issuedCredentialTypes": [
         "Maisha Digital ID"
       ],
-      "issuingAuthorities": [
-        {
-          "name": "Civil Registration",
-          "type": "National",
-          "credentials": []
-        },
-        {
-          "name": "Immigration",
-          "type": "National",
-          "credentials": []
-        },
-        {
-          "name": "NTSA",
-          "type": "National",
-          "credentials": []
-        },
-        {
-          "name": "NHIF",
-          "type": "National",
-          "credentials": []
-        }
-      ],
+      "issuingAuthorities": [],
       "acceptedCredentials": {
         "Government Services": {
           "agency": "All Government Agencies",
@@ -3544,29 +3527,12 @@
       ],
       "issuingAuthorities": [
         {
-          "name": "NIMC",
-          "type": "National",
-          "credentials": []
-        },
-        {
-          "name": "CBN / NIBSS",
-          "type": "National",
-          "credentials": []
-        },
-        {
           "name": "Nigeria Immigration Service",
           "type": "National",
-          "credentials": []
-        },
-        {
-          "name": "FRSC",
-          "type": "National",
-          "credentials": []
-        },
-        {
-          "name": "INEC",
-          "type": "National",
-          "credentials": []
+          "credentials": [
+            "Digital Driver License",
+            "Digital ID"
+          ]
         }
       ],
       "acceptedCredentials": {
@@ -3628,28 +3594,7 @@
         "GOV.UK Verify",
         "Digital Identity"
       ],
-      "issuingAuthorities": [
-        {
-          "name": "GOV.UK (GDS)",
-          "type": "National",
-          "credentials": []
-        },
-        {
-          "name": "HM Passport Office",
-          "type": "National",
-          "credentials": []
-        },
-        {
-          "name": "DVLA",
-          "type": "National",
-          "credentials": []
-        },
-        {
-          "name": "Home Office",
-          "type": "National",
-          "credentials": []
-        }
-      ],
+      "issuingAuthorities": [],
       "acceptedCredentials": {
         "Government Services": {
           "agency": "GOV.UK",
@@ -3796,18 +3741,7 @@
       "issuedCredentialTypes": [
         "Qu\u00e9bec Num\u00e9rique"
       ],
-      "issuingAuthorities": [
-        {
-          "name": "RAMQ",
-          "type": "Provincial",
-          "credentials": []
-        },
-        {
-          "name": "SAAQ",
-          "type": "Provincial",
-          "credentials": []
-        }
-      ],
+      "issuingAuthorities": [],
       "acceptedCredentials": {
         "Provincial Government Services": {
           "agency": "Quebec Government",
@@ -3865,13 +3799,7 @@
       "issuedCredentialTypes": [
         "Manitoba eID"
       ],
-      "issuingAuthorities": [
-        {
-          "name": "Manitoba Public Insurance",
-          "type": "Provincial Crown Corp",
-          "credentials": []
-        }
-      ],
+      "issuingAuthorities": [],
       "acceptedCredentials": {
         "Provincial Government Services": {
           "agency": "Manitoba Government",
@@ -3925,13 +3853,7 @@
       "issuedCredentialTypes": [
         "Saskatchewan Digital ID"
       ],
-      "issuingAuthorities": [
-        {
-          "name": "Saskatchewan Government Insurance",
-          "type": "Provincial Crown Corp",
-          "credentials": []
-        }
-      ],
+      "issuingAuthorities": [],
       "acceptedCredentials": {
         "Provincial Government Services": {
           "agency": "Saskatchewan Government",
