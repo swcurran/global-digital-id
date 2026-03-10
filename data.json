@@ -464,10 +464,6 @@
           "acceptedTypes": [
             "EUDI Wallet"
           ]
-        },
-        "Travel (Schengen)": {
-          "agency": "Border Control",
-          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -1828,10 +1824,6 @@
           "acceptedTypes": [
             "Digital ID"
           ]
-        },
-        "Travel (EU)": {
-          "agency": "Border Control",
-          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -1912,19 +1904,11 @@
             "Digital ID"
           ]
         },
-        "Healthcare": {
-          "agency": "Healthcare Providers",
-          "acceptedTypes": []
-        },
         "Travel (EU)": {
           "agency": "Border Control / Airlines",
           "acceptedTypes": [
             "Digital Driver License"
           ]
-        },
-        "Banking": {
-          "agency": "German Banks",
-          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -2011,19 +1995,11 @@
             "EUDI Wallet"
           ]
         },
-        "Healthcare": {
-          "agency": "SSN (National Health Service)",
-          "acceptedTypes": []
-        },
         "Travel (Domestic/EU)": {
           "agency": "Police / Border Control",
           "acceptedTypes": [
             "Digital Driving License"
           ]
-        },
-        "Banking": {
-          "agency": "Italian Banks",
-          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -2367,28 +2343,7 @@
           ]
         }
       ],
-      "acceptedCredentials": {
-        "Federal Government Services": {
-          "agency": "myGov / Services Australia",
-          "acceptedTypes": []
-        },
-        "Tax Services": {
-          "agency": "ATO",
-          "acceptedTypes": []
-        },
-        "Healthcare": {
-          "agency": "Medicare",
-          "acceptedTypes": []
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": []
-        },
-        "Travel (Domestic)": {
-          "agency": "Airlines / TSA equivalent",
-          "acceptedTypes": []
-        }
-      },
+      "acceptedCredentials": {},
       "digitalScore": 100.0,
       "digitalCount": 1
     },
@@ -2451,14 +2406,6 @@
           "acceptedTypes": [
             "Alberta eID"
           ]
-        },
-        "Federal Services": {
-          "agency": "Government of Canada",
-          "acceptedTypes": []
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -2514,14 +2461,6 @@
           "acceptedTypes": [
             "ONeID"
           ]
-        },
-        "Federal Services": {
-          "agency": "Government of Canada",
-          "acceptedTypes": []
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -2583,10 +2522,6 @@
           "acceptedTypes": [
             "mDL"
           ]
-        },
-        "Border Crossing (Land/Sea)": {
-          "agency": "CBP",
-          "acceptedTypes": []
         },
         "Government Services": {
           "agency": "NY State Agencies",
@@ -2669,10 +2604,6 @@
           "acceptedTypes": [
             "Digital ID"
           ]
-        },
-        "Travel": {
-          "agency": "Border Control / Airlines",
-          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -2749,14 +2680,6 @@
           "acceptedTypes": [
             "MyDigital ID"
           ]
-        },
-        "Travel": {
-          "agency": "Immigration / Airlines",
-          "acceptedTypes": []
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -2829,10 +2752,6 @@
           "acceptedTypes": [
             "Digital ID"
           ]
-        },
-        "Travel": {
-          "agency": "Immigration / Airlines",
-          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -2904,10 +2823,6 @@
           "acceptedTypes": [
             "Digital ID"
           ]
-        },
-        "Travel": {
-          "agency": "Immigration / Airlines",
-          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -2970,14 +2885,6 @@
           "acceptedTypes": [
             "Digital Identity"
           ]
-        },
-        "Banking": {
-          "agency": "Singapore Banks",
-          "acceptedTypes": []
-        },
-        "Healthcare": {
-          "agency": "MOH / Healthcare Providers",
-          "acceptedTypes": []
         },
         "Travel": {
           "agency": "ICA / Airlines",
@@ -3063,14 +2970,6 @@
           "acceptedTypes": [
             "Digital ID (UAE Pass)"
           ]
-        },
-        "Travel": {
-          "agency": "Immigration / Airlines",
-          "acceptedTypes": []
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -3156,10 +3055,6 @@
           "acceptedTypes": [
             "Digital ID (CTID)"
           ]
-        },
-        "Healthcare": {
-          "agency": "Healthcare Providers",
-          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -3231,10 +3126,6 @@
           "acceptedTypes": [
             "Absher Digital ID"
           ]
-        },
-        "Travel": {
-          "agency": "Immigration / Airlines",
-          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -3312,10 +3203,6 @@
           "acceptedTypes": [
             "Health Card"
           ]
-        },
-        "Travel": {
-          "agency": "Immigration / Airlines",
-          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -3463,24 +3350,7 @@
         "Maisha Digital ID"
       ],
       "issuingAuthorities": [],
-      "acceptedCredentials": {
-        "Government Services": {
-          "agency": "All Government Agencies",
-          "acceptedTypes": []
-        },
-        "Healthcare": {
-          "agency": "NHIF / Healthcare Providers",
-          "acceptedTypes": []
-        },
-        "Banking (KYC)": {
-          "agency": "CBK / Banks",
-          "acceptedTypes": []
-        },
-        "Travel": {
-          "agency": "Immigration / Airlines",
-          "acceptedTypes": []
-        }
-      },
+      "acceptedCredentials": {},
       "digitalScore": 100.0,
       "digitalCount": 1
     },
@@ -3534,24 +3404,7 @@
           ]
         }
       ],
-      "acceptedCredentials": {
-        "Government Services": {
-          "agency": "All Government Agencies",
-          "acceptedTypes": []
-        },
-        "Banking (KYC)": {
-          "agency": "CBN / Banks",
-          "acceptedTypes": []
-        },
-        "SIM Registration": {
-          "agency": "NCC / Telcos",
-          "acceptedTypes": []
-        },
-        "Travel": {
-          "agency": "Immigration / Airlines",
-          "acceptedTypes": []
-        }
-      },
+      "acceptedCredentials": {},
       "digitalScore": 100.0,
       "digitalCount": 2
     },
@@ -3594,24 +3447,7 @@
         "Digital Identity"
       ],
       "issuingAuthorities": [],
-      "acceptedCredentials": {
-        "Government Services": {
-          "agency": "GOV.UK",
-          "acceptedTypes": []
-        },
-        "Banking": {
-          "agency": "UK Banks",
-          "acceptedTypes": []
-        },
-        "Travel": {
-          "agency": "Border Force / Airlines",
-          "acceptedTypes": []
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": []
-        }
-      },
+      "acceptedCredentials": {},
       "digitalScore": 100.0,
       "digitalCount": 2
     },
@@ -3669,8 +3505,7 @@
         "Provincial Government Services": {
           "agency": "BC Government",
           "acceptedTypes": [
-            "BC Services Card",
-            "BCID"
+            "BC Services Card"
           ]
         },
         "Healthcare": {
@@ -3683,12 +3518,6 @@
           "agency": "Government of Canada",
           "acceptedTypes": [
             "BC Services Card"
-          ]
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "BCID"
           ]
         }
       },
@@ -3731,24 +3560,7 @@
         "Qu\u00e9bec Num\u00e9rique"
       ],
       "issuingAuthorities": [],
-      "acceptedCredentials": {
-        "Provincial Government Services": {
-          "agency": "Quebec Government",
-          "acceptedTypes": []
-        },
-        "Healthcare": {
-          "agency": "RAMQ / Healthcare Providers",
-          "acceptedTypes": []
-        },
-        "Federal Services": {
-          "agency": "Government of Canada",
-          "acceptedTypes": []
-        },
-        "Age Verification": {
-          "agency": "SQDC / Retailers",
-          "acceptedTypes": []
-        }
-      },
+      "acceptedCredentials": {},
       "digitalScore": 100.0,
       "digitalCount": 1
     },
@@ -3797,20 +3609,7 @@
           ]
         }
       ],
-      "acceptedCredentials": {
-        "Provincial Government Services": {
-          "agency": "Manitoba Government",
-          "acceptedTypes": []
-        },
-        "Federal Services": {
-          "agency": "Government of Canada",
-          "acceptedTypes": []
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": []
-        }
-      },
+      "acceptedCredentials": {},
       "digitalScore": 100.0,
       "digitalCount": 1
     },
@@ -3848,20 +3647,7 @@
       "walletTech": "None (third-party eID-Me only)",
       "issuedCredentialTypes": [],
       "issuingAuthorities": [],
-      "acceptedCredentials": {
-        "Provincial Government Services": {
-          "agency": "Saskatchewan Government",
-          "acceptedTypes": []
-        },
-        "Federal Services": {
-          "agency": "Government of Canada",
-          "acceptedTypes": []
-        },
-        "Age Verification": {
-          "agency": "Retailers / Bars",
-          "acceptedTypes": []
-        }
-      },
+      "acceptedCredentials": {},
       "digitalScore": 0.0,
       "digitalCount": 0
     }
