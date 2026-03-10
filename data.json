@@ -70,24 +70,19 @@
         "Travel (Domestic)": {
           "agency": "Airlines",
           "acceptedTypes": [
-            "Digital Driver License",
-            "Physical Driver License",
-            "Passport"
+            "Digital Driver License"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
           "acceptedTypes": [
-            "Digital Driver License",
-            "Physical Driver License",
-            "Proof of Age Card"
+            "Digital Driver License"
           ]
         },
         "Government Services": {
           "agency": "State/Federal Agencies",
           "acceptedTypes": [
-            "Digital Driver License",
-            "myGovID"
+            "Digital Driver License"
           ]
         }
       },
@@ -136,8 +131,7 @@
           "type": "State",
           "credentials": [
             "mDL",
-            "Digital ID",
-            "Physical Driver License"
+            "Digital ID"
           ]
         }
       ],
@@ -145,35 +139,25 @@
         "TSA Airport Security": {
           "agency": "TSA",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
+            "mDL"
           ]
         },
         "Age Verification": {
           "agency": "ABC / Retailers",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport"
+            "mDL"
           ]
         },
         "Government Services": {
           "agency": "CA State Agencies",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         },
         "Law Enforcement": {
           "agency": "Police / Sheriff",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       },
@@ -274,8 +258,7 @@
           "agency": "Finnish Transport",
           "acceptedTypes": [
             "eID",
-            "Mobile Certificate",
-            "Physical ID"
+            "Mobile Certificate"
           ]
         }
       },
@@ -392,8 +375,6 @@
         "Travel": {
           "agency": "Border Control / Police",
           "acceptedTypes": [
-            "National ID",
-            "Passport",
             "Digital Driving License"
           ]
         }
@@ -449,9 +430,7 @@
         {
           "name": "EU Commission (eIDAS 2.0)",
           "type": "Supranational",
-          "credentials": [
-            "EUDI Wallet Framework"
-          ]
+          "credentials": []
         },
         {
           "name": "Member State Authorities",
@@ -481,17 +460,12 @@
         "Professional Recognition": {
           "agency": "EU Professional Bodies",
           "acceptedTypes": [
-            "Professional Credentials",
             "EUDI Wallet"
           ]
         },
         "Travel (Schengen)": {
           "agency": "Border Control",
-          "acceptedTypes": [
-            "National ID",
-            "Passport",
-            "EUDI Wallet (future)"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -546,9 +520,7 @@
         {
           "name": "IRN (Records & Notaries)",
           "type": "National",
-          "credentials": [
-            "Cart\u00e3o de Cidad\u00e3o"
-          ]
+          "credentials": []
         },
         {
           "name": "SNS (Health Service)",
@@ -570,7 +542,6 @@
           "agency": "ePortugal",
           "acceptedTypes": [
             "Chave M\u00f3vel Digital",
-            "Cart\u00e3o de Cidad\u00e3o",
             "EUDI Wallet"
           ]
         },
@@ -578,23 +549,19 @@
           "agency": "SNS",
           "acceptedTypes": [
             "Health Card",
-            "Cart\u00e3o de Cidad\u00e3o",
             "Chave M\u00f3vel Digital"
           ]
         },
         "Travel": {
           "agency": "SEF / Border Control",
           "acceptedTypes": [
-            "Cart\u00e3o de Cidad\u00e3o",
-            "Passport",
             "Digital Driving License"
           ]
         },
         "Banking": {
           "agency": "Portuguese Banks",
           "acceptedTypes": [
-            "Chave M\u00f3vel Digital",
-            "Cart\u00e3o de Cidad\u00e3o"
+            "Chave M\u00f3vel Digital"
           ]
         }
       },
@@ -645,8 +612,7 @@
           "name": "Ministry of Interior",
           "type": "National",
           "credentials": [
-            "PASS Mobile ID",
-            "Resident Registration Card"
+            "PASS Mobile ID"
           ]
         },
         {
@@ -659,24 +625,20 @@
         {
           "name": "Ministry of Foreign Affairs",
           "type": "National",
-          "credentials": [
-            "Passport"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
         "Government Services": {
           "agency": "All Government Agencies",
           "acceptedTypes": [
-            "PASS Mobile ID",
-            "Resident Registration Card"
+            "PASS Mobile ID"
           ]
         },
         "Banking": {
           "agency": "Korean Banks",
           "acceptedTypes": [
             "PASS Mobile ID",
-            "Resident Registration Card",
             "Digital Driver License"
           ]
         },
@@ -684,15 +646,12 @@
           "agency": "Retailers / Bars",
           "acceptedTypes": [
             "PASS Mobile ID",
-            "Digital Driver License",
-            "Resident Registration Card"
+            "Digital Driver License"
           ]
         },
         "Travel": {
           "agency": "Immigration / Airlines",
           "acceptedTypes": [
-            "Resident Registration Card",
-            "Passport",
             "Digital Driver License"
           ]
         }
@@ -741,9 +700,7 @@
           "name": "Service NSW",
           "type": "State",
           "credentials": [
-            "Digital Driver License",
-            "Physical Driver License",
-            "Proof of Age Card"
+            "Digital Driver License"
           ]
         }
       ],
@@ -751,25 +708,19 @@
         "State Government Services": {
           "agency": "NSW Government",
           "acceptedTypes": [
-            "Digital Driver License",
-            "Physical Driver License"
+            "Digital Driver License"
           ]
         },
         "Federal Services": {
           "agency": "Australian Government",
           "acceptedTypes": [
-            "Digital Driver License",
-            "Physical Driver License",
-            "Passport",
-            "myGovID"
+            "Digital Driver License"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
           "acceptedTypes": [
-            "Digital Driver License",
-            "Physical Driver License",
-            "Proof of Age Card"
+            "Digital Driver License"
           ]
         }
       },
@@ -817,9 +768,7 @@
           "name": "Service Victoria",
           "type": "State",
           "credentials": [
-            "Digital Driver License",
-            "Physical Driver License",
-            "Proof of Age Card"
+            "Digital Driver License"
           ]
         }
       ],
@@ -827,25 +776,19 @@
         "State Government Services": {
           "agency": "Victoria Government",
           "acceptedTypes": [
-            "Digital Driver License",
-            "Physical Driver License"
+            "Digital Driver License"
           ]
         },
         "Federal Services": {
           "agency": "Australian Government",
           "acceptedTypes": [
-            "Digital Driver License",
-            "Physical Driver License",
-            "Passport",
-            "myGovID"
+            "Digital Driver License"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
           "acceptedTypes": [
-            "Digital Driver License",
-            "Physical Driver License",
-            "Proof of Age Card"
+            "Digital Driver License"
           ]
         }
       },
@@ -894,9 +837,7 @@
           "name": "Louisiana OMV",
           "type": "State",
           "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       ],
@@ -904,26 +845,19 @@
         "TSA Airport Security": {
           "agency": "TSA",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
+            "mDL"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
+            "mDL"
           ]
         },
         "Government Services": {
           "agency": "LA State Agencies",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       },
@@ -969,9 +903,7 @@
           "name": "Arizona MVD",
           "type": "State",
           "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       ],
@@ -979,26 +911,19 @@
         "TSA Airport Security": {
           "agency": "TSA",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
+            "mDL"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
+            "mDL"
           ]
         },
         "Government Services": {
           "agency": "AZ State Agencies",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       },
@@ -1044,9 +969,7 @@
           "name": "Maryland MVA",
           "type": "State",
           "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       ],
@@ -1054,26 +977,19 @@
         "TSA Airport Security": {
           "agency": "TSA",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
+            "mDL"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
+            "mDL"
           ]
         },
         "Government Services": {
           "agency": "MD State Agencies",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       },
@@ -1119,9 +1035,7 @@
           "name": "Colorado DMV",
           "type": "State",
           "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       ],
@@ -1129,26 +1043,19 @@
         "TSA Airport Security": {
           "agency": "TSA",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
+            "mDL"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Dispensaries",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
+            "mDL"
           ]
         },
         "Government Services": {
           "agency": "CO State Agencies",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       },
@@ -1194,9 +1101,7 @@
           "name": "Georgia DDS",
           "type": "State",
           "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       ],
@@ -1204,26 +1109,19 @@
         "TSA Airport Security": {
           "agency": "TSA",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
+            "mDL"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
+            "mDL"
           ]
         },
         "Government Services": {
           "agency": "GA State Agencies",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       },
@@ -1270,9 +1168,7 @@
           "name": "Ohio BMV",
           "type": "State",
           "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       ],
@@ -1280,26 +1176,19 @@
         "TSA Airport Security": {
           "agency": "TSA",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
+            "mDL"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
+            "mDL"
           ]
         },
         "Government Services": {
           "agency": "OH State Agencies",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       },
@@ -1346,9 +1235,7 @@
           "name": "Utah DMV",
           "type": "State",
           "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       ],
@@ -1356,26 +1243,19 @@
         "TSA Airport Security": {
           "agency": "TSA",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
+            "mDL"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
+            "mDL"
           ]
         },
         "Government Services": {
           "agency": "UT State Agencies",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       },
@@ -1422,9 +1302,7 @@
           "name": "Iowa DOT",
           "type": "State",
           "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       ],
@@ -1432,26 +1310,19 @@
         "TSA Airport Security": {
           "agency": "TSA",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
+            "mDL"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
+            "mDL"
           ]
         },
         "Government Services": {
           "agency": "IA State Agencies",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       },
@@ -1498,9 +1369,7 @@
           "name": "Virginia DMV",
           "type": "State",
           "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       ],
@@ -1508,26 +1377,19 @@
         "TSA Airport Security": {
           "agency": "TSA",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
+            "mDL"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
+            "mDL"
           ]
         },
         "Government Services": {
           "agency": "VA State Agencies",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       },
@@ -1573,9 +1435,7 @@
           "name": "Nevada DMV",
           "type": "State",
           "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       ],
@@ -1583,26 +1443,19 @@
         "TSA Airport Security": {
           "agency": "TSA",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
+            "mDL"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Bars / Dispensaries",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
+            "mDL"
           ]
         },
         "Government Services": {
           "agency": "NV State Agencies",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       },
@@ -1649,9 +1502,7 @@
           "name": "Vermont DMV",
           "type": "State",
           "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       ],
@@ -1659,26 +1510,19 @@
         "TSA Airport Security": {
           "agency": "TSA",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
+            "mDL"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
+            "mDL"
           ]
         },
         "Government Services": {
           "agency": "VT State Agencies",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       },
@@ -1723,9 +1567,7 @@
           "name": "New Jersey MVC",
           "type": "State",
           "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       ],
@@ -1733,26 +1575,19 @@
         "TSA Airport Security": {
           "agency": "TSA",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
+            "mDL"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
+            "mDL"
           ]
         },
         "Government Services": {
           "agency": "NJ State Agencies",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       },
@@ -1797,9 +1632,7 @@
           "name": "Texas DPS",
           "type": "State",
           "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       ],
@@ -1807,26 +1640,19 @@
         "TSA Airport Security": {
           "agency": "TSA",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
+            "mDL"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
+            "mDL"
           ]
         },
         "Government Services": {
           "agency": "TX State Agencies",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       },
@@ -1881,16 +1707,13 @@
           "name": "Ministry of Economy",
           "type": "National",
           "credentials": [
-            "Gov.br",
-            "CPF"
+            "Gov.br"
           ]
         },
         {
           "name": "State Secretariats",
           "type": "State",
-          "credentials": [
-            "RG"
-          ]
+          "credentials": []
         },
         {
           "name": "DENATRAN",
@@ -1902,9 +1725,7 @@
         {
           "name": "Federal Police",
           "type": "National",
-          "credentials": [
-            "Passport"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
@@ -1912,8 +1733,6 @@
           "agency": "All Government Agencies",
           "acceptedTypes": [
             "Gov.br",
-            "RG",
-            "CPF",
             "CNH Digital"
           ]
         },
@@ -1921,24 +1740,19 @@
           "agency": "Brazilian Banks",
           "acceptedTypes": [
             "Gov.br",
-            "CPF",
-            "RG",
             "CNH Digital"
           ]
         },
         "Travel (Domestic)": {
           "agency": "Airlines",
           "acceptedTypes": [
-            "RG",
             "CNH Digital",
-            "Passport",
             "Gov.br"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
           "acceptedTypes": [
-            "RG",
             "CNH Digital"
           ]
         }
@@ -1993,7 +1807,6 @@
           "name": "Police and Border Guard Board",
           "type": "National",
           "credentials": [
-            "ID-kaart",
             "e-Residency"
           ]
         },
@@ -2001,8 +1814,7 @@
           "name": "Telia / Elisa / Tele2",
           "type": "Private",
           "credentials": [
-            "Mobile-ID",
-            "Smart-ID"
+            "Mobile-ID"
           ]
         }
       ],
@@ -2010,34 +1822,26 @@
         "Government Services": {
           "agency": "e-Estonia",
           "acceptedTypes": [
-            "ID-kaart",
             "Digital ID",
             "Mobile-ID",
-            "Smart-ID",
             "e-Residency"
           ]
         },
         "Banking": {
           "agency": "Estonian Banks",
           "acceptedTypes": [
-            "ID-kaart",
-            "Mobile-ID",
-            "Smart-ID"
+            "Mobile-ID"
           ]
         },
         "Healthcare": {
           "agency": "e-Health",
           "acceptedTypes": [
-            "ID-kaart",
             "Digital ID"
           ]
         },
         "Travel (EU)": {
           "agency": "Border Control",
-          "acceptedTypes": [
-            "ID-kaart",
-            "Passport"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -2091,9 +1895,7 @@
           "name": "Federal Ministry of Interior",
           "type": "National",
           "credentials": [
-            "Personalausweis",
-            "EUDI Wallet",
-            "Passport"
+            "EUDI Wallet"
           ]
         },
         {
@@ -2106,41 +1908,30 @@
         {
           "name": "Health Insurance Funds",
           "type": "Private/Regulated",
-          "credentials": [
-            "Health Card (eGK)"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
         "Government Services": {
           "agency": "All Government Agencies",
           "acceptedTypes": [
-            "Personalausweis",
             "EUDI Wallet",
             "Digital ID"
           ]
         },
         "Healthcare": {
           "agency": "Healthcare Providers",
-          "acceptedTypes": [
-            "Health Card (eGK)",
-            "Personalausweis"
-          ]
+          "acceptedTypes": []
         },
         "Travel (EU)": {
           "agency": "Border Control / Airlines",
           "acceptedTypes": [
-            "Personalausweis",
-            "Passport",
             "Digital Driver License"
           ]
         },
         "Banking": {
           "agency": "German Banks",
-          "acceptedTypes": [
-            "Personalausweis",
-            "Passport"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -2193,23 +1984,18 @@
           "name": "AgID (Digital Italy Agency)",
           "type": "National",
           "credentials": [
-            "SPID",
             "EUDI Wallet"
           ]
         },
         {
           "name": "Ministry of Interior",
           "type": "National",
-          "credentials": [
-            "CIE (Carta d'Identit\u00e0 Elettronica)"
-          ]
+          "credentials": []
         },
         {
           "name": "Ministry of Health",
           "type": "National",
-          "credentials": [
-            "Health Card (TS)"
-          ]
+          "credentials": []
         },
         {
           "name": "Ministry of Transport",
@@ -2223,33 +2009,22 @@
         "Government Services": {
           "agency": "AgID / Public Admin",
           "acceptedTypes": [
-            "SPID",
-            "CIE",
             "EUDI Wallet"
           ]
         },
         "Healthcare": {
           "agency": "SSN (National Health Service)",
-          "acceptedTypes": [
-            "Health Card (TS)",
-            "CIE",
-            "SPID"
-          ]
+          "acceptedTypes": []
         },
         "Travel (Domestic/EU)": {
           "agency": "Police / Border Control",
           "acceptedTypes": [
-            "CIE",
-            "Passport",
             "Digital Driving License"
           ]
         },
         "Banking": {
           "agency": "Italian Banks",
-          "acceptedTypes": [
-            "SPID",
-            "CIE"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -2296,9 +2071,7 @@
         {
           "name": "Ministry of Interior",
           "type": "National",
-          "credentials": [
-            "DNIe (Documento Nacional de Identidad electr\u00f3nico)"
-          ]
+          "credentials": []
         },
         {
           "name": "Ministry of Digital Affairs",
@@ -2327,7 +2100,6 @@
         "Government Services": {
           "agency": "Administraci\u00f3n Digital",
           "acceptedTypes": [
-            "DNIe",
             "Cl@ve",
             "EUDI Wallet"
           ]
@@ -2336,24 +2108,19 @@
           "agency": "SNS (National Health System)",
           "acceptedTypes": [
             "Health Card",
-            "DNIe",
             "Cl@ve"
           ]
         },
         "Travel (Domestic/EU)": {
           "agency": "Police / Border Control",
           "acceptedTypes": [
-            "DNIe",
-            "Passport",
             "Digital Driving License"
           ]
         },
         "Tax Services": {
           "agency": "Agencia Tributaria",
           "acceptedTypes": [
-            "Cl@ve",
-            "DNIe",
-            "Digital Certificate"
+            "Cl@ve"
           ]
         }
       },
@@ -2409,16 +2176,12 @@
         {
           "name": "Ministry of Interior",
           "type": "National",
-          "credentials": [
-            "CNIe (Carte Nationale d'Identit\u00e9)"
-          ]
+          "credentials": []
         },
         {
           "name": "Assurance Maladie",
           "type": "National",
-          "credentials": [
-            "Carte Vitale"
-          ]
+          "credentials": []
         },
         {
           "name": "Ministry of Transport",
@@ -2433,30 +2196,25 @@
           "agency": "Service-Public.fr",
           "acceptedTypes": [
             "FranceConnect",
-            "CNIe",
             "EUDI Wallet"
           ]
         },
         "Healthcare": {
           "agency": "Assurance Maladie",
           "acceptedTypes": [
-            "Carte Vitale",
             "FranceConnect"
           ]
         },
         "Travel (Domestic/EU)": {
           "agency": "Police / Border Control",
           "acceptedTypes": [
-            "CNIe",
-            "Passport",
             "Digital Driving License"
           ]
         },
         "Tax Services": {
           "agency": "impots.gouv.fr",
           "acceptedTypes": [
-            "FranceConnect",
-            "Digital Certificate"
+            "FranceConnect"
           ]
         }
       },
@@ -2505,16 +2263,14 @@
           "name": "Logius (Government IT)",
           "type": "National",
           "credentials": [
-            "DigiD",
-            "eHerkenning"
+            "DigiD"
           ]
         },
         {
           "name": "Ministry of Interior",
           "type": "National",
           "credentials": [
-            "EUDI Wallet",
-            "National ID"
+            "EUDI Wallet"
           ]
         },
         {
@@ -2537,14 +2293,12 @@
           "agency": "Overheid.nl",
           "acceptedTypes": [
             "DigiD",
-            "eHerkenning",
             "EUDI Wallet"
           ]
         },
         "Business Services": {
           "agency": "KVK / Government",
           "acceptedTypes": [
-            "eHerkenning",
             "EUDI Wallet"
           ]
         },
@@ -2558,8 +2312,6 @@
         "Travel": {
           "agency": "Border Control / Police",
           "acceptedTypes": [
-            "National ID",
-            "Passport",
             "Digital Driving License"
           ]
         }
@@ -2609,62 +2361,39 @@
         {
           "name": "ATO (myGovID)",
           "type": "National",
-          "credentials": [
-            "myGovID"
-          ]
+          "credentials": []
         },
         {
           "name": "State/Territory Transport Authorities",
           "type": "State",
-          "credentials": [
-            "Physical Driver License",
-            "Proof of Age Card"
-          ]
+          "credentials": []
         },
         {
           "name": "DFAT",
           "type": "National",
-          "credentials": [
-            "Passport"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
         "Federal Government Services": {
           "agency": "myGov / Services Australia",
-          "acceptedTypes": [
-            "myGovID",
-            "Physical Driver License",
-            "Passport"
-          ]
+          "acceptedTypes": []
         },
         "Tax Services": {
           "agency": "ATO",
-          "acceptedTypes": [
-            "myGovID"
-          ]
+          "acceptedTypes": []
         },
         "Healthcare": {
           "agency": "Medicare",
-          "acceptedTypes": [
-            "Medicare Card",
-            "myGovID"
-          ]
+          "acceptedTypes": []
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "Physical Driver License",
-            "Proof of Age Card",
-            "Passport"
-          ]
+          "acceptedTypes": []
         },
         "Travel (Domestic)": {
           "agency": "Airlines / TSA equivalent",
-          "acceptedTypes": [
-            "Physical Driver License",
-            "Passport"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -2711,42 +2440,29 @@
           "name": "Service Alberta",
           "type": "Provincial",
           "credentials": [
-            "Alberta eID",
-            "Provincial ID"
+            "Alberta eID"
           ]
         },
         {
           "name": "Alberta Transportation",
           "type": "Provincial",
-          "credentials": [
-            "Driver License"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
         "Provincial Government Services": {
           "agency": "Alberta Government",
           "acceptedTypes": [
-            "Alberta eID",
-            "Driver License",
-            "Provincial ID"
+            "Alberta eID"
           ]
         },
         "Federal Services": {
           "agency": "Government of Canada",
-          "acceptedTypes": [
-            "Driver License",
-            "Provincial ID",
-            "Passport"
-          ]
+          "acceptedTypes": []
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "Driver License",
-            "Provincial ID",
-            "Passport"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -2793,9 +2509,7 @@
           "name": "ServiceOntario",
           "type": "Provincial",
           "credentials": [
-            "ONeID",
-            "Driver License",
-            "Photo Card"
+            "ONeID"
           ]
         }
       ],
@@ -2803,26 +2517,16 @@
         "Provincial Government Services": {
           "agency": "Ontario Government",
           "acceptedTypes": [
-            "ONeID",
-            "Driver License",
-            "Photo Card"
+            "ONeID"
           ]
         },
         "Federal Services": {
           "agency": "Government of Canada",
-          "acceptedTypes": [
-            "Driver License",
-            "Photo Card",
-            "Passport"
-          ]
+          "acceptedTypes": []
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "Driver License",
-            "Photo Card",
-            "Passport"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -2868,10 +2572,7 @@
           "name": "NY DMV",
           "type": "State",
           "credentials": [
-            "mDL",
-            "Physical Driver License",
-            "State ID",
-            "Enhanced ID"
+            "mDL"
           ]
         }
       ],
@@ -2879,35 +2580,23 @@
         "TSA Airport Security": {
           "agency": "TSA",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "Enhanced ID",
-            "Passport",
-            "Passport Card",
-            "Global Entry"
+            "mDL"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License"
+            "mDL"
           ]
         },
         "Border Crossing (Land/Sea)": {
           "agency": "CBP",
-          "acceptedTypes": [
-            "Enhanced ID",
-            "Passport",
-            "Passport Card"
-          ]
+          "acceptedTypes": []
         },
         "Government Services": {
           "agency": "NY State Agencies",
           "acceptedTypes": [
-            "mDL",
-            "Physical Driver License",
-            "State ID"
+            "mDL"
           ]
         }
       },
@@ -2955,49 +2644,37 @@
           "name": "Ministry of Interior",
           "type": "National",
           "credentials": [
-            "Teudat Zehut",
-            "Digital ID",
-            "Passport"
+            "Digital ID"
           ]
         },
         {
           "name": "Ministry of Transport",
           "type": "National",
-          "credentials": [
-            "Driver License"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
         "Government Services": {
           "agency": "All Government Agencies",
           "acceptedTypes": [
-            "Teudat Zehut",
             "Digital ID"
           ]
         },
         "Banking": {
           "agency": "Israeli Banks",
           "acceptedTypes": [
-            "Teudat Zehut",
-            "Digital ID",
-            "Driver License"
+            "Digital ID"
           ]
         },
         "Healthcare": {
           "agency": "Kupat Holim",
           "acceptedTypes": [
-            "Teudat Zehut",
             "Digital ID"
           ]
         },
         "Travel": {
           "agency": "Border Control / Airlines",
-          "acceptedTypes": [
-            "Teudat Zehut",
-            "Passport",
-            "Driver License"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -3050,48 +2727,35 @@
           "name": "JPN (National Registration)",
           "type": "National",
           "credentials": [
-            "MyKad",
-            "MyDigital ID",
-            "Passport"
+            "MyDigital ID"
           ]
         },
         {
           "name": "JPJ (Road Transport)",
           "type": "National",
-          "credentials": [
-            "Driver License"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
         "Government Services": {
           "agency": "All Government Agencies",
           "acceptedTypes": [
-            "MyKad",
             "MyDigital ID"
           ]
         },
         "Banking": {
           "agency": "Malaysian Banks",
           "acceptedTypes": [
-            "MyKad",
             "MyDigital ID"
           ]
         },
         "Travel": {
           "agency": "Immigration / Airlines",
-          "acceptedTypes": [
-            "MyKad",
-            "Passport",
-            "Driver License"
-          ]
+          "acceptedTypes": []
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "MyKad",
-            "Driver License"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -3140,40 +2804,31 @@
           "name": "Ministry of Interior",
           "type": "National",
           "credentials": [
-            "National ID",
-            "Digital ID",
-            "Passport"
+            "Digital ID"
           ]
         },
         {
           "name": "Royal Oman Police",
           "type": "National",
-          "credentials": [
-            "Driver License"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
         "Government Services": {
           "agency": "All Government Agencies",
           "acceptedTypes": [
-            "National ID",
             "Digital ID"
           ]
         },
         "Banking": {
           "agency": "Omani Banks",
           "acceptedTypes": [
-            "National ID",
             "Digital ID"
           ]
         },
         "Travel": {
           "agency": "Immigration / Airlines",
-          "acceptedTypes": [
-            "National ID",
-            "Passport"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -3221,40 +2876,31 @@
           "name": "Ministry of Interior",
           "type": "National",
           "credentials": [
-            "Qatar ID",
-            "Digital ID",
-            "Passport"
+            "Digital ID"
           ]
         },
         {
           "name": "Traffic Department",
           "type": "National",
-          "credentials": [
-            "Driver License"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
         "Government Services": {
           "agency": "All Government Agencies",
           "acceptedTypes": [
-            "Qatar ID",
             "Digital ID"
           ]
         },
         "Banking": {
           "agency": "Qatari Banks",
           "acceptedTypes": [
-            "Qatar ID",
             "Digital ID"
           ]
         },
         "Travel": {
           "agency": "Immigration / Airlines",
-          "acceptedTypes": [
-            "Qatar ID",
-            "Passport"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -3307,48 +2953,33 @@
           "name": "GovTech",
           "type": "National",
           "credentials": [
-            "Singpass",
             "Digital Identity"
           ]
         },
         {
           "name": "ICA",
           "type": "National",
-          "credentials": [
-            "NRIC",
-            "Passport"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
         "Government Services": {
           "agency": "All Government Agencies",
           "acceptedTypes": [
-            "Singpass",
-            "NRIC",
             "Digital Identity"
           ]
         },
         "Banking": {
           "agency": "Singapore Banks",
-          "acceptedTypes": [
-            "Singpass",
-            "NRIC",
-            "Passport"
-          ]
+          "acceptedTypes": []
         },
         "Healthcare": {
           "agency": "MOH / Healthcare Providers",
-          "acceptedTypes": [
-            "Singpass",
-            "NRIC"
-          ]
+          "acceptedTypes": []
         },
         "Travel": {
           "agency": "ICA / Airlines",
           "acceptedTypes": [
-            "NRIC",
-            "Passport",
             "Digital Identity"
           ]
         }
@@ -3398,53 +3029,40 @@
           "name": "Federal Authority for Identity",
           "type": "National",
           "credentials": [
-            "Emirates ID",
             "Digital ID (UAE Pass)"
           ]
         },
         {
           "name": "Ministry of Interior",
           "type": "National",
-          "credentials": [
-            "Passport"
-          ]
+          "credentials": []
         },
         {
           "name": "RTA / Traffic Departments",
           "type": "Emirate-level",
-          "credentials": [
-            "Driver License"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
         "Government Services": {
           "agency": "All Government Agencies",
           "acceptedTypes": [
-            "Emirates ID",
             "Digital ID (UAE Pass)"
           ]
         },
         "Banking": {
           "agency": "UAE Banks",
           "acceptedTypes": [
-            "Emirates ID",
             "Digital ID (UAE Pass)"
           ]
         },
         "Travel": {
           "agency": "Immigration / Airlines",
-          "acceptedTypes": [
-            "Emirates ID",
-            "Passport"
-          ]
+          "acceptedTypes": []
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "Emirates ID",
-            "Driver License"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -3464,7 +3082,7 @@
         "\u8eab\u4efd\u7ed1\u5b9a",
         "WeChat integration"
       ],
-      "description": "Launched July 2025. Voluntary online identity linked to physical ID. 16M downloads, 6M credentials applied.",
+      "description": "Launched July 2025. Voluntary online identity linked to . 16M downloads, 6M credentials applied.",
       "details": [
         "Voluntary (not mandatory)",
         "Linked to physical ID card",
@@ -3500,55 +3118,42 @@
           "name": "Ministry of Public Security",
           "type": "National",
           "credentials": [
-            "Resident Identity Card",
-            "Digital ID (CTID)",
-            "Passport"
+            "Digital ID (CTID)"
           ]
         },
         {
           "name": "Ministry of Transport",
           "type": "National",
-          "credentials": [
-            "Driver License"
-          ]
+          "credentials": []
         },
         {
           "name": "Ministry of Human Resources",
           "type": "National",
-          "credentials": [
-            "Social Security Card"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
         "Government Services": {
           "agency": "All Government Agencies",
           "acceptedTypes": [
-            "Resident Identity Card",
             "Digital ID (CTID)"
           ]
         },
         "Banking": {
           "agency": "Chinese Banks",
           "acceptedTypes": [
-            "Resident Identity Card",
             "Digital ID (CTID)"
           ]
         },
         "Travel (Domestic)": {
           "agency": "Airlines / Railways",
           "acceptedTypes": [
-            "Resident Identity Card",
-            "Digital ID (CTID)",
-            "Passport"
+            "Digital ID (CTID)"
           ]
         },
         "Healthcare": {
           "agency": "Healthcare Providers",
-          "acceptedTypes": [
-            "Social Security Card",
-            "Resident Identity Card"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -3596,44 +3201,31 @@
           "name": "Ministry of Interior",
           "type": "National",
           "credentials": [
-            "National ID",
-            "Absher Digital ID",
-            "Passport",
-            "Iqama"
+            "Absher Digital ID"
           ]
         },
         {
           "name": "Traffic Police",
           "type": "National",
-          "credentials": [
-            "Driver License"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
         "Government Services": {
           "agency": "All Government Agencies",
           "acceptedTypes": [
-            "National ID",
-            "Absher Digital ID",
-            "Iqama"
+            "Absher Digital ID"
           ]
         },
         "Banking": {
           "agency": "Saudi Banks",
           "acceptedTypes": [
-            "National ID",
-            "Absher Digital ID",
-            "Iqama"
+            "Absher Digital ID"
           ]
         },
         "Travel": {
           "agency": "Immigration / Airlines",
-          "acceptedTypes": [
-            "National ID",
-            "Passport",
-            "Iqama"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -3680,17 +3272,13 @@
           "name": "National Immigration Agency",
           "type": "National",
           "credentials": [
-            "National ID",
-            "Digital ID",
-            "Passport"
+            "Digital ID"
           ]
         },
         {
           "name": "Ministry of Transportation",
           "type": "National",
-          "credentials": [
-            "Driver License"
-          ]
+          "credentials": []
         },
         {
           "name": "Ministry of Health",
@@ -3704,24 +3292,18 @@
         "Government Services": {
           "agency": "All Government Agencies",
           "acceptedTypes": [
-            "National ID",
             "Digital ID"
           ]
         },
         "Healthcare": {
           "agency": "NHI / Healthcare Providers",
           "acceptedTypes": [
-            "Health Card",
-            "National ID"
+            "Health Card"
           ]
         },
         "Travel": {
           "agency": "Immigration / Airlines",
-          "acceptedTypes": [
-            "National ID",
-            "Passport",
-            "Driver License"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -3784,79 +3366,57 @@
         {
           "name": "Income Tax Department",
           "type": "National",
-          "credentials": [
-            "PAN Card"
-          ]
+          "credentials": []
         },
         {
           "name": "Ministry of External Affairs",
           "type": "National",
-          "credentials": [
-            "Passport"
-          ]
+          "credentials": []
         },
         {
           "name": "State RTOs",
           "type": "State",
-          "credentials": [
-            "Driver License"
-          ]
+          "credentials": []
         },
         {
           "name": "Election Commission",
           "type": "National",
-          "credentials": [
-            "Voter ID"
-          ]
+          "credentials": []
         },
         {
           "name": "Ministry of Health",
           "type": "National",
-          "credentials": [
-            "ABHA Health ID"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
         "Government Services": {
           "agency": "Various Ministries",
           "acceptedTypes": [
-            "Aadhaar",
-            "PAN Card",
-            "Passport",
-            "Voter ID"
+            "Aadhaar"
           ]
         },
         "Banking (KYC)": {
           "agency": "RBI / Banks",
           "acceptedTypes": [
-            "Aadhaar",
-            "PAN Card",
-            "Passport",
-            "Driver License",
-            "Voter ID"
+            "Aadhaar"
           ]
         },
         "Tax Services": {
           "agency": "Income Tax Department",
           "acceptedTypes": [
-            "PAN Card",
             "Aadhaar"
           ]
         },
         "Travel (Domestic)": {
           "agency": "Airlines / Railways",
           "acceptedTypes": [
-            "Aadhaar",
-            "Passport",
-            "Driver License",
-            "Voter ID"
+            "Aadhaar"
           ]
         },
         "Healthcare": {
           "agency": "Healthcare Providers",
           "acceptedTypes": [
-            "ABHA Health ID",
             "Aadhaar"
           ]
         }
@@ -3903,63 +3463,40 @@
         {
           "name": "Civil Registration",
           "type": "National",
-          "credentials": [
-            "Maisha Card",
-            "National ID"
-          ]
+          "credentials": []
         },
         {
           "name": "Immigration",
           "type": "National",
-          "credentials": [
-            "Passport"
-          ]
+          "credentials": []
         },
         {
           "name": "NTSA",
           "type": "National",
-          "credentials": [
-            "Driver License"
-          ]
+          "credentials": []
         },
         {
           "name": "NHIF",
           "type": "National",
-          "credentials": [
-            "NHIF Card"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
         "Government Services": {
           "agency": "All Government Agencies",
-          "acceptedTypes": [
-            "Maisha Card",
-            "National ID",
-            "Passport"
-          ]
+          "acceptedTypes": []
         },
         "Healthcare": {
           "agency": "NHIF / Healthcare Providers",
-          "acceptedTypes": [
-            "NHIF Card",
-            "National ID"
-          ]
+          "acceptedTypes": []
         },
         "Banking (KYC)": {
           "agency": "CBK / Banks",
-          "acceptedTypes": [
-            "National ID",
-            "Passport",
-            "Driver License"
-          ]
+          "acceptedTypes": []
         },
         "Travel": {
           "agency": "Immigration / Airlines",
-          "acceptedTypes": [
-            "National ID",
-            "Passport"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -4009,71 +3546,45 @@
         {
           "name": "NIMC",
           "type": "National",
-          "credentials": [
-            "NIN"
-          ]
+          "credentials": []
         },
         {
           "name": "CBN / NIBSS",
           "type": "National",
-          "credentials": [
-            "BVN"
-          ]
+          "credentials": []
         },
         {
           "name": "Nigeria Immigration Service",
           "type": "National",
-          "credentials": [
-            "International Passport"
-          ]
+          "credentials": []
         },
         {
           "name": "FRSC",
           "type": "National",
-          "credentials": [
-            "Driver License"
-          ]
+          "credentials": []
         },
         {
           "name": "INEC",
           "type": "National",
-          "credentials": [
-            "Voter's Card"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
         "Government Services": {
           "agency": "All Government Agencies",
-          "acceptedTypes": [
-            "NIN",
-            "International Passport",
-            "Driver License",
-            "Voter's Card"
-          ]
+          "acceptedTypes": []
         },
         "Banking (KYC)": {
           "agency": "CBN / Banks",
-          "acceptedTypes": [
-            "BVN",
-            "NIN",
-            "International Passport",
-            "Driver License"
-          ]
+          "acceptedTypes": []
         },
         "SIM Registration": {
           "agency": "NCC / Telcos",
-          "acceptedTypes": [
-            "NIN"
-          ]
+          "acceptedTypes": []
         },
         "Travel": {
           "agency": "Immigration / Airlines",
-          "acceptedTypes": [
-            "International Passport",
-            "Driver License",
-            "Voter's Card"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -4121,61 +3632,40 @@
         {
           "name": "GOV.UK (GDS)",
           "type": "National",
-          "credentials": [
-            "UK One Login"
-          ]
+          "credentials": []
         },
         {
           "name": "HM Passport Office",
           "type": "National",
-          "credentials": [
-            "Physical Passport"
-          ]
+          "credentials": []
         },
         {
           "name": "DVLA",
           "type": "National",
-          "credentials": [
-            "Driving License"
-          ]
+          "credentials": []
         },
         {
           "name": "Home Office",
           "type": "National",
-          "credentials": [
-            "Biometric Residence Permit"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
         "Government Services": {
           "agency": "GOV.UK",
-          "acceptedTypes": [
-            "UK One Login",
-            "Physical Passport",
-            "Driving License"
-          ]
+          "acceptedTypes": []
         },
         "Banking": {
           "agency": "UK Banks",
-          "acceptedTypes": [
-            "Physical Passport",
-            "Driving License"
-          ]
+          "acceptedTypes": []
         },
         "Travel": {
           "agency": "Border Force / Airlines",
-          "acceptedTypes": [
-            "Physical Passport",
-            "Driving License (EU only)"
-          ]
+          "acceptedTypes": []
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "Driving License",
-            "PASS cards"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -4236,7 +3726,6 @@
           "name": "ICBC",
           "type": "Provincial Crown Corp",
           "credentials": [
-            "Physical Driver License",
             "BCID"
           ]
         }
@@ -4246,7 +3735,6 @@
           "agency": "BC Government",
           "acceptedTypes": [
             "BC Services Card",
-            "Physical Driver License",
             "BCID"
           ]
         },
@@ -4259,17 +3747,13 @@
         "Federal Services": {
           "agency": "Government of Canada",
           "acceptedTypes": [
-            "BC Services Card",
-            "Physical Driver License",
-            "Passport"
+            "BC Services Card"
           ]
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
           "acceptedTypes": [
-            "Physical Driver License",
-            "BCID",
-            "Passport"
+            "BCID"
           ]
         }
       },
@@ -4316,49 +3800,30 @@
         {
           "name": "RAMQ",
           "type": "Provincial",
-          "credentials": [
-            "RAMQ Card"
-          ]
+          "credentials": []
         },
         {
           "name": "SAAQ",
           "type": "Provincial",
-          "credentials": [
-            "Physical Driver License",
-            "Provincial ID"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
         "Provincial Government Services": {
           "agency": "Quebec Government",
-          "acceptedTypes": [
-            "RAMQ Card",
-            "Physical Driver License",
-            "Provincial ID"
-          ]
+          "acceptedTypes": []
         },
         "Healthcare": {
           "agency": "RAMQ / Healthcare Providers",
-          "acceptedTypes": [
-            "RAMQ Card"
-          ]
+          "acceptedTypes": []
         },
         "Federal Services": {
           "agency": "Government of Canada",
-          "acceptedTypes": [
-            "Physical Driver License",
-            "Provincial ID",
-            "Passport"
-          ]
+          "acceptedTypes": []
         },
         "Age Verification": {
           "agency": "SQDC / Retailers",
-          "acceptedTypes": [
-            "Physical Driver License",
-            "Provincial ID",
-            "Passport"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -4378,7 +3843,7 @@
         "Verifiable Credentials",
         "Health card"
       ],
-      "description": "Digital Health Card available via MB Wallet app. Physical ID cards also available.",
+      "description": "Digital Health Card available via MB Wallet app. cards also available.",
       "details": [
         "MB Wallet app",
         "Digital Health Card",
@@ -4404,35 +3869,21 @@
         {
           "name": "Manitoba Public Insurance",
           "type": "Provincial Crown Corp",
-          "credentials": [
-            "Driver License",
-            "Provincial ID"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
         "Provincial Government Services": {
           "agency": "Manitoba Government",
-          "acceptedTypes": [
-            "Driver License",
-            "Provincial ID"
-          ]
+          "acceptedTypes": []
         },
         "Federal Services": {
           "agency": "Government of Canada",
-          "acceptedTypes": [
-            "Driver License",
-            "Provincial ID",
-            "Passport"
-          ]
+          "acceptedTypes": []
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "Driver License",
-            "Provincial ID",
-            "Passport"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
@@ -4478,35 +3929,21 @@
         {
           "name": "Saskatchewan Government Insurance",
           "type": "Provincial Crown Corp",
-          "credentials": [
-            "Driver License",
-            "Provincial ID"
-          ]
+          "credentials": []
         }
       ],
       "acceptedCredentials": {
         "Provincial Government Services": {
           "agency": "Saskatchewan Government",
-          "acceptedTypes": [
-            "Driver License",
-            "Provincial ID"
-          ]
+          "acceptedTypes": []
         },
         "Federal Services": {
           "agency": "Government of Canada",
-          "acceptedTypes": [
-            "Driver License",
-            "Provincial ID",
-            "Passport"
-          ]
+          "acceptedTypes": []
         },
         "Age Verification": {
           "agency": "Retailers / Bars",
-          "acceptedTypes": [
-            "Driver License",
-            "Provincial ID",
-            "Passport"
-          ]
+          "acceptedTypes": []
         }
       },
       "digitalScore": 100.0,
