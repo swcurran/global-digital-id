@@ -220,7 +220,30 @@
         'pilot': 'var(--warning)',
         'development': 'var(--info)',
         'unknown': 'var(--text-mute)'
-      };
+      }
+    function renderCredential(cred) {
+        // Handle string format (backward compat)
+        if (typeof cred === 'string') {
+            return `<span class="cred-pill">${cred}</span>`;
+        }
+
+        // Handle object format
+        const statusBadge = getStatusBadge(cred.status);
+        const issuerInfo = cred.issuer ? `<div class="cred-meta">🏛️ ${cred.issuer}</div>` : '';
+        const networkInfo = cred.verificationNetwork ? `<div class="cred-meta">🔗 ${cred.verificationNetwork}</div>` : '';
+
+        return `
+            <div class="cred-pill cred-pill-detailed">
+                <div class="cred-header">
+                    <span class="cred-name">${cred.type}</span>
+                    ${statusBadge}
+                </div>
+                ${issuerInfo}
+                ${networkInfo}
+            </div>
+        `;
+    }
+;
       const labels = {
         'production': 'Production',
         'pilot': 'Pilot',
@@ -232,9 +255,30 @@
       return `<span style="font-size:0.65rem;padding:2px 8px;background:${color};color:#fff;border-radius:4px;">${label}</span>`;
     }
 
-    function renderCredential(cred) {
-      if (typeof cred === 'string') {
-        return `<span class="cred-pill">${cred}</span>`;
+    (cred) {
+        // Handle string format (backward compat)
+        if (typeof cred === 'string') {
+            return `<span class="cred-pill">${cred}</span>`;
+        }
+
+        // Handle object format
+        const statusBadge = getStatusBadge(cred.status);
+        const issuerInfo = cred.issuer ? `<div class="cred-meta">🏛️ ${cred.issuer}</div>` : '';
+        const networkInfo = cred.verificationNetwork ? `<div class="cred-meta">🔗 ${cred.verificationNetwork}</div>` : '';
+
+        return `
+            <div class="cred-pill cred-pill-detailed">
+                <div class="cred-header">
+                    <span class="cred-name">${cred.type}</span>
+                    ${statusBadge}
+                </div>
+                ${issuerInfo}
+                ${networkInfo}
+            </div>
+        `;
+    }
+
+    </span>`;
       }
       const status = cred.status || 'unknown';
       const type = cred.type || cred;

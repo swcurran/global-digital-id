@@ -5,6 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Global Digital ID Map - BC Government Digital Trust</title>
   <link rel="stylesheet" href="styles.css">
+
+    // ============= HELPER FUNCTIONS =============
+
+    function getStatusBadge(status) {
+        const colors = {
+            'production': 'var(--success)',
+            'pilot': 'var(--warning)',
+            'development': 'var(--info)',
+            'mixed': 'linear-gradient(45deg, var(--success), var(--info))',
+            'unknown': 'var(--text-mute)'
+        };
+        const labels = {
+            'production': '🟢 Production',
+            'pilot': '🟡 Pilot',
+            'development': '🔵 Development',
+            'mixed': '⚡ Mixed',
+            'unknown': '⚪ Unknown'
+        };
+        const color = colors[status] || colors['unknown'];
+        const label = labels[status] || labels['unknown'];
+
+        if (status === 'mixed') {
+            return `<span class="status-badge" style="background:${color}">${label}</span>`;
+        }
+        return `<span class="status-badge" style="border-color:${color};color:${color}">${label}</span>`;
+    }
+
+    function renderCredential(cred) {
+        // Handle string format (backward compat)
+        if (typeof cred === 'string') {
+            return `<span class="cred-pill">${cred}</span>`;
+        }
+
+        // Handle object format
+        const statusBadge = getStatusBadge(cred.status);
+        const issuerInfo = cred.issuer ? `<div class="cred-meta">🏛️ ${cred.issuer}</div>` : '';
+        const networkInfo = cred.verificationNetwork ? `<div class="cred-meta">🔗 ${cred.verificationNetwork}</div>` : '';
+
+        return `
+            <div class="cred-pill cred-pill-detailed">
+                <div class="cred-header">
+                    <span class="cred-name">${cred.type}</span>
+                    ${statusBadge}
+                </div>
+                ${issuerInfo}
+                ${networkInfo}
+            </div>
+        `;
+    }
+
+    // ============= END HELPERS =============
+
 </head>
 <body>
   <div class="toolbar">
