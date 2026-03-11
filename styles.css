@@ -150,6 +150,14 @@ h3 { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.06em; color
 .modal-link a { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; background: var(--accent); color: var(--bg); text-decoration: none; border-radius: var(--radius); font-weight: 500; font-size: 0.75rem; transition: opacity 0.2s; }
 .modal-link a:hover { opacity: 0.9; }
 
+/* Modal detail grid (for usecases.html modal) */
+.detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+.detail-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px; }
+.detail-label { font-size: 0.6rem; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+.detail-value { font-size: 0.75rem; color: var(--text); font-weight: 500; word-break: break-word; }
+.credential-flow { display: flex; flex-wrap: wrap; gap: 6px; }
+
+
 /* Section styles */
 .section { margin-top: 32px; }
 .section-title { font-size: 1rem; font-weight: 600; margin-bottom: 4px; display: flex; align-items: center; gap: 10px; }
