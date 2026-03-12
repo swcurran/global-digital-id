@@ -320,8 +320,9 @@ global-digital-id/
 Based on current data (50 jurisdictions):
 
 ### By Status
-- **Production**: 32 jurisdictions (64%)
-- **Development**: 18 jurisdictions (36%)
+- **Production**: 7 jurisdictions (14%)
+- **Development**: 30 jurisdictions (60%)
+- **Mixed**: 13 jurisdictions (26%)
 
 ### By Region
 - **North America**: 22 jurisdictions (44%)
@@ -331,25 +332,25 @@ Based on current data (50 jurisdictions):
 - **Africa**: 2 jurisdictions (4%)
 
 ### Top Credential Types
-1. Physical Driver License (19 jurisdictions)
-2. Passport (15 jurisdictions)
-3. Driver License (15 jurisdictions)
-4. mDL (15 jurisdictions)
-5. State ID (14 jurisdictions)
+1. mDL (15 jurisdictions)
+2. EUDI Wallet (9 jurisdictions)
+3. Digital Driving License (7 jurisdictions)
+4. Digital ID (6 jurisdictions)
+5. Digital Driver License (5 jurisdictions)
 
 ### Top Use Cases
-1. Government Services (40 jurisdictions)
-2. Age Verification (30 jurisdictions)
-3. Healthcare (18 jurisdictions)
-4. Banking (17 jurisdictions)
-5. Travel (15 jurisdictions)
+1. Government Services (37 jurisdictions)
+2. Age Verification (20 jurisdictions)
+3. TSA Airport Security (15 jurisdictions)
+4. Banking (13 jurisdictions)
+5. Healthcare (11 jurisdictions)
 
 ---
 
 ## 📞 Contact
 
 **Prepared for**: BC Government Digital Trust Initiative  
-**Last Updated**: 2026-03-02  
+**Last Updated**: 2026-03-12  
 **Repository**: https://github.com/krobinsonca/global-digital-id  
 **Live Site**: https://krobinsonca.github.io/global-digital-id/
 

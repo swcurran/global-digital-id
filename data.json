@@ -2,7 +2,7 @@
   "meta": {
     "title": "Global Digital ID Landscape",
     "description": "Jurisdictional scan of digital ID systems worldwide",
-    "lastUpdated": "2026-03-02",
+    "lastUpdated": "2026-03-12",
     "preparedFor": "BC Government Digital Trust Initiative"
   },
   "stats": {
@@ -628,11 +628,11 @@
       "walletTech": "PT Wallet",
       "issuedCredentialTypes": [
         {
-          "type": "Chave Móvel Digital",
+          "type": "Chave M\u00f3vel Digital",
           "status": "production",
           "issuer": "Agency for Administrative Modernization",
           "issuerUrl": "https://www2.gov.pt/",
-          "verificationNetwork": "Chave Móvel Digital / eIDAS",
+          "verificationNetwork": "Chave M\u00f3vel Digital / eIDAS",
           "networkUrl": "https://www2.gov.pt/en/temas/cidadania-e-documentos/cartao-de-cidadao"
         },
         {
@@ -640,7 +640,7 @@
           "status": "development",
           "issuer": "Agency for Administrative Modernization",
           "issuerUrl": "https://www2.gov.pt/",
-          "verificationNetwork": "Chave Móvel Digital / eIDAS",
+          "verificationNetwork": "Chave M\u00f3vel Digital / eIDAS",
           "networkUrl": "https://www2.gov.pt/en/temas/cidadania-e-documentos/cartao-de-cidadao"
         },
         {
@@ -648,7 +648,7 @@
           "status": "pilot",
           "issuer": "Agency for Administrative Modernization",
           "issuerUrl": "https://www2.gov.pt/",
-          "verificationNetwork": "Chave Móvel Digital / eIDAS",
+          "verificationNetwork": "Chave M\u00f3vel Digital / eIDAS",
           "networkUrl": "https://www2.gov.pt/en/temas/cidadania-e-documentos/cartao-de-cidadao"
         }
       ],
@@ -657,7 +657,7 @@
           "name": "AMA (Agency for Modernization)",
           "type": "National",
           "credentials": [
-            "Chave Móvel Digital",
+            "Chave M\u00f3vel Digital",
             "EUDI Wallet"
           ]
         },
@@ -680,7 +680,7 @@
         "Government Services": {
           "agency": "ePortugal",
           "acceptedTypes": [
-            "Chave Móvel Digital",
+            "Chave M\u00f3vel Digital",
             "EUDI Wallet"
           ]
         },
@@ -688,7 +688,7 @@
           "agency": "SNS",
           "acceptedTypes": [
             "Health Card",
-            "Chave Móvel Digital"
+            "Chave M\u00f3vel Digital"
           ]
         },
         "Travel": {
@@ -700,7 +700,7 @@
         "Banking": {
           "agency": "Portuguese Banks",
           "acceptedTypes": [
-            "Chave Móvel Digital"
+            "Chave M\u00f3vel Digital"
           ]
         }
       },
@@ -708,7 +708,7 @@
       "digitalCount": 3,
       "primaryIssuer": "Agency for Administrative Modernization",
       "primaryIssuerUrl": "https://www2.gov.pt/",
-      "primaryNetwork": "Chave Móvel Digital / eIDAS",
+      "primaryNetwork": "Chave M\u00f3vel Digital / eIDAS",
       "primaryNetworkUrl": "https://www2.gov.pt/en/temas/cidadania-e-documentos/cartao-de-cidadao"
     },
     {
@@ -1096,7 +1096,8 @@
         }
       },
       "digitalScore": 100.0,
-      "digitalCount": 1
+      "digitalCount": 1,
+      "walletTech": "AZ MVD Now App"
     },
     {
       "name": "Maryland",
@@ -1165,7 +1166,8 @@
         }
       },
       "digitalScore": 100.0,
-      "digitalCount": 1
+      "digitalCount": 1,
+      "walletTech": "MD MVA Wallet"
     },
     {
       "name": "Colorado",
@@ -1234,7 +1236,8 @@
         }
       },
       "digitalScore": 100.0,
-      "digitalCount": 1
+      "digitalCount": 1,
+      "walletTech": "CO DMV Mobile"
     },
     {
       "name": "Georgia",
@@ -1303,7 +1306,8 @@
         }
       },
       "digitalScore": 100.0,
-      "digitalCount": 1
+      "digitalCount": 1,
+      "walletTech": "GA DDS Wallet"
     },
     {
       "name": "Ohio",
@@ -1652,7 +1656,8 @@
         }
       },
       "digitalScore": 100.0,
-      "digitalCount": 1
+      "digitalCount": 1,
+      "walletTech": "NV DMV Mobile ID"
     },
     {
       "name": "Vermont",
@@ -1790,7 +1795,8 @@
         }
       },
       "digitalScore": 100.0,
-      "digitalCount": 1
+      "digitalCount": 1,
+      "walletTech": "NJ MVC Wallet"
     },
     {
       "name": "Texas",
@@ -1858,7 +1864,8 @@
         }
       },
       "digitalScore": 100.0,
-      "digitalCount": 1
+      "digitalCount": 1,
+      "walletTech": "TX DPS Mobile ID"
     },
     {
       "name": "Brazil",
@@ -2389,7 +2396,7 @@
       ],
       "acceptedCredentials": {
         "Government Services": {
-          "agency": "Administración Digital",
+          "agency": "Administraci\u00f3n Digital",
           "acceptedTypes": [
             "Cl@ve",
             "EUDI Wallet"
@@ -2430,15 +2437,15 @@
       "issuanceModel": "single",
       "isSubnational": false,
       "url": "https://france-identite.gouv.fr/",
-      "technology": "France Identité + EUDI Wallet",
+      "technology": "France Identit\u00e9 + EUDI Wallet",
       "techStack": [
-        "France Identité",
+        "France Identit\u00e9",
         "NFC",
         "EUDI Wallet"
       ],
-      "description": "France Identité (digital ID card) exists. EUDI Wallet in development.",
+      "description": "France Identit\u00e9 (digital ID card) exists. EUDI Wallet in development.",
       "details": [
-        "France Identité",
+        "France Identit\u00e9",
         "EUDI Wallet dev"
       ],
       "nodevice": [
@@ -2453,12 +2460,12 @@
       "credentialType": "Government Wallet (Multi-credential)",
       "walletType": "Government",
       "credentialFormat": "Verifiable Credentials",
-      "walletTech": "France Identité",
+      "walletTech": "France Identit\u00e9",
       "issuedCredentialTypes": [
         {
           "type": "FranceConnect",
           "status": "production",
-          "issuer": "France Identité",
+          "issuer": "France Identit\u00e9",
           "issuerUrl": "https://france-identite.gouv.fr/",
           "verificationNetwork": "FranceConnect",
           "networkUrl": "https://franceconnect.gouv.fr/"
@@ -2466,7 +2473,7 @@
         {
           "type": "EUDI Wallet",
           "status": "development",
-          "issuer": "France Identité",
+          "issuer": "France Identit\u00e9",
           "issuerUrl": "https://france-identite.gouv.fr/",
           "verificationNetwork": "FranceConnect",
           "networkUrl": "https://franceconnect.gouv.fr/"
@@ -2474,7 +2481,7 @@
         {
           "type": "Digital Driving License",
           "status": "pilot",
-          "issuer": "France Identité",
+          "issuer": "France Identit\u00e9",
           "issuerUrl": "https://france-identite.gouv.fr/",
           "verificationNetwork": "FranceConnect",
           "networkUrl": "https://franceconnect.gouv.fr/"
@@ -2534,7 +2541,7 @@
       },
       "digitalScore": 100.0,
       "digitalCount": 3,
-      "primaryIssuer": "France Identité",
+      "primaryIssuer": "France Identit\u00e9",
       "primaryIssuerUrl": "https://france-identite.gouv.fr/",
       "primaryNetwork": "FranceConnect",
       "primaryNetworkUrl": "https://franceconnect.gouv.fr/"
@@ -3391,7 +3398,7 @@
       "technology": "Cyber ID / Web ID (voluntary)",
       "techStack": [
         "Facial recognition",
-        "身份绑定",
+        "\u8eab\u4efd\u7ed1\u5b9a",
         "WeChat integration"
       ],
       "description": "Launched July 2025. Voluntary online identity linked to . 16M downloads, 6M credentials applied.",
@@ -3742,7 +3749,7 @@
     {
       "name": "Kenya",
       "flag": "ke",
-      "region": "africa",
+      "region": "af",
       "status": "development",
       "issuanceModel": "cloud",
       "isSubnational": false,
@@ -3785,7 +3792,7 @@
     {
       "name": "Nigeria",
       "flag": "ng",
-      "region": "africa",
+      "region": "af",
       "status": "production",
       "issuanceModel": "single",
       "isSubnational": false,
@@ -4013,7 +4020,7 @@
         "TBD",
         "eID-Me"
       ],
-      "description": "Identité numérique Québec project suspended March 2025. No government digital ID program.",
+      "description": "Identit\u00e9 num\u00e9rique Qu\u00e9bec project suspended March 2025. No government digital ID program.",
       "details": [
         "Program suspended",
         "Bill 82 passed"
@@ -4033,7 +4040,7 @@
       "walletTech": "None (third-party eID-Me only)",
       "issuedCredentialTypes": [
         {
-          "type": "Québec Numérique",
+          "type": "Qu\u00e9bec Num\u00e9rique",
           "status": "unknown"
         }
       ],
@@ -4119,7 +4126,9 @@
       "description": "RFP for digital ID issued. eID-Me available as third-party option since 2020.",
       "details": [
         "Digital ID roadmap",
-        "RFP in progress"
+        "RFP in progress",
+        "eID-Me third-party support",
+        "Multi-credential wallet planned"
       ],
       "nodevice": [
         "Physical ID"
@@ -4130,15 +4139,63 @@
           "value": "Exploring"
         }
       ],
-      "credentialType": "OIDC-style authentication",
-      "walletType": "Platform",
-      "credentialFormat": "OIDC",
-      "walletTech": "None (third-party eID-Me only)",
-      "issuedCredentialTypes": [],
-      "issuingAuthorities": [],
-      "acceptedCredentials": {},
-      "digitalScore": 0.0,
-      "digitalCount": 0
+      "credentialType": "Government Wallet (Multi-credential)",
+      "walletType": "Government",
+      "credentialFormat": "Verifiable Credentials",
+      "walletTech": "SGI Wallet / eID-Me",
+      "issuedCredentialTypes": [
+        {
+          "type": "Digital Driver License",
+          "status": "development",
+          "issuer": "Saskatchewan Government Insurance (SGI)",
+          "issuerUrl": "https://sgi.sk.ca/",
+          "verificationNetwork": "SGI Wallet / Verifiable Credentials",
+          "networkUrl": "https://sgi.sk.ca/photo-id"
+        },
+        {
+          "type": "eID-Me Credential",
+          "status": "production",
+          "issuer": "eID-Me (Third-party)",
+          "issuerUrl": "https://www.eidme.com/",
+          "verificationNetwork": "eID-Me Network",
+          "networkUrl": "https://www.eidme.com/"
+        }
+      ],
+      "issuingAuthorities": [
+        {
+          "name": "Saskatchewan Government Insurance (SGI)",
+          "type": "Provincial Crown Corporation",
+          "credentials": [
+            "Digital Driver License",
+            "Photo ID"
+          ]
+        },
+        {
+          "name": "eID-Me",
+          "type": "Third-party",
+          "credentials": [
+            "eID-Me Credential"
+          ]
+        }
+      ],
+      "acceptedCredentials": {
+        "Provincial Government Services": {
+          "agency": "Saskatchewan Government",
+          "acceptedTypes": [
+            "Digital Driver License",
+            "eID-Me Credential"
+          ]
+        },
+        "Age Verification": {
+          "agency": "Retailers / Bars",
+          "acceptedTypes": [
+            "Digital Driver License",
+            "eID-Me Credential"
+          ]
+        }
+      },
+      "digitalScore": 50.0,
+      "digitalCount": 2
     }
   ],
   "nodeviceSolutions": [
